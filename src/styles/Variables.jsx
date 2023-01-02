@@ -14,16 +14,14 @@ export const Variables = {
   // colors
   // When swapping leave note of what the color looks like
   // used in button link styling
-  color1: "#E5B8F4", // light purple
-  color2: "#C147E9", // purple
-  color3: "#FCF9BE", // light yellow-white
-
+  color1: "#007a3e", // green
+  color2: "#3d3935", // dark gray
   black: "black",
   white: "#ffff",
 
   // Type
-  joseph: "Josefin Sans, sans-serif",
-  openSans: "Open Sans, sans-serif",
+  sourceSans: "Source Sans Pro, sans-serif",
+  ubuntu: "Ubuntu, sans-serif",
   // Company name
   companyName: "Digital Delight",
 

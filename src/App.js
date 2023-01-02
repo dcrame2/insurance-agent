@@ -1,3 +1,5 @@
+import "./global.css";
+
 function App() {
   return <h1>Insurance Site</h1>;
 }
