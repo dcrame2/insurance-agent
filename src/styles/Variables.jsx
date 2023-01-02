@@ -23,7 +23,7 @@ export const Variables = {
   sourceSans: "Source Sans Pro, sans-serif",
   ubuntu: "Ubuntu, sans-serif",
   // Company name
-  companyName: "Digital Delight",
+  companyName: "Country Financial",
 
   // Logos
   logo1Url: "digitaldelight.png",
