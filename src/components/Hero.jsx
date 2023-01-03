@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { H1Styles } from "../styles/Type";
 import { Variables } from "../styles/Variables";
-import { Container } from "../styles/Utilities";
+import { Container, MediaQueries } from "../styles/Utilities";
 
 const HeroContainer = styled.section`
   ${Container}
@@ -13,8 +13,14 @@ const HeroContainer = styled.section`
     display: flex;
     flex-direction: row;
     align-items: center;
+    /* flex-wrap: wrap; */
     gap: 30px;
-    text-align: center;
+    @media ${MediaQueries.tablet} {
+      flex-direction: column;
+    }
+    @media ${MediaQueries.mobile} {
+      align-items: left;
+    }
     h1 {
       text-transform: uppercase;
       ${H1Styles}
@@ -28,6 +34,12 @@ const HeroContainer = styled.section`
     img {
       height: 500px;
       width: auto;
+      @media ${MediaQueries.tablet} {
+        height: 350px;
+      }
+      @media ${MediaQueries.mobile} {
+        height: 250px;
+      }
     }
   }
 `;
