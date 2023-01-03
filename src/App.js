@@ -1,7 +1,8 @@
 import "./global.css";
+import Hero from "./components/Hero";
 
 function App() {
-  return <h1>Insurance Site</h1>;
+  return <Hero />;
 }
 
 export default App;
