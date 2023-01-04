@@ -25,8 +25,5 @@ export const Variables = {
 
     companyName: 'Country Financial',
 
-    // Logos
-    logo: 'cflogo.png',
-
     background: '/Images/texture_background.jpg',
 };
