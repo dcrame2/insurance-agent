@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { H1Styles, PSecondary } from "../styles/Type";
+import { H1Styles, PSecondary, H2Styles } from "../styles/Type";
 import { Variables } from "../styles/Variables";
 import { Container, MediaQueries } from "../styles/Utilities";
 import { GlassEffect } from "../styles/Utilities";
@@ -86,9 +86,11 @@ const Hero = () => {
             <p>Your favorite insurance agent</p>
             <h1>Michael Moulis</h1>
           </div>
-
           <img src="agent-nobg.png" alt="Michael Moulis" srcset="" />
-          <h2>Country Financial</h2>
+          <div className="hero-content">
+            <p>Supported by</p>
+            <h2>{Variables.companyName}</h2>
+          </div>
         </div>
       </HeroContainer>
     </OpaqueFilter>
