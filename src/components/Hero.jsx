@@ -8,7 +8,7 @@ const HeroContainer = styled.section`
   ${Container}
   width: 100vw;
   height: 100vh;
-  margin-top: 60px;
+  margin-top: 150px;
   .hero-inner-container {
     display: flex;
     flex-direction: row;
