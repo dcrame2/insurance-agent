@@ -58,16 +58,16 @@ const HeroContainer = styled.section`
 
 const OpaqueFilter = styled.div`
   background: linear-gradient(
-    90deg,
+    180deg,
     ${Variables.cfgreen} 0%,
-    rgba(125, 125, 125, 0) 98%,
+    rgba(125, 125, 125, 0) 95%,
     rgba(255, 255, 255, 0) 100%
   );
   opacity: 0.8;
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 80%;
+  width: 100%;
   z-index: 1;
 
   @media ${MediaQueries.tablet} {
