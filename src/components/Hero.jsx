@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { H1Styles } from "../styles/Type";
+import { H1Styles, PSecondary } from "../styles/Type";
 import { Variables } from "../styles/Variables";
 import { Container, MediaQueries } from "../styles/Utilities";
 import { GlassEffect } from "../styles/Utilities";
@@ -15,6 +15,7 @@ const HeroContainer = styled.section`
     display: flex;
     flex-direction: row;
     align-items: center;
+    /* justify-content: space-between; */
 
     gap: 30px;
     @media ${MediaQueries.tablet} {
@@ -23,10 +24,20 @@ const HeroContainer = styled.section`
     @media ${MediaQueries.mobile} {
       align-items: left;
     }
-    h1 {
-      text-transform: uppercase;
-      ${H1Styles}/* color: ${Variables.black}; */
+
+    .hero-content {
+      flex-direction: column;
+      display: flex;
+      gap: 10px;
+      h1 {
+        text-transform: uppercase;
+        ${H1Styles}/* color: ${Variables.black}; */
+      }
+      p {
+        ${PSecondary}
+      }
     }
+
     h2 {
       text-transform: uppercase;
       ${H1Styles}
@@ -49,7 +60,7 @@ const OpaqueFilter = styled.div`
   background: linear-gradient(
     90deg,
     ${Variables.cfgreen} 0%,
-    rgba(125, 125, 125, 0) 90%,
+    rgba(125, 125, 125, 0) 98%,
     rgba(255, 255, 255, 0) 100%
   );
   opacity: 0.8;
@@ -71,7 +82,11 @@ const Hero = () => {
     <OpaqueFilter>
       <HeroContainer>
         <div className="hero-inner-container">
-          <h1>Michael Moulis</h1>
+          <div className="hero-content">
+            <p>Your favorite insurance agent</p>
+            <h1>Michael Moulis</h1>
+          </div>
+
           <img src="agent-nobg.png" alt="Michael Moulis" srcset="" />
           <h2>Country Financial</h2>
         </div>
