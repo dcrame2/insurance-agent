@@ -215,15 +215,7 @@ const Nav = styled.nav`
     }
 `;
 
-const data = {
-    links: [
-        { href: '#services', text: 'Services' },
-        { href: '#testimonials', text: 'Testimonials' },
-        { href: '#faqSection', text: 'FAQ' },
-    ],
-};
-
-export default function Navigation({ backdrop }) {
+export default function Navigation({ backdrop, data }) {
     const [hamburgerPressed, setHamburgerPressed] = useState(false);
 
     const HamburgerToggle = () => {
@@ -234,8 +226,6 @@ export default function Navigation({ backdrop }) {
         }
     };
 
-    //delete me
-
     return (
         <Nav>
             <div
@@ -245,8 +235,8 @@ export default function Navigation({ backdrop }) {
             >
                 <ul>
                     <li className='logo'>
-                        <a href='#'>
-                            <img src={`/images/cflogo.png`} alt='Logo'></img>
+                        <a href='/'>
+                            <img src={data.logo.src} alt={data.logo.alt}></img>
                         </a>
                     </li>
                     <li
@@ -267,7 +257,14 @@ export default function Navigation({ backdrop }) {
                                                 className='underline'
                                                 key={`textLink${index}`}
                                             >
-                                                <a href={`${link.href}`}>
+                                                <a
+                                                    href={`${link.url}`}
+                                                    target={
+                                                        link.target
+                                                            ? '_blank'
+                                                            : ''
+                                                    }
+                                                >
                                                     {link.text}
                                                 </a>
                                             </li>
@@ -280,9 +277,9 @@ export default function Navigation({ backdrop }) {
                                 className='cta'
                             >
                                 <LinkButton
-                                    ariaLabel='Contact us'
-                                    text='Contact Us'
-                                    href='#contact'
+                                    ariaLabel={data.button.label}
+                                    text={data.button.text}
+                                    href={data.button.url}
                                 ></LinkButton>
                             </li>
                         </ul>
