@@ -16,28 +16,31 @@ const HeroContainer = styled.section`
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
-    /* padding-top: 130px; */
+    padding-top: 130px;
+    /* justify-content: center; */
     gap: 45px;
 
-    @media ${MediaQueries.tablet} {
-      /* flex-direction: column; */
+    @media (max-width: 961px) {
+      /* padding-top: 130px; */
+      justify-content: center;
+      gap: 15px;
+      padding-top: 400px;
+      flex-direction: column;
     }
     @media ${MediaQueries.mobile} {
       align-items: left;
-      padding-top: 160px;
+      padding-top: 240px;
       gap: 0;
-      flex-direction: column;
     }
 
     .hero-content {
       flex-direction: column;
       display: flex;
-      /* align-items: center; */
       justify-content: center;
       gap: 10px;
       h1 {
         text-transform: uppercase;
-        ${H1Styles}/* color: ${Variables.black}; */
+        ${H1Styles}
       }
       p {
         ${PSecondary}
