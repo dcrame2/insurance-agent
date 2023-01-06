@@ -11,17 +11,12 @@ const HeroContainer = styled.section`
 
   ${Container}
   .hero-inner-container {
-    /* width: 100vw; */
     height: 100%;
     display: flex;
     flex-direction: row;
-    /* flex-wrap: wrap; */
     padding-top: 130px;
-    /* justify-content: center; */
     gap: 45px;
-
     @media (max-width: 961px) {
-      /* padding-top: 130px; */
       justify-content: center;
       gap: 15px;
       padding-top: 400px;
@@ -59,20 +54,9 @@ const HeroContainer = styled.section`
       flex-direction: column;
       align-items: center;
       justify-content: end;
-      /* @media ${MediaQueries.tablet} {
-        max-width: 300px;
-      } */
-
       img {
         height: auto;
         width: 100%;
-        /* right: 200px; */
-        /* @media ${MediaQueries.tablet} {
-          height: 500px;
-        }
-        @media ${MediaQueries.mobile} {
-          height: 250px;
-        } */
       }
     }
   }
