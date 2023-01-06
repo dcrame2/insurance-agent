@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import LinkButton from '../sub_components/LinkButton';
 import { Variables } from '../styles/Variables';
 import { useState } from 'react';
@@ -12,6 +12,7 @@ const Nav = styled.nav`
     left: 0;
     right: 0;
     z-index: 10;
+    position: sticky;
 
     .wrapper {
         position: relative;
@@ -89,6 +90,7 @@ const Nav = styled.nav`
                         transition: height ease 0.3s;
                         overflow: hidden;
                         transition: height ease 0.3s;
+
                         &.active {
                             height: 100vh;
                         }

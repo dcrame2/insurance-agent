@@ -22,9 +22,10 @@ function App() {
 
     scrollListener();
     return (
-        <section>
+        <>
             <Navigation backdrop={navBackdrop} data={NavigationData} />
             <Hero
+                data={HomeData.homeHero}
                 eyebrow1={HomeData.homeHero.eyebrow1}
                 heading1={HomeData.homeHero.heading1}
                 eyebrow2={HomeData.homeHero.eyebrow2}
@@ -32,7 +33,7 @@ function App() {
                 heroImgSrc={HomeData.homeHero.heroImgSrc}
                 heroImgAlt={HomeData.homeHero.heroImgAlt}
             />
-        </section>
+        </>
     );
 }
 
