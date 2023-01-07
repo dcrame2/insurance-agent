@@ -12,14 +12,12 @@ const InsuranceContainer = styled.section`
   position: absolute;
   top: 100%;
   ${Container}
-
   @media (max-width: 961px) {
     top: 120%;
   }
   @media ${MediaQueries.mobile} {
     top: 100%;
   }
-
   .insurance-content {
     margin: 10% 0;
     display: flex;
@@ -35,7 +33,6 @@ const InsuranceContainer = styled.section`
     p {
       ${PBaseStyles}
     }
-
     .insurance-icon-content {
       display: flex;
       flex-direction: row;
@@ -44,29 +41,21 @@ const InsuranceContainer = styled.section`
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
-        /* align-items: center; */
       }
-
       .icon {
         z-index: 1;
         max-width: 200px;
         height: auto;
-
-        /* background-color: ${Variables.white}; */
         border: 3px solid ${Variables.cfgreen};
         padding: 20px;
         border-radius: 12px;
         @media (max-width: 961px) {
           flex: 1 0 25%;
-
-          /* width: 50%; */
           max-width: 155px;
         }
-
         &:hover {
           border: 3px solid ${Variables.white};
         }
-
         img {
           position: relative;
           z-index: 2;
@@ -91,18 +80,9 @@ const OpaqueFilter = styled.div`
     rgba(125, 125, 125, 0) 90%,
     rgba(255, 255, 255, 0) 100%
   );
-  /* opacity: 0.6; */
   border-radius: 12px;
-  /* position: absolute; */
-  /* top: 0;
-  bottom: 0; */
-
-  /* width: 100%; */
   z-index: 1;
-
   @media ${MediaQueries.tablet} {
-    /* width: 100%; */
-
     ${GlassEffect}
   }
 `;
