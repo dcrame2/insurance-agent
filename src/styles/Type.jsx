@@ -21,13 +21,13 @@ export const H1Styles = css`
 
 export const H2Styles = css`
   font-family: ${Variables.ubuntu};
-  font-size: 6rem;
+  font-size: 4rem;
 
-  @media ${Variables.tablet} {
-    font-size: 4.5rem;
+  @media ${MediaQueries.tablet} {
+    font-size: 3.5rem;
   }
 
-  @media ${Variables.mobile} {
+  @media ${MediaQueries.mobile} {
     font-size: 2.5rem;
   }
 `;
