@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import { H1Styles, PSecondary, H2Styles } from "../styles/Type";
 import { Variables } from "../styles/Variables";
 import { Container, MediaQueries } from "../styles/Utilities";
@@ -11,33 +11,31 @@ const HeroContainer = styled.section`
 
   ${Container}
   .hero-inner-container {
-    /* width: 100vw; */
     height: 100%;
     display: flex;
     flex-direction: row;
-    /* flex-wrap: wrap; */
-    /* padding-top: 130px; */
+    padding-top: 130px;
     gap: 45px;
-
-    @media ${MediaQueries.tablet} {
-      /* flex-direction: column; */
+    @media (max-width: 961px) {
+      justify-content: center;
+      gap: 15px;
+      padding-top: 400px;
+      flex-direction: column;
     }
     @media ${MediaQueries.mobile} {
       align-items: left;
-      padding-top: 160px;
+      padding-top: 0px;
       gap: 0;
-      flex-direction: column;
     }
 
     .hero-content {
       flex-direction: column;
       display: flex;
-      /* align-items: center; */
       justify-content: center;
       gap: 10px;
       h1 {
         text-transform: uppercase;
-        ${H1Styles}/* color: ${Variables.black}; */
+        ${H1Styles}
       }
       p {
         ${PSecondary}
@@ -56,20 +54,18 @@ const HeroContainer = styled.section`
       flex-direction: column;
       align-items: center;
       justify-content: end;
-      /* @media ${MediaQueries.tablet} {
-        max-width: 300px;
-      } */
-
+      height: auto;
+      @media ${MediaQueries.mobile} {
+        align-items: start;
+        justify-content: start;
+      }
       img {
         height: auto;
         width: 100%;
-        /* right: 200px; */
-        /* @media ${MediaQueries.tablet} {
-          height: 500px;
-        }
         @media ${MediaQueries.mobile} {
-          height: 250px;
-        } */
+          height: 300px;
+          width: auto;
+        }
       }
     }
   }
@@ -107,9 +103,9 @@ const Hero = ({ ...props }) => {
             <h2>{props.heading2}</h2>
           </div>
           <div className="hero-img-content">
-            <div>
-              <img src={props.heroImgSrc} alt={props.heroImgAlt} srcset="" />
-            </div>
+            {/* <div> */}
+            <img src={props.heroImgSrc} alt={props.heroImgAlt} srcset="" />
+            {/* </div> */}
           </div>
         </div>
       </HeroContainer>
