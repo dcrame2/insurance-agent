@@ -21,13 +21,14 @@ const InsuranceContainer = styled.section`
   }
 
   .insurance-content {
-    margin: 10%;
+    margin: 10% 0;
     display: flex;
     flex-direction: column;
     max-width: ${Variables.maxWidth};
     align-items: center;
     justify-content: center;
     gap: 10px;
+    text-align: center;
     h2 {
       ${H2Styles}
     }
@@ -41,6 +42,8 @@ const InsuranceContainer = styled.section`
       gap: 20px;
       @media (max-width: 961px) {
         flex-wrap: wrap;
+        justify-content: center;
+        /* align-items: center; */
       }
 
       .icon {
@@ -105,7 +108,8 @@ const InsuranceTypes = () => {
   return (
     <InsuranceContainer>
       <div className="insurance-content">
-        <h2>Need insurance coverage? Request a quote!</h2>
+        <h2>Need insurance coverage? </h2>
+        {/* Request a quote!  */}
         <p>I offer a wide range of insurance coverages all across Illinois</p>
         <div className="insurance-icon-content">
           <OpaqueFilter>
