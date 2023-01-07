@@ -43,6 +43,7 @@ const InsuranceContainer = styled.section`
       @media (max-width: 961px) {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 10px;
         /* align-items: center; */
       }
 
@@ -57,8 +58,9 @@ const InsuranceContainer = styled.section`
         border-radius: 12px;
         @media (max-width: 961px) {
           flex: 1 0 25%;
+
           /* width: 50%; */
-          max-width: 125px;
+          max-width: 155px;
         }
 
         &:hover {
