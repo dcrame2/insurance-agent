@@ -38,6 +38,7 @@ function App() {
       <InsuranceTypes data={InsuranceTypesData} />
       <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
       <FaqModule data={FaqData} />
+      <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
     </>
   );
 }
