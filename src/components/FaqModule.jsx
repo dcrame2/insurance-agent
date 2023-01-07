@@ -82,54 +82,55 @@ const FaqContainer = styled.section`
   }
 `;
 
-const data = {
-  heading: "Frequently Asked Questions",
-  subheading:
-    "If you have a question that you do not see here, please reach out via the contact form",
-  questions: [
-    {
-      question: `How much does ${Variables.companyName} cost?
-        `,
-      answer:
-        "Each businesses goals differ. You must have a conversation with a team member to ensure we align on the scope of your project. We’ve ranged from $1,000 - $20,000.",
-    },
-    {
-      question: "How long does it take for a website to be built?",
-      answer:
-        "This depends on the scope of your project, we’ve been able to complete websites in 2-3 weeks to 4 months. ",
-    },
-    {
-      question: "How easy is it for me to make changes on a website? ",
-      answer: `${Variables.companyName} may provide clients with a Content Management System which allows for easy edits to copy, media etc.`,
-    },
-    {
-      question: "Does your company handle all things related to a website?",
-      answer:
-        "Yes, we handle everything spanning from web design, web development, hosting and content updates.",
-    },
-    {
-      question: "What does the process of your website include? ",
-      answer:
-        "We follow an Agile approach, we will conduct weekly or bi-weekly status updates throughout the entire project to ensure we are aligned throughout the whole process and meeting your goals.",
-    },
-    {
-      question: "Do you work with WordPress?",
-      answer:
-        "Yes, we specialize in WordPress with years of experience. We have worked with some of the most complex themes as well as creating custom themes.",
-    },
-    {
-      question: "Can you make web application or mobile applications?",
-      answer:
-        "Yes, we can create fully custom web applications and mobile applications. These products are a much higher cost to a client due to additional hours commenced.",
-    },
-  ],
-};
+// const data = {
+//   heading: "Frequently Asked Questions",
+//   subheading:
+//     "If you have a question that you do not see here, please reach out via the contact form",
+//   questions: [
+//     {
+//       question: `How much does ${Variables.companyName} cost?
+//         `,
+//       answer:
+//         "Each businesses goals differ. You must have a conversation with a team member to ensure we align on the scope of your project. We’ve ranged from $1,000 - $20,000.",
+//     },
+//     {
+//       question: "How long does it take for a website to be built?",
+//       answer:
+//         "This depends on the scope of your project, we’ve been able to complete websites in 2-3 weeks to 4 months. ",
+//     },
+//     {
+//       question: "How easy is it for me to make changes on a website? ",
+//       answer: `${Variables.companyName} may provide clients with a Content Management System which allows for easy edits to copy, media etc.`,
+//     },
+//     {
+//       question: "Does your company handle all things related to a website?",
+//       answer:
+//         "Yes, we handle everything spanning from web design, web development, hosting and content updates.",
+//     },
+//     {
+//       question: "What does the process of your website include? ",
+//       answer:
+//         "We follow an Agile approach, we will conduct weekly or bi-weekly status updates throughout the entire project to ensure we are aligned throughout the whole process and meeting your goals.",
+//     },
+//     {
+//       question: "Do you work with WordPress?",
+//       answer:
+//         "Yes, we specialize in WordPress with years of experience. We have worked with some of the most complex themes as well as creating custom themes.",
+//     },
+//     {
+//       question: "Can you make web application or mobile applications?",
+//       answer:
+//         "Yes, we can create fully custom web applications and mobile applications. These products are a much higher cost to a client due to additional hours commenced.",
+//     },
+//   ],
+// };
 
-export default function FaqModule({ ...props }) {
+export default function FaqModule({ data }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <FaqContainer id={props.id}>
+    <FaqContainer>
+      {/* id={props.id} */}
       <div className="inner-container">
         <div ref={ref} className="heading-section">
           <h2

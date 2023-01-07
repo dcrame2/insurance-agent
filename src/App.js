@@ -3,7 +3,12 @@ import { useState } from "react";
 import Hero from "./components/Hero";
 import Navigation from "./components/Navigation";
 import InsuranceTypes from "./components/InsuranceTypes";
-import { HomeData, NavigationData, InsuranceTypesData } from "./data/Data";
+import {
+  HomeData,
+  NavigationData,
+  InsuranceTypesData,
+  FaqData,
+} from "./data/Data";
 import FaqModule from "./components/FaqModule";
 import Spacer from "./sub_components/Spacer";
 import { Variables } from "./styles/Variables";
@@ -31,7 +36,7 @@ function App() {
       <Hero data={HomeData} />
       <InsuranceTypes data={InsuranceTypesData} />
       <Spacer color={Variables.black} desktop={258} tablet={120} mobile={100} />
-      <FaqModule />
+      <FaqModule data={FaqData} />
     </section>
   );
 }
