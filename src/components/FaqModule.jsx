@@ -114,8 +114,8 @@ export default function FaqModule({ data }) {
         <h2>Work with me</h2>
         <p>
           My clients are my #1 priority. If you need anything I am here to take
-          care of you throughout the entire process. I under Insurance can be
-          daunting but I will ensure you will understand everything you are
+          care of you throughout the entire process. I understand Insurance can
+          be daunting but I will ensure you will understand everything you are
           purchasing.
         </p>
       </div>
