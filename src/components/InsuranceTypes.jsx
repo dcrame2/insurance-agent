@@ -27,13 +27,13 @@ const InsuranceContainer = styled.section`
     max-width: ${Variables.maxWidth};
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     text-align: center;
     h2 {
       ${H2Styles}
     }
     p {
-      ${PSecondary}
+      ${PBaseStyles}
     }
 
     .insurance-icon-content {
@@ -64,7 +64,7 @@ const InsuranceContainer = styled.section`
         }
 
         &:hover {
-          border: 3px solid ${Variables.black};
+          border: 3px solid ${Variables.white};
         }
 
         img {
@@ -75,6 +75,7 @@ const InsuranceContainer = styled.section`
           color: ${Variables.cfgreen};
         }
         p {
+          ${PBaseStyles}
           text-align: center;
           color: ${Variables.white};
         }
@@ -110,8 +111,7 @@ const InsuranceTypes = () => {
   return (
     <InsuranceContainer>
       <div className="insurance-content">
-        <h2>Need insurance coverage? </h2>
-        {/* Request a quote!  */}
+        <h2>Need insurance coverage? Request a quote!</h2>
         <p>I offer a wide range of insurance coverages all across Illinois</p>
         <div className="insurance-icon-content">
           <OpaqueFilter>
