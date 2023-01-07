@@ -14,7 +14,7 @@ export const H1Styles = css`
   }
 
   @media ${MediaQueries.mobile} {
-    font-size: 4.2rem;
+    font-size: 4rem;
     line-height: 4.4rem;
   }
 `;
