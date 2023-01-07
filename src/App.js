@@ -35,12 +35,7 @@ function App() {
             <Navigation backdrop={navBackdrop} data={NavigationData} />
             <Hero data={HomeData} />
             <InsuranceTypes data={InsuranceTypesData} />
-            <Spacer
-                color={Variables.black}
-                desktop={258}
-                tablet={120}
-                mobile={100}
-            />
+
             <FaqModule data={FaqData} />
         </>
     );

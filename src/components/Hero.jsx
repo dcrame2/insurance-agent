@@ -15,17 +15,18 @@ const HeroContainer = styled.section`
         height: 100%;
         display: flex;
         flex-direction: row;
-        padding-top: 130px;
         gap: 45px;
+        justify-content: space-around;
+
         @media (max-width: 961px) {
             justify-content: center;
             gap: 15px;
-            padding-top: 400px;
             flex-direction: column;
+            align-items: center;
+            padding-top: 10%;
         }
         @media ${MediaQueries.mobile} {
             align-items: left;
-            padding-top: 0px;
             gap: 0;
         }
 
@@ -50,15 +51,18 @@ const HeroContainer = styled.section`
         }
 
         .hero-img-content {
-            max-width: 350px;
+            max-width: 450px;
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: end;
             height: auto;
+
             @media ${MediaQueries.mobile} {
                 align-items: start;
                 justify-content: start;
+                max-width: 385px;
             }
             img {
                 height: auto;

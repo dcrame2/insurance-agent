@@ -14,7 +14,6 @@ const InsuranceContainer = styled.section`
     ${Container}
 
     .insurance-content {
-        margin: 10% 0;
         display: flex;
         flex-direction: column;
         max-width: ${Variables.maxWidth};

@@ -5,10 +5,12 @@ import { useState } from 'react';
 import { FontStyles1, GlassEffect, BlurEffect } from '../styles/Utilities';
 import { MediaQueries } from '../styles/Utilities';
 import Hamburger from '../sub_components/svg/Hamburger';
+import { Container } from '../styles/Utilities';
 
 const Nav = styled.nav`
     position: fixed;
     z-index: 10;
+    width: 100%;
 
     .wrapper {
         position: relative;
@@ -16,6 +18,7 @@ const Nav = styled.nav`
         padding: 28px 64px;
         justify-content: center;
         background: inherit;
+        ${Container}
 
         @media ${MediaQueries.mobile} {
             padding: 28px 24px;
