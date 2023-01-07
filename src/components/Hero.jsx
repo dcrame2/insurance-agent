@@ -62,6 +62,7 @@ const HeroContainer = styled.section`
         width: 100%;
         @media ${Variables.mobile} {
           height: 70%;
+          width: auto;
         }
       }
     }
