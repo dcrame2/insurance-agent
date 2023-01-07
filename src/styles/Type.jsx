@@ -28,7 +28,7 @@ export const H2Styles = css`
   }
 
   @media ${Variables.mobile} {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 `;
 

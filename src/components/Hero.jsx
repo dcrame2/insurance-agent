@@ -54,9 +54,15 @@ const HeroContainer = styled.section`
       flex-direction: column;
       align-items: center;
       justify-content: end;
+      @media ${Variables.mobile} {
+        align-items: start;
+      }
       img {
         height: auto;
         width: 100%;
+        @media ${Variables.mobile} {
+          height: 70%;
+        }
       }
     }
   }
