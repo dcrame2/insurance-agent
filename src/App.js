@@ -4,6 +4,9 @@ import Hero from "./components/Hero";
 import Navigation from "./components/Navigation";
 import InsuranceTypes from "./components/InsuranceTypes";
 import { HomeData, NavigationData, InsuranceTypesData } from "./data/Data";
+import FaqModule from "./components/FaqModule";
+import Spacer from "./sub_components/Spacer";
+import { Variables } from "./styles/Variables";
 
 function App() {
   const [navBackdrop, setNavBackdrop] = useState(false);
@@ -27,6 +30,8 @@ function App() {
       <Navigation backdrop={navBackdrop} data={NavigationData} />
       <Hero data={HomeData} />
       <InsuranceTypes data={InsuranceTypesData} />
+      <Spacer color={Variables.black} desktop={258} tablet={120} mobile={100} />
+      <FaqModule />
     </section>
   );
 }
