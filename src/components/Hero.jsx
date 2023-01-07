@@ -61,7 +61,7 @@ const HeroContainer = styled.section`
         height: auto;
         width: 100%;
         @media ${Variables.mobile} {
-          height: 70%;
+          height: 50%;
           width: auto;
         }
       }
