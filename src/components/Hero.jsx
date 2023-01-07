@@ -24,7 +24,7 @@ const HeroContainer = styled.section`
     }
     @media ${MediaQueries.mobile} {
       align-items: left;
-      padding-top: 275px;
+      padding-top: 300px;
       gap: 0;
     }
 
