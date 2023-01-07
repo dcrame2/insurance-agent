@@ -24,7 +24,7 @@ const HeroContainer = styled.section`
     }
     @media ${MediaQueries.mobile} {
       align-items: left;
-      padding-top: 375px;
+      padding-top: 0px;
       gap: 0;
     }
 
@@ -54,14 +54,16 @@ const HeroContainer = styled.section`
       flex-direction: column;
       align-items: center;
       justify-content: end;
+      height: auto;
       @media ${MediaQueries.mobile} {
         align-items: start;
+        justify-content: start;
       }
       img {
         height: auto;
         width: 100%;
         @media ${MediaQueries.mobile} {
-          height: 50%;
+          height: 300px;
           width: auto;
         }
       }
@@ -101,9 +103,9 @@ const Hero = ({ ...props }) => {
             <h2>{props.heading2}</h2>
           </div>
           <div className="hero-img-content">
-            <div>
-              <img src={props.heroImgSrc} alt={props.heroImgAlt} srcset="" />
-            </div>
+            {/* <div> */}
+            <img src={props.heroImgSrc} alt={props.heroImgAlt} srcset="" />
+            {/* </div> */}
           </div>
         </div>
       </HeroContainer>
