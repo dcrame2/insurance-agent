@@ -8,11 +8,7 @@ import Hamburger from '../sub_components/svg/Hamburger';
 
 const Nav = styled.nav`
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     z-index: 10;
-    position: sticky;
 
     .wrapper {
         position: relative;
