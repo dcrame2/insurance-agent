@@ -87,41 +87,25 @@ const OpaqueFilter = styled.div`
   }
 `;
 
-const InsuranceTypes = () => {
+const InsuranceTypes = ({ data }) => {
   return (
     <InsuranceContainer>
       <div className="insurance-content">
-        <h2>Need insurance coverage? Request a quote!</h2>
-        <p>I offer a wide range of insurance coverages all across Illinois</p>
+        <h2>{data.headings.heading}</h2>
+        <p>{data.headings.subheader}</p>
         <div className="insurance-icon-content">
-          <OpaqueFilter>
-            <div className="icon">
-              <img src="/icons/car_icon.svg" alt="" srcset="" />
-              <p>Car</p>
-            </div>
-          </OpaqueFilter>
-          <OpaqueFilter>
-            <div className="icon">
-              <img src="/icons/life_icon.svg" alt="" srcset="" />
-              <p>Life</p>
-            </div>
-          </OpaqueFilter>
-          <OpaqueFilter>
-            <div className="icon">
-              <img src="/icons/home_icon.svg" alt="Home" srcset="" />
-              <p>Home</p>
-            </div>
-          </OpaqueFilter>
-          <OpaqueFilter>
-            <div className="icon">
-              <img
-                src="/icons/business_icon.svg"
-                alt="Hands shaking for business"
-                srcset=""
-              />
-              <p>Business</p>
-            </div>
-          </OpaqueFilter>
+          {data.insurances.map((insurance, index) => {
+            const { src, alt, name } = insurance;
+            console.log("test");
+            return (
+              <OpaqueFilter>
+                <div key={`insurance-${index}`} className="icon">
+                  <img src={src} alt={alt} />
+                  <p>{name}</p>
+                </div>
+              </OpaqueFilter>
+            );
+          })}
         </div>
       </div>
     </InsuranceContainer>

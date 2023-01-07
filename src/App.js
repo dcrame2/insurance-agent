@@ -3,7 +3,7 @@ import { useState } from "react";
 import Hero from "./components/Hero";
 import Navigation from "./components/Navigation";
 import InsuranceTypes from "./components/InsuranceTypes";
-import { HomeData, NavigationData } from "./data/Data";
+import { HomeData, NavigationData, InsuranceTypesData } from "./data/Data";
 
 function App() {
   const [navBackdrop, setNavBackdrop] = useState(false);
@@ -25,15 +25,8 @@ function App() {
   return (
     <section>
       <Navigation backdrop={navBackdrop} data={NavigationData} />
-      <Hero
-        eyebrow1={HomeData.homeHero.eyebrow1}
-        heading1={HomeData.homeHero.heading1}
-        eyebrow2={HomeData.homeHero.eyebrow2}
-        heading2={HomeData.homeHero.heading2}
-        heroImgSrc={HomeData.homeHero.heroImgSrc}
-        heroImgAlt={HomeData.homeHero.heroImgAlt}
-      />
-      <InsuranceTypes />
+      <Hero data={HomeData} />
+      <InsuranceTypes data={InsuranceTypesData} />
     </section>
   );
 }
