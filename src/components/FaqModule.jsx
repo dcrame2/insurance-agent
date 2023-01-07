@@ -8,18 +8,19 @@ import { useRef } from "react";
 // import Zoom from 'react-reveal/Zoom';
 
 const FaqContainer = styled.section`
-  display: relative;
-  padding-top: 100%;
+  display: flex;
+  padding-top: 100% !important;
   /* background-image: url(${Variables.background1}); */
-
+  ${Container}
   z-index: 1;
 
   height: 100%;
   @media (max-width: 961px) {
-    padding-top: 135%;
+    padding: 135% 0 !important;
+    flex-direction: column;
   }
   @media ${MediaQueries.mobile} {
-    padding-top: 350%;
+    padding-top: 350% !important;
   }
 
   /* Create the parallax scrolling effect */
@@ -30,6 +31,17 @@ const FaqContainer = styled.section`
   @media ${MediaQueries.tablet} {
     background-color: ${Variables.color7};
     background-image: unset;
+  }
+
+  .content-container {
+    text-align: center;
+    padding: 160px 64px 0;
+    h2 {
+      ${H2Styles}
+    }
+    p {
+      ${PSecondary}
+    }
   }
 
   .inner-container {
@@ -82,55 +94,21 @@ const FaqContainer = styled.section`
   }
 `;
 
-// const data = {
-//   heading: "Frequently Asked Questions",
-//   subheading:
-//     "If you have a question that you do not see here, please reach out via the contact form",
-//   questions: [
-//     {
-//       question: `How much does ${Variables.companyName} cost?
-//         `,
-//       answer:
-//         "Each businesses goals differ. You must have a conversation with a team member to ensure we align on the scope of your project. We’ve ranged from $1,000 - $20,000.",
-//     },
-//     {
-//       question: "How long does it take for a website to be built?",
-//       answer:
-//         "This depends on the scope of your project, we’ve been able to complete websites in 2-3 weeks to 4 months. ",
-//     },
-//     {
-//       question: "How easy is it for me to make changes on a website? ",
-//       answer: `${Variables.companyName} may provide clients with a Content Management System which allows for easy edits to copy, media etc.`,
-//     },
-//     {
-//       question: "Does your company handle all things related to a website?",
-//       answer:
-//         "Yes, we handle everything spanning from web design, web development, hosting and content updates.",
-//     },
-//     {
-//       question: "What does the process of your website include? ",
-//       answer:
-//         "We follow an Agile approach, we will conduct weekly or bi-weekly status updates throughout the entire project to ensure we are aligned throughout the whole process and meeting your goals.",
-//     },
-//     {
-//       question: "Do you work with WordPress?",
-//       answer:
-//         "Yes, we specialize in WordPress with years of experience. We have worked with some of the most complex themes as well as creating custom themes.",
-//     },
-//     {
-//       question: "Can you make web application or mobile applications?",
-//       answer:
-//         "Yes, we can create fully custom web applications and mobile applications. These products are a much higher cost to a client due to additional hours commenced.",
-//     },
-//   ],
-// };
-
 export default function FaqModule({ data }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
     <FaqContainer>
       {/* id={props.id} */}
+      <div className="content-container">
+        <h2>Work with me</h2>
+        <p>
+          My clients are my #1 priority. If you need anything I am here to take
+          care of you throughout the entire process. I under Insurance can be
+          daunting but I will ensure you will understand everything you are
+          purchasing.
+        </p>
+      </div>
       <div className="inner-container">
         <div ref={ref} className="heading-section">
           <h2
