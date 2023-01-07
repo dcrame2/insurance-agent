@@ -35,7 +35,17 @@ const FaqContainer = styled.section`
 
   .content-container {
     text-align: center;
-    padding: 160px 64px 0;
+    padding: 160px 24px 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    @media ${MediaQueries.mobile} {
+      padding: 160px 24px;
+      background-color: ${Variables.white};
+      color: ${Variables.black};
+      justify-content: center;
+      align-items: center;
+    }
     h2 {
       ${H2Styles}
     }
