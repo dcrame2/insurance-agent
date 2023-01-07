@@ -66,7 +66,6 @@ const HeroContainer = styled.section`
             }
             img {
                 height: auto;
-                width: 100%;
                 @media ${MediaQueries.mobile} {
                     height: 300px;
                     width: auto;
