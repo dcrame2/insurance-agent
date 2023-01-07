@@ -92,20 +92,21 @@ const OpaqueFilter = styled.div`
   }
 `;
 
-const Hero = ({ ...props }) => {
+const Hero = ({ data }) => {
   return (
     <OpaqueFilter>
       <HeroContainer>
         <div className="hero-inner-container">
           <div className="hero-content">
-            <p>{props.eyebrow1}</p>
-            <h1>{props.heading1}</h1>
-            <h2>{props.heading2}</h2>
+            <p>{data.homeHero.eyebrow1}</p>
+            <h1>{data.homeHero.heading1}</h1>
+            <h2>{data.homeHero.heading2}</h2>
           </div>
           <div className="hero-img-content">
-            {/* <div> */}
-            <img src={props.heroImgSrc} alt={props.heroImgAlt} srcset="" />
-            {/* </div> */}
+            <img
+              src={data.homeHero.heroImgSrc}
+              alt={data.homeHero.heroImgAlt}
+            />
           </div>
         </div>
       </HeroContainer>

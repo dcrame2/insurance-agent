@@ -13,7 +13,7 @@ const IndicatorSvg = styled.svg`
 
     polyline {
         stroke: ${(props) =>
-            props.color ? props.color : `${Variables.color10}`};
+            props.color ? props.color : `${Variables.white}`};
         stroke-width: 9;
         fill: none;
         stroke-linecap: round;

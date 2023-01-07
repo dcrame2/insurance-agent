@@ -1,9 +1,17 @@
-import './global.css';
-import { useState } from 'react';
-import Hero from './components/Hero';
-import Navigation from './components/Navigation';
-import InsuranceTypes from './components/InsuranceTypes';
-import { HomeData, NavigationData } from './data/Data';
+import "./global.css";
+import { useState } from "react";
+import Hero from "./components/Hero";
+import Navigation from "./components/Navigation";
+import InsuranceTypes from "./components/InsuranceTypes";
+import {
+  HomeData,
+  NavigationData,
+  InsuranceTypesData,
+  FaqData,
+} from "./data/Data";
+import FaqModule from "./components/FaqModule";
+import Spacer from "./sub_components/Spacer";
+import { Variables } from "./styles/Variables";
 
 function App() {
     const [navBackdrop, setNavBackdrop] = useState(false);
@@ -21,21 +29,16 @@ function App() {
         };
     };
 
-    scrollListener();
-    return (
-        <section>
-            <Navigation backdrop={navBackdrop} data={NavigationData} />
-            <Hero
-                eyebrow1={HomeData.homeHero.eyebrow1}
-                heading1={HomeData.homeHero.heading1}
-                eyebrow2={HomeData.homeHero.eyebrow2}
-                heading2={HomeData.homeHero.heading2}
-                heroImgSrc={HomeData.homeHero.heroImgSrc}
-                heroImgAlt={HomeData.homeHero.heroImgAlt}
-            />
-            <InsuranceTypes />
-        </section>
-    );
+  scrollListener();
+  return (
+    <section>
+      <Navigation backdrop={navBackdrop} data={NavigationData} />
+      <Hero data={HomeData} />
+      <InsuranceTypes data={InsuranceTypesData} />
+      <Spacer color={Variables.black} desktop={258} tablet={120} mobile={100} />
+      <FaqModule data={FaqData} />
+    </section>
+  );
 }
 
 export default App;

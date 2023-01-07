@@ -21,14 +21,14 @@ export const H1Styles = css`
 
 export const H2Styles = css`
   font-family: ${Variables.ubuntu};
-  font-size: 4rem;
+  font-size: 5rem;
 
   @media ${MediaQueries.tablet} {
     font-size: 3.5rem;
   }
 
   @media ${MediaQueries.mobile} {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
 `;
 
@@ -44,7 +44,7 @@ export const H4Styles = css`
 
 export const PBaseStyles = css`
   font-family: ${Variables.ubuntu};
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 3.3rem;
   color: ${Variables.white};
 
