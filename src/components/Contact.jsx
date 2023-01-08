@@ -28,15 +28,17 @@ const Section = styled.section`
       gap: 170px;
       justify-content: center;
       align-items: center;
+      border-radius: 40px;
+      border: solid 1px ${Variables.cfgreen};
       @media ${MediaQueries.tablet} {
         padding: 50px 20px;
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 20px;
 
         border: solid 1px ${Variables.cfgreen};
         background-color: unset;
         background: transparent;
-        border-radius: 15px;
+        border-radius: 40px;
         box-shadow: 1px 1px 10px 2px ${Variables.color2};
         -webkit-box-shadow: 1px 1px 10px 2px ${Variables.color2};
         -moz-box-shadow: 1px 1px 10px 2px ${Variables.color2};
@@ -102,13 +104,13 @@ const Section = styled.section`
         background: transparent;
         border-radius: 40px;
         padding: 50px;
-        border: solid 1px ${Variables.cfgreen};
-        box-shadow: 1px 1px 10px 2px ${Variables.color2};
+        /* border: solid 1px ${Variables.cfgreen}; */
+        /* box-shadow: 1px 1px 10px 2px ${Variables.color2};
         -webkit-box-shadow: 1px 1px 10px 2px ${Variables.color2};
         -moz-box-shadow: 1px 1px 10px 2px ${Variables.color2};
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, */
+        /* rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
 
         @keyframes shake {
           0% {
@@ -229,9 +231,9 @@ const OpaqueFilter = styled.div`
 `;
 
 const data = {
-  title: "Contact",
+  title: "Location",
   desc: "Need a website? Talk with a team member for a FREE consultation on the goals of your wesbite.",
-  title2: "Talk with our team!",
+  title2: "Contact me for a quote",
 };
 const Contact = () => {
   const [fnameValue, setFnameValue] = useState("");
@@ -298,101 +300,110 @@ const Contact = () => {
   return (
     <Section id="contact">
       <div className="ContactInnerContainer">
-        {/* <OpaqueFilter> */}
-        <div className="form-wrapper">
-          <div ref={ref} className="form-info">
-            <h2
-              style={{
-                transform: isInView ? "none" : "translateY(-200px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-              }}
-            >
-              {data.title}
-            </h2>
-            <p>{data.desc}</p>
-            <img
-              src="businessman-working-on-laptop.png"
-              alt="businessman working on laptop"
-            />
-          </div>
-
-          {successValue ? (
-            <div className="success-container">
-              <h4>{successMessage} A team member will be reaching out.</h4>
-              <img
-                src="hands/Purple-in-Jumper10.png"
-                alt="Shaking hands to initiate partnership"
-                srcset=""
-              />
+        <OpaqueFilter>
+          <div className="form-wrapper">
+            {successValue ? (
+              <div className="success-container">
+                <h4>{successMessage} A team member will be reaching out.</h4>
+                <img
+                  src="hands/Purple-in-Jumper10.png"
+                  alt="Shaking hands to initiate partnership"
+                  srcset=""
+                />
+              </div>
+            ) : (
+              <form onSubmit={OnSubmit}>
+                {/* action="https://formsubmit.co/dcrame2@gmail.com" */}
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value={`New ${Variables.companyName} Submission!`}
+                />
+                <input
+                  type="hidden"
+                  name="_autoresponse"
+                  value={`Thank you from ${Variables.companyName}`}
+                ></input>
+                <input type="hidden" name="_cc" value="jtully97@gmail.com" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table"></input>
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="http://www.thedigitaldelight.com"
+                ></input>
+                <h3>{data.title2}</h3>
+                <div>
+                  <label htmlFor="firstname">First Name*</label>
+                  <input
+                    onChange={FNameHandler}
+                    type="text"
+                    name="firstname"
+                    id="firstname"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="lastname">Last Name*</label>
+                  <input
+                    onChange={LNameHandler}
+                    type="text"
+                    name="lastname"
+                    id="lastname"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email">Email Address*</label>
+                  <input
+                    onChange={EmailHandler}
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message">Message*</label>
+                  <textarea
+                    onChange={MessageHandler}
+                    type="text"
+                    name="message"
+                    id="message"
+                    required
+                  />
+                </div>
+                <Button ariaLabel="Submit form" text="Submit"></Button>
+              </form>
+            )}
+            <div ref={ref} className="form-info">
+              <h2
+                style={{
+                  transform: isInView ? "none" : "translateY(-200px)",
+                  opacity: isInView ? 1 : 0,
+                  transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                }}
+              >
+                {data.title}
+              </h2>
+              <p>{data.desc}</p>
+              {/* <div style="width: 100%"> */}
+              <iframe
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=1761%20N%20Dilleys%20Rd%20Suites%20208,%20Gurnee,%20IL%2060031+(Michael%20Moulis%20-%20COUNTRY%20Financial)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                width="100%"
+                height="400"
+                frameborder="0"
+              >
+                <a href="https://www.maps.ie/distance-area-calculator.html">
+                  area maps
+                </a>
+              </iframe>
             </div>
-          ) : (
-            <form onSubmit={OnSubmit}>
-              {/* action="https://formsubmit.co/dcrame2@gmail.com" */}
-              <input
-                type="hidden"
-                name="_subject"
-                value={`New ${Variables.companyName} Submission!`}
-              />
-              <input
-                type="hidden"
-                name="_autoresponse"
-                value={`Thank you from ${Variables.companyName}`}
-              ></input>
-              <input type="hidden" name="_cc" value="jtully97@gmail.com" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="table"></input>
-              <input
-                type="hidden"
-                name="_next"
-                value="http://www.thedigitaldelight.com"
-              ></input>
-              <h3>{data.title2}</h3>
-              <div>
-                <label htmlFor="firstname">First Name*</label>
-                <input
-                  onChange={FNameHandler}
-                  type="text"
-                  name="firstname"
-                  id="firstname"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="lastname">Last Name*</label>
-                <input
-                  onChange={LNameHandler}
-                  type="text"
-                  name="lastname"
-                  id="lastname"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email">Email Address*</label>
-                <input
-                  onChange={EmailHandler}
-                  type="email"
-                  name="email"
-                  id="email"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="message">Message*</label>
-                <textarea
-                  onChange={MessageHandler}
-                  type="text"
-                  name="message"
-                  id="message"
-                  required
-                />
-              </div>
-              <Button ariaLabel="Submit form" text="Submit"></Button>
-            </form>
-          )}
-        </div>
-        {/* </OpaqueFilter> */}
+          </div>
+        </OpaqueFilter>
       </div>
     </Section>
   );
