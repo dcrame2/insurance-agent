@@ -25,7 +25,7 @@ const Section = styled.section`
     .form-wrapper {
       display: flex;
       flex-direction: row;
-      gap: 170px;
+      gap: 30px;
       justify-content: center;
       align-items: center;
       border-radius: 40px;
