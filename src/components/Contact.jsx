@@ -58,6 +58,7 @@ const Section = styled.section`
           margin-bottom: 20px;
           width: 100%;
         }
+
         img {
           width: 500px;
           height: 500px;
@@ -79,14 +80,27 @@ const Section = styled.section`
             text-align: center;
           }
         }
-        p {
-          ${PSecondary}
-          color: ${Variables.white};
-          line-height: 25px;
-          margin-right: 5%;
-          @media ${MediaQueries.tablet} {
-            text-align: center;
-            margin-right: unset;
+        .location-container {
+          display: flex;
+          flex-wrap: wrap;
+          /* flex: 1 1 auto; */
+          gap: 20px;
+
+          .location-inner-container {
+            max-width: 45%;
+            width: 100%;
+            flex: 1 1 auto;
+            p {
+              text-align: left;
+              ${PSecondary}
+              color: ${Variables.white};
+              line-height: 25px;
+              margin-right: 5%;
+              @media ${MediaQueries.tablet} {
+                /* text-align: center; */
+                margin-right: unset;
+              }
+            }
           }
         }
       }
@@ -225,12 +239,7 @@ const OpaqueFilter = styled.div`
   }
 `;
 
-const data = {
-  title: "Location",
-  desc: "Need a website? Talk with a team member for a FREE consultation on the goals of your wesbite.",
-  title2: "Contact me for a quote",
-};
-const Contact = () => {
+const Contact = ({ data }) => {
   const [fnameValue, setFnameValue] = useState("");
   const [lnameValue, setLnameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
@@ -381,7 +390,27 @@ const Contact = () => {
               >
                 {data.title}
               </h2>
-              <p>{data.desc}</p>
+              <div className="location-container">
+                <div className="location-inner-container">
+                  <p>Street Address:</p>
+                  <p>{data.streetAddress}</p>
+                </div>
+                <div className="location-inner-container">
+                  <p>Office Phone:</p>
+                  <p>{data.numberInfo.mobileNumber}</p>
+                </div>
+                <div className="location-inner-container">
+                  <p>Office Hours:</p>
+                  <p>{data.officeHours.days}</p>
+                  <p>{data.officeHours.hours}</p>
+                </div>
+                <div className="location-inner-container">
+                  <p>Social Media:</p>
+                  {data.socialMedia.socials.map((social) => {
+                    return <p>{social.name}</p>;
+                  })}
+                </div>
+              </div>
               {/* <div style="width: 100%"> */}
               <iframe
                 scrolling="no"

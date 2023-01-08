@@ -88,6 +88,27 @@ export const FaqData = {
   ],
 };
 
+export const ContactFormData = {
+  title: "Location",
+  desc: "Need a website? Talk with a team member for a FREE consultation on the goals of your wesbite.",
+  title2: "Contact me for a quote",
+  streetAddress: "900 Technology Way Suite 280 Libertyville, IL 60048 ",
+  numberInfo: {
+    tel: "+8475488591",
+    mobileNumber: "(847)-548-8591",
+  },
+  officeHours: {
+    days: "Monday - Saturday",
+    hours: "8:00 AM - 6:00 PM",
+  },
+  socialMedia: {
+    socials: [
+      { name: "facebook", link: "#", icon: "", alt: "facebook icon" },
+      { name: "linkedin", link: "#", icon: "", alt: "linkedin icon" },
+    ],
+  },
+};
+
 export const FooterData = {
   resources: {
     heading: "Resources",
