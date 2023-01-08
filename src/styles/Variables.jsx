@@ -25,6 +25,6 @@ export const Variables = {
   ubuntu: "Ubuntu, sans-serif",
 
   companyName: "Country Financial",
-
+  logo1Url: "images/cflogo.png",
   background: "/Images/texture_background.jpg",
 };

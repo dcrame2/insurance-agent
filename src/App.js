@@ -10,6 +10,7 @@ import {
   NavigationData,
   InsuranceTypesData,
   FaqData,
+  FooterData,
 } from "./data/Data";
 import FaqModule from "./components/FaqModule";
 import Spacer from "./sub_components/Spacer";
@@ -41,8 +42,7 @@ function App() {
       <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
       <FaqModule data={FaqData} />
       <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
-
-      <Footer />
+      <Footer data={FooterData} />
     </>
   );
 }
