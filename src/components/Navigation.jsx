@@ -11,6 +11,8 @@ const Nav = styled.nav`
     position: fixed;
     z-index: 10;
     width: 100%;
+    background-color: ${Variables.$darkGray};
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.3);
 
     .wrapper {
         position: relative;
@@ -35,7 +37,7 @@ const Nav = styled.nav`
             ${BlurEffect}
         }
 
-        &.active::before {
+        /* &.active::before {
             background: inherit;
             top: 0;
             transition: all ease-out 0.2s;
@@ -47,7 +49,7 @@ const Nav = styled.nav`
             background: inherit;
             height: 100vh;
             top: 0;
-        }
+        } */
 
         ul {
             list-style: none;
@@ -61,11 +63,12 @@ const Nav = styled.nav`
                 align-items: center;
 
                 &.logo {
-                    max-width: 315px;
+                    max-width: 285px;
                     width: 100%;
 
                     @media ${MediaQueries.tablet} {
                         margin-right: 48px;
+                        max-width: 240px;
                     }
 
                     img {
@@ -85,6 +88,8 @@ const Nav = styled.nav`
                         transition: height ease 0.3s;
                         overflow: hidden;
                         transition: height ease 0.3s;
+                        background-color: ${Variables.$darkGray};
+                        z-index: -1;
 
                         &.active {
                             height: 100vh;
