@@ -17,7 +17,7 @@ const FaqContainer = styled.section`
   background-position: center;
   background-size: cover;
   @media ${MediaQueries.tablet} {
-    background-color: ${Variables.color7};
+    /* background-color: ${Variables.color7}; */
     background-image: unset;
   }
 
@@ -25,7 +25,8 @@ const FaqContainer = styled.section`
     display: flex;
     gap: 15%;
     ${Container}
-    @media ${MediaQueries.mobile} {
+
+    @media (max-width: 961px) {
       flex-direction: column;
       gap: 20px;
     }
@@ -37,9 +38,10 @@ const FaqContainer = styled.section`
       flex-direction: column;
       max-width: 500px;
 
-      @media ${MediaQueries.mobile} {
+      @media (max-width: 961px) {
         justify-content: center;
         align-items: center;
+        margin: auto;
       }
       h2 {
         ${H2Styles}
