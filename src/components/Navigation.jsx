@@ -20,10 +20,6 @@ const Nav = styled.nav`
         background: inherit;
         ${Container}
 
-        @media ${MediaQueries.mobile} {
-            padding: 28px 24px;
-        }
-
         &::before {
             background: inherit;
             content: '';

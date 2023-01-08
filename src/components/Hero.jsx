@@ -5,8 +5,9 @@ import { Variables } from '../styles/Variables';
 import { Container, MediaQueries } from '../styles/Utilities';
 import { GlassEffect } from '../styles/Utilities';
 
+const customTablet = '900px';
+
 const HeroContainer = styled.section`
-    width: 100vw;
     height: 100vh;
     position: relative;
 
@@ -18,16 +19,19 @@ const HeroContainer = styled.section`
         gap: 45px;
         justify-content: space-around;
 
-        @media (max-width: 961px) {
-            justify-content: center;
+        @media (max-width: ${customTablet}) {
+            justify-content: space-between;
             gap: 15px;
             flex-direction: column;
             align-items: center;
-            padding-top: 10%;
+            padding-top: 150px;
         }
+
         @media ${MediaQueries.mobile} {
             align-items: left;
             gap: 0;
+            justify-content: center;
+            gap: 25px;
         }
 
         .hero-content {
@@ -59,16 +63,16 @@ const HeroContainer = styled.section`
             justify-content: end;
             height: auto;
 
-            @media ${MediaQueries.mobile} {
-                align-items: start;
-                justify-content: start;
-                max-width: 385px;
+            @media (max-width: ${customTablet}) {
+                max-width: unset;
+                overflow: auto;
             }
+
             img {
                 height: auto;
-                @media ${MediaQueries.mobile} {
-                    height: 300px;
-                    width: auto;
+
+                @media (max-width: ${customTablet}) {
+                    height: 100%;
                 }
             }
         }
