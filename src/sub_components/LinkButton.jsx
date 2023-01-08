@@ -37,11 +37,16 @@ const CustomLink = styled.a`
         content: '';
         background-color: ${Variables.cfgreen};
         position: absolute;
-        width: 100%;
+        width: 0%;
         height: 0;
+        position: absolute;
         left: 0;
+        right: 0;
+        top: 0;
         bottom: 0;
-        transition: height ease-in 0.35s;
+        margin: auto;
+        border-radius: 20px;
+        transition: all ease 0.2s;
         z-index: 0;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
             rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
@@ -51,8 +56,9 @@ const CustomLink = styled.a`
     &:hover,
     :focus {
         &:after {
-            height: 100%;
-            transition: height ease-out 0.1s;
+            height: 180%;
+            width: 100%;
+            transition: all ease 0.2s;
         }
     }
     @keyframes focusAnimation {
