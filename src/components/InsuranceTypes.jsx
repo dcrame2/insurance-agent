@@ -39,6 +39,7 @@ const InsuranceContainer = styled.section`
       .icon {
         z-index: 1;
         max-width: 200px;
+        width: 100%;
         height: auto;
         border: 3px solid ${Variables.cfgreen};
         padding: 20px;
@@ -53,9 +54,12 @@ const InsuranceContainer = styled.section`
         img {
           position: relative;
           z-index: 2;
-          width: 100%;
+          width: 150px;
           height: auto;
           color: ${Variables.cfgreen};
+          @media (max-width: 961px) {
+            width: 100px;
+          }
         }
         p {
           ${PBaseStyles}
