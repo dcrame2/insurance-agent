@@ -53,6 +53,12 @@ export const InsuranceTypesData = {
 };
 
 export const FaqData = {
+  headers: {
+    heading: "Work with me",
+    subheader:
+      "My clients are my #1 priority. If you need anything I am here to take care of you throughout the entire process. I understand Insurance can be daunting but I will ensure you will understand everything you are purchasing.",
+  },
+
   questions: [
     {
       question: `How do I get a quote?

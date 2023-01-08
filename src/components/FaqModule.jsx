@@ -70,13 +70,8 @@ export default function FaqModule({ data }) {
       {/* id={props.id} */}
       <div className="faq-inner-container">
         <div className="content-container">
-          <h2>Work with me</h2>
-          <p>
-            My clients are my #1 priority. If you need anything I am here to
-            take care of you throughout the entire process. I understand
-            Insurance can be daunting but I will ensure you will understand
-            everything you are purchasing.
-          </p>
+          <h2>{data.headers.heading}</h2>
+          <p>{data.headers.subheader}</p>
         </div>
         <div className="faq-drop-container">
           <div className="dropdown-container">
