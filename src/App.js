@@ -3,6 +3,8 @@ import { useState } from "react";
 import Hero from "./components/Hero";
 import Navigation from "./components/Navigation";
 import InsuranceTypes from "./components/InsuranceTypes";
+
+import Footer from "./components/Footer";
 import {
   HomeData,
   NavigationData,
@@ -39,6 +41,8 @@ function App() {
       <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
       <FaqModule data={FaqData} />
       <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
+
+      <Footer />
     </>
   );
 }

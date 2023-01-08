@@ -26,11 +26,9 @@ const FaqContainer = styled.section`
     gap: 15%;
     ${Container}
     @media ${MediaQueries.mobile} {
-        flex-direction: column;
-        gap: 20px;
+      flex-direction: column;
+      gap: 20px;
     }
-
-}
 
     .content-container {
       text-align: center;
