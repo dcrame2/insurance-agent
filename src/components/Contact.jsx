@@ -219,10 +219,8 @@ const OpaqueFilter = styled.div`
   );
   border-radius: 40px;
   z-index: 1;
-
   @media ${MediaQueries.tablet} {
     width: 100%;
-
     ${GlassEffect}
   }
 `;
