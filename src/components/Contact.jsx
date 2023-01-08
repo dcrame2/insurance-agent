@@ -34,11 +34,9 @@ const Section = styled.section`
         padding: 50px 20px;
         flex-direction: column-reverse;
         gap: 20px;
-
         border: solid 1px ${Variables.cfgreen};
         background-color: unset;
         background: transparent;
-        border-radius: 40px;
         box-shadow: 1px 1px 10px 2px ${Variables.color2};
         -webkit-box-shadow: 1px 1px 10px 2px ${Variables.color2};
         -moz-box-shadow: 1px 1px 10px 2px ${Variables.color2};
@@ -47,7 +45,6 @@ const Section = styled.section`
           rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
       }
       @media ${MediaQueries.mobile} {
-        border-radius: 30px;
         padding: 40px 20px;
       }
 
