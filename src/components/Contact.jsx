@@ -52,7 +52,9 @@ const Section = styled.section`
         display: flex;
         flex-direction: column;
         gap: 10px;
-        margin-bottom: 50px;
+        /* margin-bottom: 50px; */
+        margin: 50px;
+        /* margin-top: 50px; */
         width: 40%;
         @media ${MediaQueries.tablet} {
           margin-bottom: 20px;
