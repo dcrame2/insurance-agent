@@ -24,7 +24,7 @@ import BusinessInsurance from "./pages/BusinessInsurance";
 import HomeInsurance from "./pages/HomeInsurance";
 import LifeInsurance from "./pages/LifeInsurance";
 import CarInsurance from "./pages/CarInsurance";
-
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   const [navBackdrop, setNavBackdrop] = useState(false);
   const [scrollY, setScrollY] = useState();
@@ -45,6 +45,7 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Navigation backdrop={navBackdrop} data={NavigationData} />
         <Routes>
           <Route path="/" element={<Home />} />
