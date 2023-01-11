@@ -55,33 +55,10 @@ const CustomButton = styled.button`
             transition: height ease-out 0.1s;
         }
     }
-    @keyframes focusAnimation {
-        0% {
-            height: 90%;
-        }
-        10% {
-            height: 82%;
-        }
-        20% {
-            height: 75%;
-        }
-        30% {
-            height: 98%;
-        }
-        40% {
-            height: 79%;
-        }
-        50% {
-            height: 85%;
-        }
-        60% {
-            height: 98%;
-        }
-    }
+
     &:focus {
         &:after {
             transition: height ease 0.4s;
-            animation: focusAnimation 1s infinite;
             animation-fill-mode: forwards;
         }
     }
