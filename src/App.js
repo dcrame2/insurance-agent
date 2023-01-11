@@ -18,7 +18,10 @@ import Spacer from "./sub_components/Spacer";
 import { Variables } from "./styles/Variables";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-
+import BusinessInsurance from "./pages/BusinessInsurance";
+import HomeInsurance from "./pages/HomeInsurance";
+import LifeInsurance from "./pages/LifeInsurance";
+import CarInsurance from "./pages/CarInsurance";
 function App() {
   const [navBackdrop, setNavBackdrop] = useState(false);
   const [scrollY, setScrollY] = useState();
@@ -42,11 +45,10 @@ function App() {
         <Navigation backdrop={navBackdrop} data={NavigationData} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route
-            path="/insurance"
-            element={<InsuranceTypes data={InsuranceTypesData} />}
-          />
-          <Route path="/contact" element={<Contact data={ContactFormData} />} />
+          <Route path="/car-insurance" element={<CarInsurance />} />
+          <Route path="/life-insurance" element={<LifeInsurance />} />
+          <Route path="/home-insurance" element={<HomeInsurance />} />
+          <Route path="/business-insurance" element={<BusinessInsurance />} />
         </Routes>
         <Footer data={FooterData} />
       </Router>
