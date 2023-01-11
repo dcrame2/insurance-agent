@@ -49,6 +49,7 @@ function App() {
           <Route path="/life-insurance" element={<LifeInsurance />} />
           <Route path="/home-insurance" element={<HomeInsurance />} />
           <Route path="/business-insurance" element={<BusinessInsurance />} />
+          <Route path="/contact" element={<Contact data={ContactFormData} />} />
         </Routes>
         <Footer data={FooterData} />
       </Router>
