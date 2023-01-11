@@ -9,5 +9,9 @@ const CarouselInnerContainer = styled.div`
 `;
 
 export default function Carousel({ ...props }) {
-    return <div>Carousel</div>;
+    return (
+        <CarouselContainer>
+            <CarouselInnerContainer></CarouselInnerContainer>
+        </CarouselContainer>
+    );
 }
