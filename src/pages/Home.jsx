@@ -6,7 +6,7 @@ import FaqModule from "../components/FaqModule";
 import {
   HomeData,
   InsuranceTypesData,
-  FaqData,
+  HomePageFaqData,
   ContactFormData,
 } from "../data/Data";
 import Spacer from "../sub_components/Spacer";
@@ -19,7 +19,7 @@ const Home = () => {
       <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
       <InsuranceTypes data={InsuranceTypesData} />
       <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
-      <FaqModule data={FaqData} />
+      <FaqModule {...HomePageFaqData} />
       <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
       <Contact data={ContactFormData} />
       <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />

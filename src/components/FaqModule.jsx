@@ -64,7 +64,7 @@ const FaqContainer = styled.section`
   }
 `;
 
-export default function FaqModule({ data }) {
+export default function FaqModule({ ...props }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
@@ -72,12 +72,12 @@ export default function FaqModule({ data }) {
       {/* id={props.id} */}
       <div className="faq-inner-container">
         <div className="content-container">
-          <h2>{data.headers.heading}</h2>
-          <p>{data.headers.subheader}</p>
+          <h2>{props.headers.heading}</h2>
+          <p>{props.headers.subheader}</p>
         </div>
         <div className="faq-drop-container">
           <div className="dropdown-container">
-            {data.questions.map((faq, index) => {
+            {props.questions.map((faq, index) => {
               return (
                 // <Zoom key={`zoom-${index}`}>
                 <Dropdown
