@@ -5,7 +5,6 @@ import { Container, MediaQueries } from "../styles/Utilities";
 import { H2Styles, PBaseStyles, PSecondary } from "../styles/Type";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-// import Zoom from 'react-reveal/Zoom';
 
 const FaqContainer = styled.section`
   position: relative;
@@ -17,7 +16,6 @@ const FaqContainer = styled.section`
   background-position: center;
   background-size: cover;
   @media ${MediaQueries.tablet} {
-    /* background-color: ${Variables.color7}; */
     background-image: unset;
   }
 

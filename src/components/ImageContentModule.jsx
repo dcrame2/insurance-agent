@@ -31,7 +31,7 @@ const ICMContainer = styled.section`
 
         img {
             background-color: ${Variables.black};
-            max-width: 440px;
+            max-width: 400px;
             /* width: 40%; */
             width: 100%;
             height: auto;
