@@ -33,21 +33,25 @@ export const InsuranceTypesData = {
       src: "/icons/car_icon.svg",
       alt: "Car",
       name: "Car",
+      url: "/car-insurance",
     },
     {
       src: "/icons/life_icon.svg",
       alt: "Life",
       name: "Life",
+      url: "/life-insurance",
     },
     {
       src: "/icons/home_icon.svg",
       alt: "Home",
       name: "Home",
+      url: "/home-insurance",
     },
     {
       src: "/icons/business_icon.svg",
       alt: "Hands shaking for business",
       name: "Business",
+      url: "/business-insurance",
     },
   ],
 };

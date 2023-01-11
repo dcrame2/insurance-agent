@@ -5,6 +5,7 @@ import { Variables } from "../styles/Variables";
 import { H2Styles, PBaseStyles, PSecondary } from "../styles/Type";
 import { GlassEffect } from "../styles/Utilities";
 import { MediaQueries } from "../styles/Utilities";
+import { Link } from "react-router-dom";
 
 const InsuranceContainer = styled.section`
   height: auto;
@@ -93,13 +94,15 @@ const InsuranceTypes = ({ data }) => {
         <p>{data.headings.subheader}</p>
         <div className="insurance-icon-content">
           {data.insurances.map((insurance, index) => {
-            const { src, alt, name } = insurance;
+            const { src, alt, name, url } = insurance;
             return (
               <OpaqueFilter>
-                <div key={`insurance-${index}`} className="icon">
-                  <img src={src} alt={alt} />
-                  <p>{name}</p>
-                </div>
+                <Link to={url}>
+                  <div key={`insurance-${index}`} className="icon">
+                    <img src={src} alt={alt} />
+                    <p>{name}</p>
+                  </div>
+                </Link>
               </OpaqueFilter>
             );
           })}
