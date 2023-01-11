@@ -6,6 +6,7 @@ import { FontStyles1, GlassEffect, BlurEffect } from '../styles/Utilities';
 import { MediaQueries } from '../styles/Utilities';
 import Hamburger from '../sub_components/svg/Hamburger';
 import { Container } from '../styles/Utilities';
+import { NavLink } from 'react-router-dom';
 
 const Nav = styled.nav`
     position: fixed;
@@ -259,8 +260,8 @@ export default function Navigation({ backdrop, data }) {
                                                 className='underline'
                                                 key={`textLink${index}`}
                                             >
-                                                <a
-                                                    href={`${link.url}`}
+                                                <NavLink
+                                                    to={`${link.url}`}
                                                     target={
                                                         link.target
                                                             ? '_blank'
@@ -268,7 +269,7 @@ export default function Navigation({ backdrop, data }) {
                                                     }
                                                 >
                                                     {link.text}
-                                                </a>
+                                                </NavLink>
                                             </li>
                                         );
                                     })}

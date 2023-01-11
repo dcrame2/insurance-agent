@@ -3,12 +3,12 @@ import { Variables } from "../styles/Variables";
 export const NavigationData = {
   logo: { src: "/images/cflogo.png", alt: "logo" },
   links: [
-    { url: "#", text: "Insurance", external: false },
-    { url: "#", text: "Reviews", external: false },
-    { url: "#", text: "FAQ", external: false },
-    { url: "#", text: "lorem", external: false },
+    { url: "/car-insurance", text: "Car", external: false },
+    { url: "/life-insurance", text: "Life", external: false },
+    { url: "/home-insurance", text: "Home", external: false },
+    { url: "/business-insurance", text: "Business", external: false },
   ],
-  button: { url: "#", text: "contact", label: "jump to contact form" },
+  button: { url: "/contact", text: "contact", label: "jump to contact form" },
 };
 
 export const HomeData = {
@@ -33,21 +33,25 @@ export const InsuranceTypesData = {
       src: "/icons/car_icon.svg",
       alt: "Car",
       name: "Car",
+      url: "/car-insurance",
     },
     {
       src: "/icons/life_icon.svg",
       alt: "Life",
       name: "Life",
+      url: "/life-insurance",
     },
     {
       src: "/icons/home_icon.svg",
       alt: "Home",
       name: "Home",
+      url: "/home-insurance",
     },
     {
       src: "/icons/business_icon.svg",
       alt: "Hands shaking for business",
       name: "Business",
+      url: "/business-insurance",
     },
   ],
 };
