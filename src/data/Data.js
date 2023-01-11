@@ -3,10 +3,10 @@ import { Variables } from "../styles/Variables";
 export const NavigationData = {
   logo: { src: "/images/cflogo.png", alt: "logo" },
   links: [
-    { url: "#", text: "Insurance", external: false },
-    { url: "#", text: "Reviews", external: false },
-    { url: "#", text: "FAQ", external: false },
-    { url: "#", text: "lorem", external: false },
+    { url: "/insurance", text: "Insurance", external: false },
+    { url: "/", text: "Reviews", external: false },
+    { url: "/faq", text: "FAQ", external: false },
+    { url: "/lorem", text: "lorem", external: false },
   ],
   button: { url: "#", text: "contact", label: "jump to contact form" },
 };

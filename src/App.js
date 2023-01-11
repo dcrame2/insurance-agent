@@ -16,6 +16,8 @@ import {
 import FaqModule from "./components/FaqModule";
 import Spacer from "./sub_components/Spacer";
 import { Variables } from "./styles/Variables";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   const [navBackdrop, setNavBackdrop] = useState(false);
@@ -36,16 +38,18 @@ function App() {
   scrollListener();
   return (
     <>
-      <Navigation backdrop={navBackdrop} data={NavigationData} />
-      <Hero data={HomeData} />
-      <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
-      <InsuranceTypes data={InsuranceTypesData} />
-      <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
-      <FaqModule data={FaqData} />
-      <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
-      <Contact data={ContactFormData} />
-      <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
-      <Footer data={FooterData} />
+      <Router>
+        <Navigation backdrop={navBackdrop} data={NavigationData} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/insurance"
+            element={<InsuranceTypes data={InsuranceTypesData} />}
+          />
+          <Route path="/contact" element={<Contact data={ContactFormData} />} />
+        </Routes>
+        <Footer data={FooterData} />
+      </Router>
     </>
   );
 }
