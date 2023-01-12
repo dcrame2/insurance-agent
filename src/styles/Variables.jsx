@@ -14,9 +14,9 @@ export const Variables = {
   // colors
   // When swapping leave note of what the color looks like
   // used in button link styling
-  cfgreen: "#007a3e", // green
+  //   cfgreen: "#007a3e", // green
 
-  //   cfgreen: "#ff0000", // state farm testing
+  cfgreen: "#00ffee", // state farm testing
   color2: "#3d3935", // dark gray
   black: "black",
   white: "#ffff",
