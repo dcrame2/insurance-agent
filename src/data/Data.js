@@ -113,6 +113,11 @@ export const ContactFormData = {
   },
 };
 
+export const ContactBarData = {
+  header: "Contact me for more information!",
+  button: { url: "/contact", text: "contact", label: "jump to contact form" },
+};
+
 export const FooterData = {
   resources: {
     heading: "Resources",
