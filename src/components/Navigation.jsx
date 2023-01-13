@@ -123,7 +123,7 @@ const Nav = styled.nav`
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background-color: ${Variables.color16};
+                background-color: ${Variables.primaryColor};
                 opacity: 0.35;
               }
             }
@@ -164,7 +164,7 @@ const Nav = styled.nav`
                       width: 0%;
                       transition: width ease 0.3s;
                       bottom: 0px;
-                      background-color: ${Variables.white};
+                      background-color: ${Variables.primaryColor};
                     }
                     &:hover,
                     focus {
