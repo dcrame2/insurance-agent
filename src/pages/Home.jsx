@@ -30,6 +30,7 @@ const Home = () => {
                 mobile={100}
             />
             <Spacer
+                shadowToggle='true'
                 color={Variables.primaryColor2}
                 desktop={64}
                 tablet={120}
@@ -37,6 +38,7 @@ const Home = () => {
             />
             <FaqModule {...HomePageFaqData} />
             <Spacer
+                shadowToggle='true'
                 color={Variables.primaryColor2}
                 desktop={64}
                 tablet={120}
