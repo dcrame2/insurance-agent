@@ -9,7 +9,7 @@ const ContactBarContainer = styled.section`
   height: auto;
   width: 100%;
   padding: 150px;
-  background-color: ${Variables.$darkGray};
+  background-color: ${Variables.secondaryColor};
   @media ${MediaQueries.mobile} {
     padding: 50px;
   }

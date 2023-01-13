@@ -15,8 +15,20 @@ const BusinessInsurance = () => {
     <>
       <ImageContentModule {...BusinessInsuranceICMData} />
       <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
+      <Spacer
+        color={Variables.primaryColor2}
+        desktop={244}
+        tablet={120}
+        mobile={100}
+      />
       <FaqModule {...BusinessInsuranceFaqData} />
-      <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
+      <Spacer
+        color={Variables.primaryColor2}
+        desktop={244}
+        tablet={120}
+        mobile={100}
+      />
+
       <ContactBarModule data={ContactBarData} />
     </>
   );
