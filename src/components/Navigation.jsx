@@ -161,7 +161,7 @@ const Nav = styled.nav`
                                         height: 3px;
                                         width: 0%;
                                         transition: width ease 0.3s;
-                                        bottom: 0px;
+                                        bottom: -4px;
                                         background-color: ${Variables.primaryColor};
                                     }
                                     &:hover,
@@ -238,7 +238,7 @@ export default function Navigation({ backdrop, data }) {
             >
                 <ul>
                     <li className='logo'>
-                        <NavLink exact href='/'>
+                        <NavLink exact to='/'>
                             <img src={data.logo.src} alt={data.logo.alt}></img>
                         </NavLink>
                     </li>
