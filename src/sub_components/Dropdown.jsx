@@ -8,7 +8,8 @@ import { GlassEffect } from "../styles/Utilities";
 const Container = styled.div`
   display: relative;
   /* border-bottom: 2px solid ${Variables.primaryColor}; */
-  border: 2px solid ${Variables.primaryColor};
+  background-color: ${Variables.secondaryColor};
+  border-bottom: 2px solid ${Variables.primaryColor};
   border-radius: 12px;
   height: auto;
   padding: 0 10px;
