@@ -12,7 +12,6 @@ const Nav = styled.nav`
     position: relative;
     z-index: 10;
     width: 100%;
-    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.3);
 
     .wrapper {
         position: relative;

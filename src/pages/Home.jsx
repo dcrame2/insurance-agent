@@ -29,10 +29,16 @@ const Home = () => {
                 tablet={120}
                 mobile={100}
             />
+            <Spacer
+                color={Variables.primaryColor2}
+                desktop={64}
+                tablet={120}
+                mobile={100}
+            />
             <FaqModule {...HomePageFaqData} />
             <Spacer
-                color={Variables.black}
-                desktop={244}
+                color={Variables.primaryColor2}
+                desktop={64}
                 tablet={120}
                 mobile={100}
             />

@@ -10,6 +10,7 @@ const customTablet = '900px';
 const HeroContainer = styled.section`
     height: 100vh;
     position: relative;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.3);
 
     .hero-inner-container {
         ${Container}

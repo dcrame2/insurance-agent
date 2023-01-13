@@ -15,6 +15,7 @@ export const Variables = {
     // When swapping leave note of what the color looks like
     // used in button link styling
     primaryColor: '#E91152',
+    primaryColor2: '#181818',
     secondaryColor: '#333333',
     black: 'black',
     white: '#ffff',
