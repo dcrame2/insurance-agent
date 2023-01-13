@@ -14,9 +14,9 @@ export const Variables = {
   // colors
   // When swapping leave note of what the color looks like
   // used in button link styling
-  //   cfgreen: "#007a3e", // green
+  cfgreen: "#007a3e", // green
 
-  cfgreen: "#00ffee", // state farm testing
+  //   cfgreen: "#D65A31", // state farm testing
   color2: "#3d3935", // dark gray
   black: "black",
   white: "#ffff",
@@ -28,5 +28,8 @@ export const Variables = {
 
   companyName: "Country Financial",
   logo1Url: "images/cflogo.png",
+  logoWhite: "logos/logo-white.png",
+  logoBlack: "logos/logo-black.png",
+  logoGreen: "logos/logo-green.png",
   background: "/Images/texture_background.jpg",
 };

@@ -137,7 +137,7 @@ export default function Footer({ data }) {
       <OpaqueFilter>
         <FooterInner>
           <img
-            src={Variables.logo1Url}
+            src={Variables.logoWhite}
             alt={`${Variables.companyName} logo`}
           ></img>
           <ul>

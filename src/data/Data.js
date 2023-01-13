@@ -1,7 +1,7 @@
 import { Variables } from "../styles/Variables";
 
 export const NavigationData = {
-  logo: { src: "/images/cflogo.png", alt: "logo" },
+  logo: { src: `${Variables.logoWhite}`, alt: "logo" },
   links: [
     { url: "/car-insurance", text: "Car", external: false },
     { url: "/life-insurance", text: "Life", external: false },
@@ -126,8 +126,8 @@ export const FooterData = {
     heading: "Email",
     links: [
       {
-        href: "mailto:michaelmoulis@countryfinanical.com",
-        text: "michaelmoulis@countryfinanical.com",
+        href: "mailto:mike.moulis@countryfinanical.com",
+        text: "mike.moulis@countryfinanical.com",
       },
     ],
   },
