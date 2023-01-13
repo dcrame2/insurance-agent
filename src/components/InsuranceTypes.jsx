@@ -22,6 +22,7 @@ const InsuranceContainer = styled.section`
         justify-content: center;
         gap: 15px;
         text-align: center;
+
         h2 {
             ${H2Styles}
             margin-bottom: 8px;
@@ -37,11 +38,19 @@ const InsuranceContainer = styled.section`
         }
         .insurance-icon-content {
             display: grid;
-            grid-auto-flow: column;
+            grid-template-columns: repeat(4, 1fr);
             gap: 28px;
+            max-width: 900px;
+            width: 100%;
 
-            @media (max-width: 961px) {
-                gap: 20px;
+            @media ${MediaQueries.tablet} {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 500px;
+            }
+
+            @media ${MediaQueries.mobile} {
+                grid-template-columns: 1fr;
+                max-width: 250px;
             }
 
             a {
@@ -49,38 +58,30 @@ const InsuranceContainer = styled.section`
                 border: 3px solid ${Variables.primaryColor};
                 transition: all ease 0.2s;
 
-                &:hover {
+                &:hover,
+                &:focus {
                     border: 3px solid ${Variables.white};
                     border-radius: 25px;
                 }
-            }
 
-            .icon {
-                z-index: 1;
-                max-width: 200px;
-                width: 100%;
-                height: auto;
-                padding: 20px;
+                .icon {
+                    z-index: 1;
 
-                @media (max-width: 961px) {
-                    flex: 1 0 25%;
-                    max-width: 155px;
-                }
-
-                img {
-                    position: relative;
-                    z-index: 2;
-                    width: 150px;
                     height: auto;
-                    color: ${Variables.primaryColor};
-                    @media (max-width: 961px) {
-                        width: 100px;
+                    padding: 20px;
+
+                    img {
+                        position: relative;
+                        z-index: 2;
+                        width: 100%;
+                        height: auto;
+                        color: ${Variables.primaryColor};
                     }
-                }
-                p {
-                    ${PBaseStyles}
-                    text-align: center;
-                    color: ${Variables.white};
+                    h3 {
+                        ${PBaseStyles}
+                        text-align: center;
+                        color: ${Variables.white};
+                    }
                 }
             }
         }
@@ -121,7 +122,7 @@ const InsuranceTypes = ({ data }) => {
                                     className='icon'
                                 >
                                     <img src={src} alt={alt} />
-                                    <p>{name}</p>
+                                    <h3>{name}</h3>
                                 </div>
                             </Link>
                             // </OpaqueFilter>
