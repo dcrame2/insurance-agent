@@ -15,8 +15,19 @@ const HomeInsurance = () => {
     <>
       <ImageContentModule {...HomeInsuranceICMData} />
       <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
+      <Spacer
+        color={Variables.primaryColor2}
+        desktop={244}
+        tablet={120}
+        mobile={100}
+      />
       <FaqModule {...HomeInsuranceFaqData} />
-      <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
+      <Spacer
+        color={Variables.primaryColor2}
+        desktop={244}
+        tablet={120}
+        mobile={100}
+      />
       <ContactBarModule data={ContactBarData} />
     </>
   );
