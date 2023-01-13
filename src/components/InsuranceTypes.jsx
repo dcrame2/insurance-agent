@@ -25,19 +25,23 @@ const InsuranceContainer = styled.section`
         h2 {
             ${H2Styles}
             margin-bottom: 8px;
+
+            span {
+                color: ${Variables.primaryColor};
+                white-space: nowrap;
+            }
         }
         p {
             ${PBaseStyles}
-            margin-bottom: 12px;
+            margin-bottom: 42px;
         }
         .insurance-icon-content {
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
+            display: grid;
+            grid-auto-flow: column;
+            gap: 28px;
+
             @media (max-width: 961px) {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 10px;
+                gap: 20px;
             }
 
             a {
@@ -101,7 +105,10 @@ const InsuranceTypes = ({ data }) => {
     return (
         <InsuranceContainer>
             <div className='insurance-content'>
-                <h2>{data.headings.heading}</h2>
+                <h2>
+                    {data.headings.heading}{' '}
+                    <span>{data.headings.headingColor}</span>
+                </h2>
                 <p>{data.headings.subheader}</p>
                 <div className='insurance-icon-content'>
                     {data.insurances.map((insurance, index) => {
