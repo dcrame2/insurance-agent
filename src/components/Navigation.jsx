@@ -9,10 +9,9 @@ import { Container } from '../styles/Utilities';
 import { NavLink } from 'react-router-dom';
 
 const Nav = styled.nav`
-    position: fixed;
+    position: relative;
     z-index: 10;
     width: 100%;
-    background-color: ${Variables.$darkGray};
     box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.3);
 
     .wrapper {
@@ -35,7 +34,6 @@ const Nav = styled.nav`
             transition: all ease-in 0.2s;
             max-height: 125px;
             height: 100%;
-            ${BlurEffect}
         }
 
         &.active::before {
