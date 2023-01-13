@@ -35,7 +35,7 @@ const CustomButton = styled.button`
 
     &:after {
         content: '';
-        background-color: ${Variables.color2};
+        background-color: ${Variables.secondaryColor};
         position: absolute;
         width: 100%;
         height: 0;

@@ -37,9 +37,9 @@ const Section = styled.section`
                 border: solid 1px ${Variables.primaryColor};
                 background-color: unset;
                 background: transparent;
-                box-shadow: 1px 1px 10px 2px ${Variables.color2};
-                -webkit-box-shadow: 1px 1px 10px 2px ${Variables.color2};
-                -moz-box-shadow: 1px 1px 10px 2px ${Variables.color2};
+                box-shadow: 1px 1px 10px 2px ${Variables.secondaryColor};
+                -webkit-box-shadow: 1px 1px 10px 2px ${Variables.secondaryColor};
+                -moz-box-shadow: 1px 1px 10px 2px ${Variables.secondaryColor};
                 box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
                     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
                     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -118,9 +118,9 @@ const Section = styled.section`
                 border-radius: 40px;
                 padding: 50px;
                 /* border: solid 1px ${Variables.primaryColor}; */
-                /* box-shadow: 1px 1px 10px 2px ${Variables.color2};
-        -webkit-box-shadow: 1px 1px 10px 2px ${Variables.color2};
-        -moz-box-shadow: 1px 1px 10px 2px ${Variables.color2};
+                /* box-shadow: 1px 1px 10px 2px ${Variables.secondaryColor};
+        -webkit-box-shadow: 1px 1px 10px 2px ${Variables.secondaryColor};
+        -moz-box-shadow: 1px 1px 10px 2px ${Variables.secondaryColor};
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, */
                 /* rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
           rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
