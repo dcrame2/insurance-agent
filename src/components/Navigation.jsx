@@ -123,7 +123,7 @@ const Nav = styled.nav`
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background-color: ${Variables.primaryColor};
+                background-color: ${Variables.black};
                 opacity: 0.35;
               }
             }
