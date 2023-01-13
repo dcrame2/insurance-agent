@@ -97,7 +97,7 @@ export const HomePageFaqData = {
 export const ContactFormData = {
   title: "Location",
   desc: "Need a website? Talk with a team member for a FREE consultation on the goals of your wesbite.",
-  title2: "Contact me for a quote",
+  title2: "Contact ",
   streetAddress: "900 Technology Way Suite 280 Libertyville, IL 60048 ",
   numberInfo: {
     tel: "+8475488591",
