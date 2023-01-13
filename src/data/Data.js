@@ -25,7 +25,8 @@ export const HomeData = {
 
 export const InsuranceTypesData = {
   headings: {
-    heading: "Need insurance coverage? Request a quote!",
+    heading: "Need insurance coverage? ",
+    headingColor: 'Request a quote!',
     subheader:
       "I offer a wide range of insurance coverages all across Illinois",
   },
