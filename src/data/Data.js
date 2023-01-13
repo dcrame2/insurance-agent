@@ -15,7 +15,7 @@ export const HomeData = {
   homeHero: {
     eyebrow1: "Your favorite insurance agent",
     heading1: "Mike",
-    heading1Color: 'Moulis',
+    heading1Color: "Moulis",
     eyebrow2: "Supported by",
     heading2: `${Variables.companyName}`,
     heroImgSrc: "/images/agent-nobg.png",
@@ -26,7 +26,7 @@ export const HomeData = {
 export const InsuranceTypesData = {
   headings: {
     heading: "Need insurance coverage? ",
-    headingColor: 'Request a quote!',
+    headingColor: "Request a quote!",
     subheader:
       "I offer a wide range of insurance coverages all across Illinois",
   },
@@ -154,9 +154,8 @@ export const HomeInsuranceICMData = {
 
 export const HomeInsuranceFaqData = {
   headers: {
-    heading: "Work with me",
-    subheader:
-      "My clients are my #1 priority. If you need anything I am here to take care of you throughout the entire process. I understand Insurance can be daunting but I will ensure you will understand everything you are purchasing.",
+    heading: "Home Insurance FAQs",
+    subheader: "",
   },
 
   questions: [
@@ -202,36 +201,29 @@ export const CarInsuranceICMData = {
 
 export const CarInsuranceFaqData = {
   headers: {
-    heading: "Work with me",
-    subheader:
-      "My clients are my #1 priority. If you need anything I am here to take care of you throughout the entire process. I understand Insurance can be daunting but I will ensure you will understand everything you are purchasing.",
+    heading: "Car Insurance FAQs",
+    subheader: "",
   },
 
   questions: [
     {
-      question: `How do I get a quote?
+      question: `How does car insurance work?
         `,
       answer:
-        "You can request a detailed estimate for car or home insurance online. For other products, submit an online form, call 866-COUNTRY (866-268-6879) or contact your local rep to get a quote.",
+        "In general, you pay your insurance company and in return, you get protection for damages caused to, or with, your car. Car insurance also protects you from accidents caused by other drivers with little or no insurance. That protection is outlined in your auto insurance policy.",
     },
     {
-      question: "Who’s there to support me?",
+      question: "What are my coverage options?",
       answer:
-        "Your local rep is there to help with anything you need, along with our client support center, which can be reached at 866-COUNTRY (866-268-6879). You can also pay your bill, start a claim, print an insurance card and more through your online account or our mobile app.",
+        "We offer car insurance coverage with several additional features, so you can customize your protection to your needs. Our coverages page gives you an idea of the types of protection an auto policy can provide.",
     },
     {
-      question: "Will I be pressured to purchase over the phone?",
-      answer: `No one likes feeling pressured over the phone to purchase products. Reach out to your local rep directly or call us at 866-COUNTRY (866-268-6879) to start the conversation on your terms.`,
+      question: "How can I save on car insurance?",
+      answer: `You could save money with a home and auto insurance bundle. Purchase another policy (like life or home) to get an insurance discount.`,
     },
     {
-      question: "Why do you talk about insurance and investment products?",
-      answer:
-        "Protection and planning go hand in hand. Insurance products protect your current and future assets, which includes your financial goals. We’re here to help with both.",
-    },
-    {
-      question: "How does your insurance claims process work?",
-      answer:
-        "When you file a claim, the unknown can be the hardest part. We work hard to make the process as easy as possible. To get started, file your claim through your online account, our mobile app or by calling 866-COUNTRY (866-268-6879). After that, a claim rep will reach out to explain your options, answer any questions and review your policy. Your claim rep is your main point of contact throughout the process, but your local rep is always there for support.",
+      question: "What do I need to know about auto insurance claims?",
+      answer: "We’re with you every step of the way.",
     },
   ],
 };
@@ -250,36 +242,30 @@ export const LifeInsuranceICMData = {
 
 export const LifeInsuranceFaqData = {
   headers: {
-    heading: "Work with me",
-    subheader:
-      "My clients are my #1 priority. If you need anything I am here to take care of you throughout the entire process. I understand Insurance can be daunting but I will ensure you will understand everything you are purchasing.",
+    heading: "Life Insurance FAQs",
+    subheader: "",
   },
 
   questions: [
     {
-      question: `How do I get a quote?
+      question: `How does life insurance work?
         `,
       answer:
-        "You can request a detailed estimate for car or home insurance online. For other products, submit an online form, call 866-COUNTRY (866-268-6879) or contact your local rep to get a quote.",
+        "In general, you pay your insurance company a premium and in return, get financial protection for your beneficiaries if you were to die during the term specified in your policy. You can choose between term life insurance (coverage for a specific amount of time) or permanent life insurance (lifetime coverage). ",
     },
     {
-      question: "Who’s there to support me?",
+      question: "How do I know if I need term or permanent life insurance?",
       answer:
-        "Your local rep is there to help with anything you need, along with our client support center, which can be reached at 866-COUNTRY (866-268-6879). You can also pay your bill, start a claim, print an insurance card and more through your online account or our mobile app.",
+        "It depends on your situation. An easy way to think about the difference is to compare them to the idea of renting or owning a home. Term life insurance would be 'renting' and permanent life insurance would be 'owning.'",
     },
     {
-      question: "Will I be pressured to purchase over the phone?",
-      answer: `No one likes feeling pressured over the phone to purchase products. Reach out to your local rep directly or call us at 866-COUNTRY (866-268-6879) to start the conversation on your terms.`,
+      question: "How much life insurance do I need?",
+      answer: `The amount of life insurance you need depends on several things, like the number of children you have, your mortgage, income and more.`,
     },
     {
-      question: "Why do you talk about insurance and investment products?",
+      question: "What types of life insurance are there?",
       answer:
-        "Protection and planning go hand in hand. Insurance products protect your current and future assets, which includes your financial goals. We’re here to help with both.",
-    },
-    {
-      question: "How does your insurance claims process work?",
-      answer:
-        "When you file a claim, the unknown can be the hardest part. We work hard to make the process as easy as possible. To get started, file your claim through your online account, our mobile app or by calling 866-COUNTRY (866-268-6879). After that, a claim rep will reach out to explain your options, answer any questions and review your policy. Your claim rep is your main point of contact throughout the process, but your local rep is always there for support.",
+        "The three most popular types of life insurance are term, whole and universal. Term life provides protection for a specified period of time (like 10, 20 or 30 years) and is typically very affordable when you’re younger. Whole life and universal life policies provide permanent coverage as long as premiums are paid. They typically have higher premiums than term life but also build cash value that can help with things like providing emergency funds or an estate for your family later in life.",
     },
   ],
 };
@@ -298,9 +284,8 @@ export const BusinessInsuranceICMData = {
 
 export const BusinessInsuranceFaqData = {
   headers: {
-    heading: "Work with me",
-    subheader:
-      "My clients are my #1 priority. If you need anything I am here to take care of you throughout the entire process. I understand Insurance can be daunting but I will ensure you will understand everything you are purchasing.",
+    heading: "Business Insurance FAQs",
+    subheader: "",
   },
 
   questions: [
