@@ -5,7 +5,7 @@ import { Variables } from '../../styles/Variables';
 const Svg = styled.svg`
     polyline {
         stroke-width: 8;
-        stroke: ${Variables.cfgreen};
+        stroke: ${Variables.primaryColor};
     }
 `;
 
@@ -23,48 +23,46 @@ export default function Hamburger(props) {
         //     />
         // </Svg>
 
-
-
-  <Svg
-    fill={`${Variables.white}`}
-    stroke={`${Variables.white}`}
-    id="Layer_1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
-    width="100%"
-    height="100%"
-    viewBox="0 0 512 512"
-    enableBackground="new 0 0 512 512"
-    xmlSpace="preserve"
-    {...props}
-  >
-    <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z" />
-    <g>
-      <rect
-        x={151.5}
-        y={184.5}
-        fillRule="evenodd"
-        clipRule="evenodd"
-        width={192}
-        height={32}
-      />
-      <rect
-        x={151.5}
-        y={248.5}
-        fillRule="evenodd"
-        clipRule="evenodd"
-        width={192}
-        height={32}
-      />
-      <rect
-        x={151.5}
-        y={312.5}
-        fillRule="evenodd"
-        clipRule="evenodd"
-        width={192}
-        height={32}
-      />
-    </g>
-  </Svg>
+        <Svg
+            fill={`${Variables.white}`}
+            stroke={`${Variables.white}`}
+            id='Layer_1'
+            xmlns='http://www.w3.org/2000/svg'
+            xmlnsXlink='http://www.w3.org/1999/xlink'
+            width='100%'
+            height='100%'
+            viewBox='0 0 512 512'
+            enableBackground='new 0 0 512 512'
+            xmlSpace='preserve'
+            {...props}
+        >
+            <path d='M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z' />
+            <g>
+                <rect
+                    x={151.5}
+                    y={184.5}
+                    fillRule='evenodd'
+                    clipRule='evenodd'
+                    width={192}
+                    height={32}
+                />
+                <rect
+                    x={151.5}
+                    y={248.5}
+                    fillRule='evenodd'
+                    clipRule='evenodd'
+                    width={192}
+                    height={32}
+                />
+                <rect
+                    x={151.5}
+                    y={312.5}
+                    fillRule='evenodd'
+                    clipRule='evenodd'
+                    width={192}
+                    height={32}
+                />
+            </g>
+        </Svg>
     );
 }

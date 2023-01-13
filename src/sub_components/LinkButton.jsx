@@ -35,7 +35,7 @@ const CustomLinkStylingWrapper = styled.div`
 
         &:after {
             content: '';
-            background-color: ${Variables.cfgreen};
+            background-color: ${Variables.primaryColor};
             position: absolute;
             width: 0%;
             height: 0;

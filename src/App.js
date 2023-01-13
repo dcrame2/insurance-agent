@@ -42,6 +42,7 @@ function App() {
   };
 
   scrollListener();
+  
   return (
     <>
       <Router>

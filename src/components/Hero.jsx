@@ -42,6 +42,10 @@ const HeroContainer = styled.section`
             h1 {
                 text-transform: uppercase;
                 ${H1Styles}
+
+                span {
+                    color: ${Variables.primaryColor};
+                }
             }
             p {
                 ${PSecondary}
@@ -79,45 +83,25 @@ const HeroContainer = styled.section`
     }
 `;
 
-const OpaqueFilter = styled.div`
-    background: linear-gradient(
-        180deg,
-        ${Variables.cfgreen} 0%,
-        rgba(125, 125, 125, 0) 95%,
-        rgba(255, 255, 255, 0) 100%
-    );
-    opacity: 0.8;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
-
-    @media ${MediaQueries.tablet} {
-        width: 100%;
-
-        ${GlassEffect}
-    }
-`;
-
 const Hero = ({ data }) => {
     return (
         <HeroContainer>
-            <OpaqueFilter>
-                <div className='hero-inner-container'>
-                    <div className='hero-content'>
-                        <p>{data.homeHero.eyebrow1}</p>
-                        <h1>{data.homeHero.heading1}</h1>
-                        <h2>{data.homeHero.heading2}</h2>
-                    </div>
-                    <div className='hero-img-content'>
-                        <img
-                            src={data.homeHero.heroImgSrc}
-                            alt={data.homeHero.heroImgAlt}
-                        />
-                    </div>
+            <div className='hero-inner-container'>
+                <div className='hero-content'>
+                    <p>{data.homeHero.eyebrow1}</p>
+                    <h1>
+                        {data.homeHero.heading1}{' '}
+                        <span>{data.homeHero.heading1Color}</span>
+                    </h1>
+                    <h2>{data.homeHero.heading2}</h2>
                 </div>
-            </OpaqueFilter>
+                <div className='hero-img-content'>
+                    <img
+                        src={data.homeHero.heroImgSrc}
+                        alt={data.homeHero.heroImgAlt}
+                    />
+                </div>
+            </div>
         </HeroContainer>
     );
 };

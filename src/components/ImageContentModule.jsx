@@ -36,9 +36,9 @@ const ICMContainer = styled.section`
             width: 100%;
             height: auto;
             border-radius: 15px;
-            box-shadow: 1px 1px 10px 2px ${Variables.cfgreen};
-            -webkit-box-shadow: 1px 1px 10px 2px ${Variables.cfgreen};
-            -moz-box-shadow: 1px 1px 10px 2px ${Variables.cfgreen};
+            box-shadow: 1px 1px 10px 2px ${Variables.primaryColor};
+            -webkit-box-shadow: 1px 1px 10px 2px ${Variables.primaryColor};
+            -moz-box-shadow: 1px 1px 10px 2px ${Variables.primaryColor};
 
             /* @media ${MediaQueries.mobile} {
         width: 100%;
@@ -82,7 +82,10 @@ export default function ImageContentModule({ ...props }) {
     }
 
     return (
-        <ICMContainer id={props.contentModule.id} imgPlacement={props.imgPlacement}>
+        <ICMContainer
+            id={props.contentModule.id}
+            imgPlacement={props.imgPlacement}
+        >
             <div className='ICMInnerContainer' ref={ref}>
                 <img
                     src={props.contentModule.src}
