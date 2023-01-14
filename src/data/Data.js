@@ -194,7 +194,7 @@ export const CarInsuranceICMData = {
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, earum!",
     id: "carInsurance",
-    src: "/icons/Car_icon.svg",
+    src: "/images/car.jpeg",
     alt: "car insurance",
   },
 };

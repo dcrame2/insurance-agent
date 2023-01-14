@@ -13,7 +13,7 @@ import ContactBarModule from "../components/ContactBarModule";
 const BusinessInsurance = () => {
   return (
     <>
-      <ImageContentModule {...BusinessInsuranceICMData} />
+      <ImageContentModule imgPlacement="right" {...BusinessInsuranceICMData} />
       <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
       <Spacer
         color={Variables.primaryColor2}

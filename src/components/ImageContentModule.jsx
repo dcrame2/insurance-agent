@@ -36,10 +36,10 @@ const ICMContainer = styled.section`
       /* width: 40%; */
       width: 100%;
       height: auto;
-      border-radius: 15px;
-      box-shadow: 1px 1px 10px 2px ${Variables.primaryColor};
+      /* border-radius: 15px; */
+      /* box-shadow: 1px 1px 10px 2px ${Variables.primaryColor};
       -webkit-box-shadow: 1px 1px 10px 2px ${Variables.primaryColor};
-      -moz-box-shadow: 1px 1px 10px 2px ${Variables.primaryColor};
+      -moz-box-shadow: 1px 1px 10px 2px ${Variables.primaryColor}; */
 
       /* @media ${MediaQueries.mobile} {
         width: 100%;
