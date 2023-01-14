@@ -7,35 +7,42 @@ import { motion, useInView } from "framer-motion";
 import React, { useRef } from "react";
 
 const ICMContainer = styled.section`
-  padding-top: 150px;
+  /* padding-top: 150px; */
   position: relative;
   width: 100%;
   background-color: ${Variables.black};
+  display: flex;
+  justify-content: end;
+  @media ${MediaQueries.tablet} {
+    justify-content: center;
+  }
 
   .ICMInnerContainer {
-    ${Container}
+    /* ${Container} */
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     gap: 85px;
-    max-width: 1300px;
+    /* max-width: 1300px; */
 
     @media ${MediaQueries.tablet} {
-      flex-direction: column-reverse;
-      gap: 48px;
+      flex-direction: column;
+      justify-content: unset;
+      gap: unset;
     }
 
     @media ${MediaQueries.mobile} {
-      gap: 42px;
+      /* gap: 42px; */
     }
 
     img {
       background-color: ${Variables.black};
-      max-width: 400px;
+      max-width: 100vh;
       margin-bottom: 10px;
       /* width: 40%; */
       width: 100%;
-      height: auto;
+      height: 100vh;
       /* border-radius: 15px; */
       /* box-shadow: 1px 1px 10px 2px ${Variables.primaryColor};
       -webkit-box-shadow: 1px 1px 10px 2px ${Variables.primaryColor};
@@ -45,11 +52,23 @@ const ICMContainer = styled.section`
         width: 100%;
         height: 200px;
       } */
+      @media ${MediaQueries.tablet} {
+        height: 60vh;
+        max-width: unset;
+      }
+      @media ${MediaQueries.mobile} {
+        height: 40vh;
+        /* max-width: unset; */
+      }
     }
 
     .content {
       max-width: 460px;
-
+      /* position: absolute;
+      left: 50%; */
+      @media ${MediaQueries.tablet} {
+        text-align: center;
+      }
       h2 {
         ${H2Styles};
         text-transform: uppercase;
