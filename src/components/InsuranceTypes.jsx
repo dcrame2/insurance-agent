@@ -5,7 +5,7 @@ import { Variables } from '../styles/Variables';
 import { H2Styles, PBaseStyles, PSecondary } from '../styles/Type';
 import { GlassEffect } from '../styles/Utilities';
 import { MediaQueries } from '../styles/Utilities';
-import { Link } from 'react-router-dom';
+import Card from '../sub_components/Card';
 
 const InsuranceContainer = styled.section`
     height: auto;
@@ -21,27 +21,37 @@ const InsuranceContainer = styled.section`
         justify-content: center;
         gap: 15px;
         text-align: center;
+        overflow: visible;
         ${Container}
 
-        h2 {
-            ${H2Styles}
-            margin-bottom: 8px;
+        .heading-content {
+            margin-bottom: 42px;
 
-            span {
-                color: ${Variables.primaryColor};
-                white-space: nowrap;
+            @media ${MediaQueries.tablet} {
+                max-width: 472px;
+            }
+
+            h2 {
+                ${H2Styles}
+                margin-bottom: 8px;
+
+                span {
+                    color: ${Variables.primaryColor};
+                    white-space: nowrap;
+                }
+            }
+            p {
+                ${PBaseStyles}
             }
         }
-        p {
-            ${PBaseStyles}
-            margin-bottom: 42px;
-        }
+
         .insurance-icon-content {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 28px;
             max-width: 900px;
             width: 100%;
+            overflow: visible;
 
             @media ${MediaQueries.tablet} {
                 grid-template-columns: repeat(2, 1fr);
@@ -54,35 +64,6 @@ const InsuranceContainer = styled.section`
             }
 
             a {
-                background-color: ${Variables.primaryColor2};
-                border: 3px solid ${Variables.primaryColor};
-                transition: all ease 0.2s;
-
-                &:hover,
-                &:focus {
-                    border: 3px solid ${Variables.white};
-                    border-radius: 25px;
-                }
-
-                .icon {
-                    z-index: 1;
-
-                    height: auto;
-                    padding: 20px;
-
-                    img {
-                        position: relative;
-                        z-index: 2;
-                        width: 100%;
-                        height: auto;
-                        color: ${Variables.primaryColor};
-                    }
-                    h3 {
-                        ${PBaseStyles}
-                        text-align: center;
-                        color: ${Variables.white};
-                    }
-                }
             }
         }
     }
@@ -106,26 +87,25 @@ const InsuranceTypes = ({ data }) => {
     return (
         <InsuranceContainer>
             <div className='insurance-content'>
-                <h2>
-                    {data.headings.heading}{' '}
-                    <span>{data.headings.headingColor}</span>
-                </h2>
-                <p>{data.headings.subheader}</p>
+                <div className='heading-content'>
+                    <h2>
+                        {data.headings.heading}
+                        <span>{data.headings.headingColor}</span>
+                    </h2>
+                    <p>{data.headings.subheader}</p>
+                </div>
                 <div className='insurance-icon-content'>
                     {data.insurances.map((insurance, index) => {
                         const { src, alt, name, url } = insurance;
+
                         return (
-                            // <OpaqueFilter>
-                            <Link to={url}>
-                                <div
-                                    key={`insurance-${index}`}
-                                    className='icon'
-                                >
-                                    <img src={src} alt={alt} />
-                                    <h3>{name}</h3>
-                                </div>
-                            </Link>
-                            // </OpaqueFilter>
+                            <Card
+                                to={url}
+                                imgSrc={src}
+                                imgAlt={alt}
+                                heading={name}
+                                index={index}
+                            />
                         );
                     })}
                 </div>
