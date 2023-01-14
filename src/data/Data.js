@@ -194,7 +194,7 @@ export const CarInsuranceICMData = {
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, earum!",
     id: "carInsurance",
-    src: "/images/car.jpeg",
+    src: "/images/car.jpg",
     alt: "car insurance",
   },
 };
@@ -277,7 +277,7 @@ export const BusinessInsuranceICMData = {
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, earum!",
     id: "businessInsurance",
-    src: "/images/business.jpeg",
+    src: "/images/business.jpg",
     alt: "Business insurance",
   },
 };

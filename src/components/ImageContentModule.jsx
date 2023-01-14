@@ -7,7 +7,7 @@ import { motion, useInView } from "framer-motion";
 import React, { useRef } from "react";
 
 const ICMContainer = styled.section`
-  /* padding-top: 70px; */
+  padding-top: 70px;
   position: relative;
   width: 100%;
   background-color: ${Variables.black};
@@ -47,7 +47,7 @@ const ICMContainer = styled.section`
       margin-bottom: 10px;
       /* width: 40%; */
       width: 100%;
-      height: 100vh;
+      /* height: 100vh; */
       grid-row: 1;
 
       /* border-radius: 15px; */
@@ -80,12 +80,15 @@ const ICMContainer = styled.section`
       @media ${MediaQueries.tablet} {
         text-align: center;
         grid-row: 2;
-        margin-top: -180px;
+        margin: -180px 20px 0;
+
+        padding: 20px;
+        background-color: ${Variables.secondaryColor};
       }
       @media ${MediaQueries.mobile} {
         text-align: center;
         grid-row: 2;
-        margin-top: -150px;
+        margin-top: -225px;
       }
       h2 {
         ${H2Styles};
