@@ -226,9 +226,6 @@ export default function Navigation({ backdrop, data }) {
         }
     };
 
-    const location = useLocation();
-    console.log(location.pathname);
-
     return (
         <Nav>
             <div

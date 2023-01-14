@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Variables } from '../styles/Variables';
 import { Link } from 'react-router-dom';
-import { transition, ButtonStyles } from '../styles/Utilities';
+import { ButtonStyles } from '../styles/Utilities';
 
 const CustomLinkStylingWrapper = styled.div`
     display: flex;
