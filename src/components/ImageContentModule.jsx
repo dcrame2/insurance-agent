@@ -81,7 +81,7 @@ const ICMContainer = styled.section`
         text-align: center;
         grid-row: 2;
         margin: -180px 20px 0;
-
+        border-bottom: 2px solid ${Variables.primaryColor};
         padding: 20px;
         background-color: ${Variables.secondaryColor};
       }
