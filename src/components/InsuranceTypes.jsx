@@ -45,12 +45,12 @@ const InsuranceContainer = styled.section`
 
             @media ${MediaQueries.tablet} {
                 grid-template-columns: repeat(2, 1fr);
-                max-width: 500px;
+                max-width: 420px;
             }
 
             @media ${MediaQueries.mobile} {
                 grid-template-columns: 1fr;
-                max-width: 250px;
+                max-width: 200px;
             }
 
             a {
