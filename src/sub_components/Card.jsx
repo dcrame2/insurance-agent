@@ -1,4 +1,4 @@
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useAnimationControls } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Variables } from '../styles/Variables';
@@ -41,21 +41,20 @@ const CardStyles = styled.div`
 export default function Card({ ...props }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
+    const controls = useAnimationControls();
 
     useEffect(() => {
         console.log(isInView);
+        if (isInView) {
+            controls.start({ opacity: 1, scale: 1 });
+        }
     }, [isInView]);
 
     return (
         <motion.div
             ref={ref}
-            // style={{
-            //     transform: isInView ? 'none' : 'translateY(200px)',
-            //     opacity: isInView ? 1 : 0,
-            //     transition: '0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-            // }}
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={controls}
             transition={{
                 delay: `.${props.index}`,
             }}
