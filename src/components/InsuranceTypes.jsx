@@ -11,7 +11,6 @@ const InsuranceContainer = styled.section`
     height: auto;
     width: 100%;
     position: relative;
-    ${Container}
     background-color: ${Variables.secondaryColor};
 
     .insurance-content {
@@ -22,6 +21,7 @@ const InsuranceContainer = styled.section`
         justify-content: center;
         gap: 15px;
         text-align: center;
+        ${Container}
 
         h2 {
             ${H2Styles}

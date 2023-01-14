@@ -25,7 +25,7 @@ export const Variables = {
     sourceSans: 'Source Sans Pro, sans-serif',
     ubuntu: 'Ubuntu, sans-serif',
 
-    companyName: 'Country Financial',
+    companyName: 'Moulis Financial',
     logo1Url: 'images/cflogo.png',
     logoWhite: 'logos/logo-white.png',
     logoBlack: 'logos/logo-black.png',
