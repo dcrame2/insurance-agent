@@ -14,7 +14,7 @@ const HomeInsurance = () => {
   return (
     <>
       <ImageContentModule imgPlacement="right" {...HomeInsuranceICMData} />
-      <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
+      <Spacer color={Variables.black} desktop={0} tablet={120} mobile={100} />
       <Spacer
         color={Variables.primaryColor2}
         desktop={244}

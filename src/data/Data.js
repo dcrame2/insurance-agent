@@ -147,7 +147,7 @@ export const HomeInsuranceICMData = {
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, earum!",
     id: "homeInsurance",
-    src: "/icons/home_icon.svg",
+    src: "/images/home.jpeg",
     alt: "home insurance",
   },
 };
@@ -235,7 +235,7 @@ export const LifeInsuranceICMData = {
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, earum!",
     id: "lifeInsurance",
-    src: "/icons/life_icon.svg",
+    src: "/images/life.jpg",
     alt: "life insurance",
   },
 };
@@ -277,7 +277,7 @@ export const BusinessInsuranceICMData = {
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, earum!",
     id: "businessInsurance",
-    src: "/icons/business_icon.svg",
+    src: "/images/business.jpeg",
     alt: "Business insurance",
   },
 };

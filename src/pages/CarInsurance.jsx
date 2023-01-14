@@ -13,7 +13,7 @@ const CarInsurance = () => {
   return (
     <>
       <ImageContentModule imgPlacement="right" {...CarInsuranceICMData} />
-      <Spacer color={Variables.black} desktop={244} tablet={120} mobile={100} />
+      <Spacer color={Variables.black} desktop={0} tablet={120} mobile={100} />
       <Spacer
         color={Variables.primaryColor2}
         desktop={244}
