@@ -257,7 +257,7 @@ export default function Navigation({ backdrop, data }) {
                                                 key={`textLink${index}`}
                                             >
                                                 <NavLink
-                                                    activeClassName='active'
+                                                    activeclassname='active'
                                                     className='underline'
                                                     to={`${link.url}`}
                                                     target={

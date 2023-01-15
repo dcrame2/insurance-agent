@@ -19,7 +19,6 @@ const CardStyles = styled.div`
 
     .icon {
         z-index: 1;
-
         height: auto;
         padding: 20px;
 
@@ -44,7 +43,6 @@ export default function Card({ ...props }) {
     const controls = useAnimationControls();
 
     useEffect(() => {
-        console.log(isInView);
         if (isInView) {
             controls.start({ opacity: 1, scale: 1 });
         }

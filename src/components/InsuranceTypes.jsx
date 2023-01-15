@@ -46,6 +46,7 @@ const InsuranceContainer = styled.section`
         }
 
         .insurance-icon-content {
+            list-style: none;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 28px;
@@ -94,21 +95,23 @@ const InsuranceTypes = ({ data }) => {
                     </h2>
                     <p>{data.headings.subheader}</p>
                 </div>
-                <div className='insurance-icon-content'>
+                <ul className='insurance-icon-content'>
                     {data.insurances.map((insurance, index) => {
                         const { src, alt, name, url } = insurance;
 
                         return (
-                            <Card
-                                to={url}
-                                imgSrc={src}
-                                imgAlt={alt}
-                                heading={name}
-                                index={index}
-                            />
+                            <li key={`card-${index}`}>
+                                <Card
+                                    to={url}
+                                    imgSrc={src}
+                                    imgAlt={alt}
+                                    heading={name}
+                                    index={index}
+                                />
+                            </li>
                         );
                     })}
-                </div>
+                </ul>
             </div>
         </InsuranceContainer>
     );

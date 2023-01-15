@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components/macro';
 import { H1Styles, PSecondary, H2Styles } from '../styles/Type';
 import { Variables } from '../styles/Variables';
 import { Container, MediaQueries } from '../styles/Utilities';
-import { GlassEffect } from '../styles/Utilities';
+import { motion, useScroll, useAnimationControls } from 'framer-motion';
 
 const customTablet = '900px';
 
@@ -35,12 +35,13 @@ const HeroContainer = styled.section`
             gap: 25px;
         }
 
-        .hero-content {
+        div {
             flex-direction: column;
             display: flex;
             justify-content: center;
             gap: 10px;
-            h1 {
+
+            h2 {
                 text-transform: uppercase;
                 ${H1Styles}
 
@@ -48,11 +49,12 @@ const HeroContainer = styled.section`
                     color: ${Variables.primaryColor};
                 }
             }
+
             p {
                 ${PSecondary}
             }
 
-            h2 {
+            h1 {
                 text-transform: uppercase;
                 ${H2Styles}
                 color: ${Variables.white};
@@ -85,19 +87,54 @@ const HeroContainer = styled.section`
 `;
 
 const Hero = ({ data }) => {
+    const { scrollYProgress } = useScroll();
+    const controls = useAnimationControls();
+
+    console.log(scrollYProgress);
+
+    useEffect(() => {
+        controls.start({ transform: `translateY(${scrollYProgress})` });
+    });
+
     return (
         <HeroContainer>
             <div className='hero-inner-container'>
-                <div className='hero-content'>
-                    <p>{data.homeHero.eyebrow1}</p>
-                    <h1>
-                        {data.homeHero.heading1}{' '}
+                <div>
+                    <motion.p
+                        initial={{
+                            opacity: 0,
+                            transform: 'translateX(-200px)',
+                        }}
+                        animate={{ opacity: 1, transform: 'translateX(0px)' }}
+                        transition={{ delay: '.200' }}
+                    >
+                        {data.homeHero.eyebrow1}
+                    </motion.p>
+                    <motion.h2
+                        initial={{
+                            opacity: 0,
+                            transform: 'translateX(-200px)',
+                        }}
+                        animate={{ opacity: 1, transform: 'translateX(0px)' }}
+                        transition={{ delay: '.400' }}
+                    >
+                        {data.homeHero.heading1}
                         <span>{data.homeHero.heading1Color}</span>
-                    </h1>
-                    <h2>{data.homeHero.heading2}</h2>
+                    </motion.h2>
+                    <motion.h1
+                        initial={{
+                            opacity: 0,
+                            transform: 'translateX(-200px)',
+                        }}
+                        animate={{ opacity: 1, transform: 'translateX(0px)' }}
+                        transition={{ delay: '.600' }}
+                    >
+                        {data.homeHero.heading2}
+                    </motion.h1>
                 </div>
                 <div className='hero-img-content'>
-                    <img
+                    <motion.img
+                        style={{ scaleX: scrollYProgress }}
                         src={data.homeHero.heroImgSrc}
                         alt={data.homeHero.heroImgAlt}
                     />
