@@ -19,7 +19,7 @@ export const HomeData = {
     eyebrow2: "Supported by",
     heading2: `${Variables.companyName}`,
     heroImgSrc: "/images/agent-nobg.png",
-    heroImgAlt: "Insurance agent Michael Moulis",
+    heroImgAlt: "Insurance agent Mike Moulis",
   },
 };
 
