@@ -1,9 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components/macro';
 import { H1Styles, PSecondary, H2Styles } from '../styles/Type';
 import { Variables } from '../styles/Variables';
 import { Container, MediaQueries } from '../styles/Utilities';
-import { motion, useScroll, useAnimationControls } from 'framer-motion';
+import {
+    motion,
+    useScroll,
+    useAnimationControls,
+    useSpring,
+} from 'framer-motion';
 
 const customTablet = '900px';
 
@@ -69,10 +74,10 @@ const HeroContainer = styled.section`
             align-items: center;
             justify-content: end;
             height: auto;
+            overflow: hidden;
 
             @media (max-width: ${customTablet}) {
                 max-width: unset;
-                overflow: auto;
             }
 
             img {
@@ -87,11 +92,6 @@ const HeroContainer = styled.section`
 `;
 
 const Hero = ({ data }) => {
-    const { scrollYProgress } = useScroll();
-    const controls = useAnimationControls();
-
-    console.log(scrollYProgress);
-
     return (
         <HeroContainer>
             <div className='hero-inner-container'>
@@ -132,6 +132,14 @@ const Hero = ({ data }) => {
                     <motion.img
                         src={data.homeHero.heroImgSrc}
                         alt={data.homeHero.heroImgAlt}
+                        initial={{
+                            opacity: 0,
+                            transform: 'translateY(200px)',
+                        }}
+                        animate={{ opacity: 1, transform: 'translateY(0px)' }}
+                        transition={{
+                            delay: '.800',
+                        }}
                     />
                 </div>
             </div>
