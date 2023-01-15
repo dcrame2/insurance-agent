@@ -92,10 +92,6 @@ const Hero = ({ data }) => {
 
     console.log(scrollYProgress);
 
-    useEffect(() => {
-        controls.start({ transform: `translateY(${scrollYProgress})` });
-    });
-
     return (
         <HeroContainer>
             <div className='hero-inner-container'>
@@ -134,7 +130,6 @@ const Hero = ({ data }) => {
                 </div>
                 <div className='hero-img-content'>
                     <motion.img
-                        style={{ scaleX: scrollYProgress }}
                         src={data.homeHero.heroImgSrc}
                         alt={data.homeHero.heroImgAlt}
                     />
