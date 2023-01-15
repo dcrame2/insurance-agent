@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components/macro';
 import { Container } from '../styles/Utilities';
 import { Variables } from '../styles/Variables';
@@ -6,6 +6,7 @@ import { H2Styles, PBaseStyles, PSecondary } from '../styles/Type';
 import { GlassEffect } from '../styles/Utilities';
 import { MediaQueries } from '../styles/Utilities';
 import Card from '../sub_components/Card';
+import { motion, useAnimationControls, useInView } from 'framer-motion';
 
 const InsuranceContainer = styled.section`
     height: auto;
@@ -85,16 +86,34 @@ const OpaqueFilter = styled.div`
 `;
 
 const InsuranceTypes = ({ data }) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, {
+        once: true,
+        amount: 1,
+    });
+    const controls = useAnimationControls();
+
+    useEffect(() => {
+        if (isInView) {
+            controls.start({ opacity: 1, translateY: '0' });
+        }
+    }, [isInView]);
+
     return (
         <InsuranceContainer>
             <div className='insurance-content'>
-                <div className='heading-content'>
+                <motion.div
+                    className='heading-content'
+                    initial={{ opacity: 0, translateY: '-200%' }}
+                    animate={controls}
+                    ref={ref}
+                >
                     <h2>
                         {data.headings.heading}
                         <span>{data.headings.headingColor}</span>
                     </h2>
                     <p>{data.headings.subheader}</p>
-                </div>
+                </motion.div>
                 <ul className='insurance-icon-content'>
                     {data.insurances.map((insurance, index) => {
                         const { src, alt, name, url } = insurance;
