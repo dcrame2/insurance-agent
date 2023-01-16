@@ -62,7 +62,7 @@ const InsuranceContainer = styled.section`
 
       @media ${MediaQueries.mobile} {
         grid-template-columns: 1fr;
-        max-width: 375px; //200
+        max-width: 250px; //200
       }
 
       a {
