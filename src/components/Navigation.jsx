@@ -113,7 +113,6 @@ const Nav = styled.nav`
               li.p-list-item {
                 ul {
                   height: 68vh;
-                  align-items: center;
                 }
               }
 
@@ -156,8 +155,10 @@ const Nav = styled.nav`
                   }
 
                   &::after {
-                    content: "";
+                    content: "insurance";
                     position: absolute;
+                    font-size: 8px;
+                    padding-top: 5px;
                     left: 0;
                     height: 3px;
                     width: 0%;
