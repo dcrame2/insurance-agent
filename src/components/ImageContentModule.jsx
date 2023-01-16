@@ -44,21 +44,8 @@ const ICMContainer = styled.section`
       grid-column: 2;
       background-color: ${Variables.black};
       max-width: 100vh;
-      margin-bottom: 10px;
-      /* width: 40%; */
       width: 100%;
-      /* height: 100vh; */
       grid-row: 1;
-
-      /* border-radius: 15px; */
-      /* box-shadow: 1px 1px 10px 2px ${Variables.primaryColor};
-      -webkit-box-shadow: 1px 1px 10px 2px ${Variables.primaryColor};
-      -moz-box-shadow: 1px 1px 10px 2px ${Variables.primaryColor}; */
-
-      /* @media ${MediaQueries.mobile} {
-        width: 100%;
-        height: 200px;
-      } */
       @media ${MediaQueries.tablet} {
         height: 60vh;
         max-width: unset;
@@ -129,14 +116,15 @@ export default function ImageContentModule({ ...props }) {
           <h2>{props.contentModule.heading}</h2>
           <p>{props.contentModule.content}</p>
         </div>
-        <img
+        <motion.img
           src={props.contentModule.src}
           alt={props.contentModule.alt}
-          style={{
-            transform: isInView ? "none" : translation,
-            opacity: isInView ? 1 : 0,
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          initial={{
+            opacity: 0,
+            transform: "translateX(200px)",
           }}
+          animate={{ opacity: 1, transform: "translateX(0px)" }}
+          transition={{ delay: ".400" }}
         />
       </div>
     </ICMContainer>
