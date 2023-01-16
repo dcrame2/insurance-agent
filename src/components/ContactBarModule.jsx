@@ -24,6 +24,7 @@ const ContactBarContainer = styled.section`
 
         h3 {
             ${H2Styles}
+            margin-bottom: 24px;
             color: ${Variables.white};
             display: block;
             position: relative;
@@ -41,6 +42,10 @@ const ContactBarContainer = styled.section`
             background-position: -100%;
             transition: all 1s ease-in-out;
 
+            @media ${MediaQueries.tablet} {
+                margin-bottom: 20px;
+            }
+
             &.active {
                 background-position: 100%;
             }
@@ -50,12 +55,12 @@ const ContactBarContainer = styled.section`
 
 const ContactBarModule = ({ data }) => {
     const headingRef = useRef(null);
-    const isInView = useInView(headingRef, { once: true, amount: 1 });
+    const isInView = useInView(headingRef, { amount: 1 });
     const [active, setActive] = useState(false);
 
     useEffect(() => {
         if (isInView) {
-            setActive(true);
+            setActive(!active);
         }
     }, [isInView]);
 
