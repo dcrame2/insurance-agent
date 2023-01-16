@@ -193,7 +193,7 @@ const Nav = styled.nav`
           transition: transform ease 0.3s;
 
           &.active {
-            transform: rotate(90deg);
+            transform: rotate(450deg);
             transition: transform ease 0.3s;
           }
 
