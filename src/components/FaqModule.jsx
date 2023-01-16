@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { Variables } from '../styles/Variables';
 import { Container, MediaQueries } from '../styles/Utilities';
 import { H2Styles, PBaseStyles, PSecondary } from '../styles/Type';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion, useInView, useAnimationControls } from 'framer-motion';
+import { useRef, useEffect } from 'react';
 
 const FaqContainer = styled.section`
     position: relative;
@@ -54,36 +54,59 @@ const FaqContainer = styled.section`
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
+                list-style: none;
             }
         }
     }
 `;
 
 export default function FaqModule({ ...props }) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
+    const listRef = useRef(null);
+    const headingRef = useRef(null);
+    const isInView = useInView(listRef, { once: true, amount: 1 });
+    const listControls = useAnimationControls();
+    const headingControls = useAnimationControls();
+
+    useEffect(() => {
+        if (isInView) {
+            listControls.start({ opacity: 1, translateX: '0px' });
+            headingControls.start({ opacity: 1, translateY: '0' });
+        }
+    }, [isInView]);
+
     return (
         <FaqContainer>
-            {/* id={props.id} */}
             <div className='faq-inner-container'>
-                <div className='content-container'>
+                <motion.div
+                    ref={headingRef}
+                    className='content-container'
+                    initial={{ opacity: 0, translateY: '200px' }}
+                    animate={headingControls}
+                >
                     <h2>{props.headers.heading}</h2>
                     <p>{props.headers.subheader}</p>
-                </div>
+                </motion.div>
                 <div className='faq-drop-container'>
-                    <div className='dropdown-container'>
+                    <ul className='dropdown-container' ref={listRef}>
                         {props.questions.map((faq, index) => {
                             return (
-                                // <Zoom key={`zoom-${index}`}>
-                                <Dropdown
-                                    key={`faq-dropdown-${index}`}
-                                    question={faq.question}
-                                    answer={faq.answer}
-                                />
-                                // </Zoom>
+                                <motion.li
+                                    initial={{
+                                        opacity: 0,
+                                        translateX: '200px',
+                                    }}
+                                    animate={listControls}
+                                    transition={{ delay: `.${index}` }}
+                                >
+                                    <Dropdown
+                                        key={`faq-dropdown-${index}`}
+                                        question={faq.question}
+                                        answer={faq.answer}
+                                    />
+                                </motion.li>
                             );
                         })}
-                    </div>
+                    </ul>
                 </div>
             </div>
         </FaqContainer>
