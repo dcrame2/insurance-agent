@@ -319,6 +319,27 @@ export const BusinessInsuranceICMData = {
   },
 };
 
+export const BusinessInsuranceStatsData = {
+  stats: [
+    {
+      dataTarget: "5000",
+      heading: "Money's Saved",
+    },
+    {
+      dataTarget: "10000",
+      heading: "Money's Saved",
+    },
+    {
+      dataTarget: "500000000",
+      heading: "Money's Saved",
+    },
+    {
+      dataTarget: "50000000000000000",
+      heading: "Money's Saved",
+    },
+  ],
+};
+
 export const BusinessInsuranceFaqData = {
   headers: {
     heading: "Business Insurance FAQs",
