@@ -52,10 +52,10 @@ function Content() {
     const location = useLocation();
 
     const [displayLocation, setDisplayLocation] = useState(location);
-    const [transitionStage, setTransistionStage] = useState('fadeIn');
+    const [transitionStage, setTransitionStage] = useState('fadeIn');
 
     useEffect(() => {
-        if (location !== displayLocation) setTransistionStage('fadeOut');
+        if (location !== displayLocation) setTransitionStage('fadeOut');
     }, [location, displayLocation]);
 
     return (
@@ -63,7 +63,7 @@ function Content() {
             className={`${transitionStage}`}
             onAnimationEnd={() => {
                 if (transitionStage === 'fadeOut') {
-                    setTransistionStage('fadeIn');
+                    setTransitionStage('fadeIn');
                     setDisplayLocation(location);
                 }
             }}
