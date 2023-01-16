@@ -42,7 +42,7 @@ const ContactBarContainer = styled.section`
             transition: all 1s ease-in-out;
 
             &.active {
-                background-position: 0%;
+                background-position: 100%;
             }
         }
     }
