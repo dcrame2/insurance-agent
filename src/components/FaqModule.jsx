@@ -53,7 +53,7 @@ const FaqContainer = styled.section`
             .dropdown-container {
                 display: flex;
                 flex-direction: column;
-                gap: 10px;
+                gap: 14px;
                 list-style: none;
             }
         }
@@ -91,15 +91,18 @@ export default function FaqModule({ ...props }) {
                         {props.questions.map((faq, index) => {
                             return (
                                 <motion.li
+                                    key={`list-item-${index}`}
                                     initial={{
                                         opacity: 0,
                                         translateX: '200px',
                                     }}
                                     animate={listControls}
-                                    transition={{ delay: `.${index}` }}
+                                    transition={{
+                                        delay: `.${index}`,
+                                        duration: '.35',
+                                    }}
                                 >
                                     <Dropdown
-                                        key={`faq-dropdown-${index}`}
                                         question={faq.question}
                                         answer={faq.answer}
                                     />
