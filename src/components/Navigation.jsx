@@ -165,6 +165,9 @@ const Nav = styled.nav`
                     transition: width ease 0.3s;
                     bottom: -4px;
                     background-color: ${Variables.primaryColor};
+                    @media ${MediaQueries.tablet} {
+                      padding-top: 3px;
+                    }
                   }
                   &:hover,
                   :focus,
