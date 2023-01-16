@@ -124,7 +124,7 @@ export default function ImageContentModule({ ...props }) {
             transform: "translateX(200px)",
           }}
           animate={{ opacity: 1, transform: "translateX(0px)" }}
-          transition={{ delay: ".200" }}
+          transition={{ delay: ".400" }}
         />
       </div>
     </ICMContainer>
