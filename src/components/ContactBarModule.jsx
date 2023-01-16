@@ -39,7 +39,7 @@ const ContactBarContainer = styled.section`
             );
             background-size: 200% 100%;
             background-position: -100%;
-            transition: all 0.3s ease-in-out;
+            transition: all 1s ease-in-out;
 
             &.active {
                 background-position: 0%;
@@ -60,10 +60,9 @@ const ContactBarModule = ({ data }) => {
     }, [isInView]);
 
     return (
-        <ContactBarContainer>
-            <div className='contactbar-inner-container' ref={headingRef}>
+        <ContactBarContainer ref={headingRef}>
+            <div className='contactbar-inner-container'>
                 <h3 className={`${active ? 'active' : ''}`}>{data.header}</h3>
-
                 <LinkButton
                     ariaLabel={data.button.label}
                     text={data.button.text}
