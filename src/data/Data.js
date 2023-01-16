@@ -1,4 +1,10 @@
 import { Variables } from "../styles/Variables";
+import {
+  FaFacebookSquare,
+  FaLinkedin,
+  FaGoogle,
+  FaTwitter,
+} from "react-icons/fa";
 
 export const NavigationData = {
   logo: { src: `${Variables.logoWhite}`, alt: "logo" },
@@ -109,8 +115,18 @@ export const ContactFormData = {
   },
   socialMedia: {
     socials: [
-      { name: "facebook", link: "#", icon: "", alt: "facebook icon" },
-      { name: "linkedin", link: "#", icon: "", alt: "linkedin icon" },
+      {
+        name: "facebook",
+        link: "#",
+        icon: <FaFacebookSquare />,
+        alt: "facebook icon",
+      },
+      {
+        name: "linkedin",
+        link: "#",
+        icon: <FaLinkedin />,
+        alt: "linkedin icon",
+      },
     ],
   },
 };
@@ -135,6 +151,27 @@ export const FooterData = {
       {
         href: "mailto:mike.moulis@countryfinanical.com",
         text: "mike.moulis@countryfinanical.com",
+      },
+    ],
+  },
+  socialMedia: {
+    heading: "",
+    links: [
+      {
+        icon: <FaFacebookSquare />,
+        href: "www.facebook.com",
+      },
+      {
+        icon: <FaLinkedin />,
+        href: "www.linkedin.com",
+      },
+      {
+        icon: <FaGoogle />,
+        href: "www.google.com",
+      },
+      {
+        icon: <FaTwitter />,
+        href: "www.twitter.com",
       },
     ],
   },

@@ -109,6 +109,16 @@ const Section = styled.section`
                 margin-right: unset;
               }
             }
+            h4 {
+              display: inline;
+              margin-right: 5px;
+              ${PSecondary}
+              transition: color ease 0.3s;
+              &:hover {
+                transition: color ease 0.3s;
+                color: ${Variables.primaryColor};
+              }
+            }
           }
         }
       }
@@ -230,21 +240,6 @@ const Section = styled.section`
         }
       }
     }
-  }
-`;
-
-const OpaqueFilter = styled.div`
-  background: linear-gradient(
-    180deg,
-    ${Variables.primaryColor} 0%,
-    rgba(125, 125, 125, 0) 95%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  border-radius: 40px;
-  z-index: 1;
-  @media ${MediaQueries.tablet} {
-    width: 100%;
-    ${GlassEffect}
   }
 `;
 
@@ -416,27 +411,12 @@ const Contact = ({ data }) => {
               <div className="location-inner-container">
                 <p>Social Media:</p>
                 {data.socialMedia.socials.map((social) => {
-                  return <p>{social.name}</p>;
+                  return <h4>{social.icon}</h4>;
                 })}
               </div>
             </div>
-            {/* <div style="width: 100%"> */}
-            <iframe
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-              src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=1761%20N%20Dilleys%20Rd%20Suites%20208,%20Gurnee,%20IL%2060031+(Michael%20Moulis%20-%20COUNTRY%20Financial)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              width="100%"
-              height="400"
-              frameborder="0"
-            >
-              <a href="https://www.maps.ie/distance-area-calculator.html">
-                area maps
-              </a>
-            </iframe>
           </div>
         </div>
-        {/* </OpaqueFilter> */}
       </div>
     </Section>
   );
