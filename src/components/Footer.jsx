@@ -65,6 +65,20 @@ const FooterInner = styled.div`
       margin-bottom: 25px;
     }
   }
+  ul.social-icons {
+    gap: 7px;
+    flex-direction: row;
+    @media ${MediaQueries.tablet} {
+      align-items: center;
+
+      justify-content: center;
+    }
+    li {
+      a {
+        font-size: 18px;
+      }
+    }
+  }
   ul {
     list-style: none;
     width: 100%;
