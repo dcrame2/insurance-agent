@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Variables } from '../styles/Variables';
 import { MediaQueries } from '../styles/Utilities';
-import { H2Styles, H3Styles } from '../styles/Type';
+import { H2Styles } from '../styles/Type';
 import LinkButton from '../sub_components/LinkButton';
 import { useInView } from 'framer-motion';
 
