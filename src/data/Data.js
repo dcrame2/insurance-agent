@@ -15,7 +15,7 @@ export const HomeData = {
   homeHero: {
     eyebrow1: "Your favorite insurance agent",
     heading1: "Mike",
-    heading1Color: "Moulis",
+    heading1Color: " Moulis",
     eyebrow2: "Supported by",
     heading2: `${Variables.companyName}`,
     heroImgSrc: "/images/agent-nobg.png",
