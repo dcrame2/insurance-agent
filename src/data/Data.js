@@ -326,12 +326,12 @@ export const BusinessInsuranceStatsData = {
       heading: "Money's Saved",
     },
     {
-      dataTarget: "10000",
-      heading: "Money's Saved",
+      dataTarget: "30000",
+      heading: "Money Saved",
     },
     {
-      dataTarget: "500000",
-      heading: "Money's Saved",
+      dataTarget: "597",
+      heading: "Clients",
     },
     {
       dataTarget: "50000",

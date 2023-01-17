@@ -22,8 +22,8 @@ const StatsCounter = ({ stats, index }) => {
       const count = +counter.innerText;
       const increment = target / 87;
       if (count < target) {
-        counter.innerText = numberWithCommas(`${Math.ceil(count + increment)}`);
-        setTimeout(updateCounter, 109);
+        counter.innerText = `${Math.ceil(count + increment)}`;
+        setTimeout(updateCounter, 10);
       } else {
         counter.innerText = numberWithCommas(target);
       }
@@ -32,7 +32,7 @@ const StatsCounter = ({ stats, index }) => {
   }, []);
 
   function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return x.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
   return (
     <CounterContainer>
