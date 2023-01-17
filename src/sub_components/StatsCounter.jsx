@@ -14,29 +14,6 @@ const CounterContainer = styled.div`
 `;
 
 const StatsCounter = ({ stats, index }) => {
-    const [countChange, setCountChange] = useState(0);
-    //   useEffect(() => {
-    //     const counters = document.querySelectorAll(".counter");
-
-    //     counters.forEach((counter) => {
-    //       //   counter.innerText = "0";
-
-    //       const updateCounter = () => {
-    //         const target = stats.dataTarget;
-    //         const count = +counter.innerText;
-    //         const increment = target / 1;
-    //         if (count < target) {
-    //           setCountChange(`${Math.ceil(count + increment)}`);
-    //           setTimeout(updateCounter, 1);
-    //         } else {
-    //           setCountChange(target);
-    //         }
-    //       };
-
-    //       updateCounter();
-    //     });
-    //   }, [countChange]);
-
     useEffect(() => {
         const counter = document.getElementById(`counter-${index}`);
 
