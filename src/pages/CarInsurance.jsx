@@ -4,12 +4,13 @@ import {
     CarInsuranceFaqData,
     CarInsuranceICMData,
     ContactBarData,
+    CarInsuranceContentModuleData,
 } from '../data/Data';
 import ImageContentModule from '../components/ImageContentModule';
 import Spacer from '../sub_components/Spacer';
 import FaqModule from '../components/FaqModule';
 import ContactBarModule from '../components/ContactBarModule';
-import Content from '../components/Content';
+import ContentModule from '../components/ContentModule';
 
 const CarInsurance = () => {
     return (
@@ -21,7 +22,7 @@ const CarInsurance = () => {
                 tablet={60}
                 mobile={40}
             />
-            <Content data={'test'} />
+            <ContentModule data={CarInsuranceContentModuleData} />
             <Spacer
                 color={Variables.primaryColor2}
                 desktop={244}
