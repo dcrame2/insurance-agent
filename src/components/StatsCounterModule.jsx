@@ -1,26 +1,29 @@
-import React, { useEffect } from 'react';
-import StatsCounter from '../sub_components/StatsCounter';
-import styled from 'styled-components';
+import React, { useEffect } from "react";
+import StatsCounter from "../sub_components/StatsCounter";
+import styled from "styled-components";
 
 const StatsCounterContainer = styled.section`
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const StatsCounterModule = ({ data }) => {
-    return (
-        <StatsCounterContainer>
-            {data.stats.map((stat, index) => {
-                return (
-                    <StatsCounter
-                        key={`statCounter-${index}`}
-                        stats={stat}
-                        index={index}
-                    />
-                );
-            })}
-        </StatsCounterContainer>
-    );
+  return (
+    <StatsCounterContainer>
+      {data.stats.map((stat, index) => {
+        return (
+          <StatsCounter
+            key={`statCounter-${index}`}
+            stats={stat}
+            index={index}
+          />
+        );
+      })}
+    </StatsCounterContainer>
+  );
 };
 
 export default StatsCounterModule;
