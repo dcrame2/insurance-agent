@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { H2Styles, PSecondary } from "../styles/Type";
+import { Variables } from "../styles/Variables";
+import { MediaQueries, Container } from "../styles/Utilities";
 
 const CounterContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 30px 50px;
   text-align: center;
   .counter {
-    font-size: 60px;
+    color: ${Variables.primaryColor};
+    ${H2Styles}
     margin-top: 10px;
+  }
+  p {
+    ${PSecondary}
   }
 `;
 
@@ -25,7 +31,7 @@ const StatsCounter = ({ stats, index }) => {
         counter.innerText = `${Math.ceil(count + increment)}`;
         setTimeout(updateCounter, 10);
       } else {
-        counter.innerText = numberWithCommas(target);
+        counter.innerText = stats.symbol + numberWithCommas(target);
       }
     };
     updateCounter();

@@ -319,21 +319,25 @@ export const BusinessInsuranceICMData = {
   },
 };
 
-export const BusinessInsuranceStatsData = {
+export const HomePageStatsData = {
   stats: [
     {
+      symbol: "$",
       dataTarget: "5000",
       heading: "Money's Saved",
     },
     {
+      symbol: "$",
       dataTarget: "30000",
       heading: "Money Saved",
     },
     {
+      symbol: "+",
       dataTarget: "597",
       heading: "Clients",
     },
     {
+      symbol: "$",
       dataTarget: "50000",
       heading: "Money's Saved",
     },
