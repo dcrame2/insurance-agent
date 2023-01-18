@@ -64,13 +64,13 @@ const Home = () => {
         mobile={100}
       />
       <TestimonialsV2 data={ReviewsData} />
-      <Spacer
+      {/* <Spacer
         shadowToggle="true"
         color={Variables.black}
         desktop={64}
         tablet={120}
         mobile={100}
-      />
+      /> */}
       <ContactBarModule data={ContactBarData} />
     </>
   );

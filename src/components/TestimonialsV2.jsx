@@ -14,8 +14,8 @@ const ModuleContainer = styled.section`
 
 const InnerContainer = styled.div`
   ${Container}
-  padding-top: 160px;
-  padding-bottom: 160px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@ const InnerContainer = styled.div`
 
     h2 {
       ${H2Styles}
-      text-transform: uppercase;
+      /* text-transform: uppercase; */
       margin-bottom: 10px;
     }
     h3 {

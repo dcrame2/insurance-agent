@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
-import { H2Styles, PSecondary } from "../styles/Type";
+import { H2Styles, PSecondary, PBaseStyles, H1Styles } from "../styles/Type";
 import { Variables } from "../styles/Variables";
 import { MediaQueries, Container } from "../styles/Utilities";
 import { useInView, useAnimationControls, motion } from "framer-motion";
@@ -11,8 +11,8 @@ const CounterContainer = styled.div`
   justify-content: center;
   text-align: center;
   .counter {
-    color: ${Variables.primaryColor};
-    ${H2Styles}
+    color: ${Variables.primaryColor} !important;
+    ${H1Styles}
     margin-top: 10px;
   }
   p {
