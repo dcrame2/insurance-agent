@@ -23,45 +23,38 @@ const ContentInnerContainer = styled.div`
     p {
         ${PBaseStyles}
     }
+    br {
+        margin-bottom: 1.5rem;
+    }
 `;
 
 const ContentModule = ({ data }) => {
-    const col1Ref = useRef(null);
-    const col2Ref = useRef(null);
-    const col1IsInView = useInView(col1Ref, { once: true, amount: 1 });
-    const col2IsInView = useInView(col2Ref, { once: true, amount: 1 });
-    const col1Controls = useAnimationControls();
-    const col2Controls = useAnimationControls();
+    const ContainerRef = useRef(null);
+    const isInView = useInView(ContainerRef, { once: true, amount: 1 });
+    const controls = useAnimationControls();
 
     useEffect(() => {
-        if (col1IsInView) {
-            col1Controls.start({ opacity: 1, translateY: '0' });
+        if (isInView) {
+            controls.start({ opacity: 1, translateY: '0' });
         }
-        if (col2IsInView) {
-            col2Controls.start({ opacity: 1, translateY: '0' });
-        }
-    }, [col1IsInView, col2IsInView]);
+    }, [isInView]);
 
     return (
         <ContentContainer>
-            <ContentInnerContainer>
-                <div className='col-1' ref={col1Ref}>
-                    <motion.p
-                        initial={{ opacity: 0, translateY: '-200%' }}
-                        animate={col1Controls}
-                    >
-                        {data.content1}
-                    </motion.p>
-                </div>
-                <div ref={col2Ref}>
-                    <motion.p
-                        initial={{ opacity: 0, translateY: '-200%' }}
-                        animate={col2Controls}
-                        className='col-2'
-                    >
-                        {data.content2}
-                    </motion.p>
-                </div>
+            <ContentInnerContainer ref={ContainerRef}>
+                <motion.div
+                    className='col-1'
+                    initial={{ opacity: 0, translateY: '-200%' }}
+                    animate={controls}
+                    dangerouslySetInnerHTML={{ __html: data.content1 }}
+                />
+
+                <motion.div
+                    initial={{ opacity: 0, translateY: '-200%' }}
+                    animate={controls}
+                    className='col-2'
+                    dangerouslySetInnerHTML={{ __html: data.content2 }}
+                />
             </ContentInnerContainer>
         </ContentContainer>
     );

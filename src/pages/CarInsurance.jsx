@@ -18,16 +18,16 @@ const CarInsurance = () => {
             <ImageContentModule imgPlacement='right' {...CarInsuranceICMData} />
             <Spacer
                 color={Variables.primaryColor2}
-                desktop={80}
-                tablet={60}
-                mobile={40}
+                desktop={100}
+                tablet={80}
+                mobile={60}
             />
             <ContentModule data={CarInsuranceContentModuleData} />
             <Spacer
                 color={Variables.primaryColor2}
-                desktop={244}
-                tablet={120}
-                mobile={100}
+                desktop={100}
+                tablet={80}
+                mobile={60}
             />
             <FaqModule {...CarInsuranceFaqData} />
             <Spacer
