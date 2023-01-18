@@ -171,12 +171,19 @@ const InnerContainer = styled.div`
 
       svg {
         transition: transform ease 0.3s;
+        @media ${MediaQueries.mobile} {
+          transition: unset;
+        }
       }
 
       &:hover {
         svg {
           transform: scale(1.15);
           transition: transform ease 0.2s;
+          @media ${MediaQueries.mobile} {
+            transform: unset;
+            transition: unset;
+          }
         }
       }
     }
