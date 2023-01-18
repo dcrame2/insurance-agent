@@ -22,11 +22,11 @@ const ModuleContainer = styled.section`
     transform: rotate(30deg);
     font-size: 100px;
     position: absolute;
-    animation: shake 0.5s;
+    /* animation: shake 0.5s;
 
     /* When the animation is finished, start again */
-    animation-iteration-count: infinite;
-    @keyframes shake {
+    /* animation-iteration-count: infinite;  */
+    /* @keyframes shake {
       0% {
         transform: translate(1px, 1px) rotate(0deg);
       }
@@ -60,7 +60,7 @@ const ModuleContainer = styled.section`
       100% {
         transform: translate(1px, -2px) rotate(-1deg);
       }
-    }
+    } */
     @media ${MediaQueries.tablet} {
       right: 10%;
       top: 75px;
