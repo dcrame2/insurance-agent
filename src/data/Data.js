@@ -136,20 +136,25 @@ export const ReviewsData = {
   // subheading: `Testimonials from ${Variables.companyName} customers`,
   testimonials: [
     {
-      name: "Cynthia L.",
-      content: `I would highly recommend ${Variables.companyName} for your website needs. I've never received better communication with a business before!`,
+      name: "Dominique Woodard",
+      content: `Mike is very knowledgeable and patient. I have car and homeowners insurance with him.`,
     },
     {
-      name: "Tim C.",
-      content: `${Variables.companyName} transformed my business to a new level which increased my site viewers over 100%.`,
+      name: "Randy Brooks",
+      content: `Very nice working with  Mike! He suggested a couple of was to keep my great home owners covering and still save a few dollars as well. Thanks Mike for your help and professionalism!`,
     },
     {
-      name: "Anna J.",
-      content: `I can't thank ${Variables.companyName} enough for building our website. The design and support they provided is unmatched.`,
+      name: "Brandon O'Connor",
+      content: `Mike was incredible easy to work with! He answered all of my questions thoroughly and provided a great customer experience. Thankful to have him as my point of contact.`,
     },
     {
-      name: "Bill A.",
-      content: `${Variables.companyName} makes the best websites I have ever seen. They tripled my website viewers in 2 months.`,
+      name: "Joey Mende",
+      content: `I had a lot of questions about different home insurance coverages and mike answered them all. I feel like I was able to make the best decision for me. You won’t regret working with him!
+      Thanks Mike!!!`,
+    },
+    {
+      name: "Sam An",
+      content: `Real painless experience. Couldn't believe how much money I was saving while getting better coverage!`,
     },
   ],
 };

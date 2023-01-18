@@ -71,7 +71,7 @@ const InnerContainer = styled.div`
         flex-direction: column;
         max-width: 660px;
         background-color: ${Variables.primaryColor2};
-        border-bottom: 1px solid ${Variables.primaryColor};
+        border-bottom: 2px solid ${Variables.primaryColor};
         padding: 26px 32px 28px;
         /* border-radius: 24px; */
 
@@ -102,6 +102,7 @@ const InnerContainer = styled.div`
     button {
       background-color: unset;
       border: unset;
+      z-index: 1;
 
       &.prev {
         transform: rotate(180deg);
@@ -179,29 +180,6 @@ const InnerContainer = styled.div`
     }
   }
 `;
-
-const data = {
-  heading: "Hear what people are saying",
-  subheading: `Testimonials from ${Variables.companyName} customers`,
-  testimonials: [
-    {
-      name: "Cynthia L.",
-      content: `I would highly recommend ${Variables.companyName} for your website needs. I've never received better communication with a business before!`,
-    },
-    {
-      name: "Tim C.",
-      content: `${Variables.companyName} transformed my business to a new level which increased my site viewers over 100%.`,
-    },
-    {
-      name: "Anna J.",
-      content: `I can't thank ${Variables.companyName} enough for building our website. The design and support they provided is unmatched.`,
-    },
-    {
-      name: "Bill A.",
-      content: `${Variables.companyName} makes the best websites I have ever seen. They tripled my website viewers in 2 months.`,
-    },
-  ],
-};
 
 export default function TestimonialsV2({ data }) {
   const [activeIndex, setActiveIndex] = useState(0);

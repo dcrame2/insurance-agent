@@ -66,7 +66,7 @@ const Home = () => {
       <TestimonialsV2 data={ReviewsData} />
       <Spacer
         shadowToggle="true"
-        color={Variables.primaryColor2}
+        color={Variables.black}
         desktop={64}
         tablet={120}
         mobile={100}
