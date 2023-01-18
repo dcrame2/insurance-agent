@@ -75,12 +75,13 @@ export default function FaqModule({ ...props }) {
   }, [isInView]);
 
   return (
-    <FaqContainer ref={headingRef}>
+    <FaqContainer>
       <div className="faq-inner-container">
         <motion.div
           className="content-container"
           initial={{ opacity: 0, translateY: "200px" }}
           animate={headingControls}
+          ref={headingRef}
         >
           <h2>{props.headers.heading}</h2>
           <p>{props.headers.subheader}</p>
