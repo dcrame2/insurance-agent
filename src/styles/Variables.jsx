@@ -23,8 +23,8 @@ export const Variables = {
   $darkGray: "#434242",
 
   // Type
-  sourceSans: "Source Sans Pro, sans-serif",
-  ubuntu: "Ubuntu, sans-serif",
+  sourceSans: "'Source Sans Pro', sans-serif",
+  ubuntu: "'Ubuntu', sans-serif",
 
   companyName: "Moulis Financial",
   logo1Url: "images/cflogo.png",
