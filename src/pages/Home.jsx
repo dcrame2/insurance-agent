@@ -4,6 +4,7 @@ import InsuranceTypes from "../components/InsuranceTypes";
 import FaqModule from "../components/FaqModule";
 import {
   HomeData,
+  ReviewsData,
   InsuranceTypesData,
   HomePageFaqData,
   ContactBarData,
@@ -13,6 +14,7 @@ import Spacer from "../sub_components/Spacer";
 import { Variables } from "../styles/Variables";
 import ContactBarModule from "../components/ContactBarModule";
 import StatsCounterModule from "../components/StatsCounterModule";
+import TestimonialsV2 from "../components/TestimonialsV2";
 
 const Home = () => {
   return (
@@ -54,6 +56,14 @@ const Home = () => {
         mobile={100}
       />
       <FaqModule {...HomePageFaqData} />
+      <Spacer
+        shadowToggle="true"
+        color={Variables.primaryColor2}
+        desktop={64}
+        tablet={120}
+        mobile={100}
+      />
+      <TestimonialsV2 data={ReviewsData} />
       <Spacer
         shadowToggle="true"
         color={Variables.primaryColor2}

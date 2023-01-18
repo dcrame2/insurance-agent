@@ -131,6 +131,29 @@ export const ContactFormData = {
   },
 };
 
+export const ReviewsData = {
+  heading: "Reviews",
+  // subheading: `Testimonials from ${Variables.companyName} customers`,
+  testimonials: [
+    {
+      name: "Cynthia L.",
+      content: `I would highly recommend ${Variables.companyName} for your website needs. I've never received better communication with a business before!`,
+    },
+    {
+      name: "Tim C.",
+      content: `${Variables.companyName} transformed my business to a new level which increased my site viewers over 100%.`,
+    },
+    {
+      name: "Anna J.",
+      content: `I can't thank ${Variables.companyName} enough for building our website. The design and support they provided is unmatched.`,
+    },
+    {
+      name: "Bill A.",
+      content: `${Variables.companyName} makes the best websites I have ever seen. They tripled my website viewers in 2 months.`,
+    },
+  ],
+};
+
 export const ContactBarData = {
   header: "Contact me for more information!",
   button: { url: "/contact", text: "contact", label: "jump to contact form" },
@@ -266,10 +289,10 @@ export const CarInsuranceFaqData = {
 };
 
 export const CarInsuranceContentModuleData = {
-    content1:
-        'Car insurance is a contract between you and an insurance company in which you pay a premium and the insurance company agrees to pay for certain types of financial losses in the event of an accident or theft. The most common types of car insurance are liability, collision, and comprehensive coverage. Liability coverage is required by law and covers damages or injuries that you may cause to another person or their property while operating your vehicle.',
-    content2:
-        'Collision coverage pays for damages to your own vehicle in the event of an accident. Comprehensive coverage pays for non-collision damages such as theft, fire, or natural disasters. Other types of car insurance may include personal injury protection, uninsured motorist coverage, and more.',
+  content1:
+    "Car insurance is a contract between you and an insurance company in which you pay a premium and the insurance company agrees to pay for certain types of financial losses in the event of an accident or theft. The most common types of car insurance are liability, collision, and comprehensive coverage. Liability coverage is required by law and covers damages or injuries that you may cause to another person or their property while operating your vehicle.",
+  content2:
+    "Collision coverage pays for damages to your own vehicle in the event of an accident. Comprehensive coverage pays for non-collision damages such as theft, fire, or natural disasters. Other types of car insurance may include personal injury protection, uninsured motorist coverage, and more.",
 };
 
 // LIFE INSURANCE PAGE DATA
