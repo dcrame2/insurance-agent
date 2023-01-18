@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import { H2Styles, PSecondary } from "../styles/Type";
 import { Variables } from "../styles/Variables";
 import { MediaQueries, Container } from "../styles/Utilities";
+import { useInView, useAnimationControls, motion } from "framer-motion";
 
 const CounterContainer = styled.div`
   display: flex;
@@ -20,6 +21,9 @@ const CounterContainer = styled.div`
 `;
 
 const StatsCounter = ({ stats, index }) => {
+  const headingRef = useRef(null);
+  const isInView = useInView(headingRef);
+
   useEffect(() => {
     const counter = document.getElementById(`counter-${index}`);
     counter.innerText = "0";
@@ -35,13 +39,14 @@ const StatsCounter = ({ stats, index }) => {
       }
     };
     updateCounter();
-  }, []);
+  }, [isInView]);
 
   function numberWithCommas(x) {
     return x.toLocaleString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
+
   return (
-    <CounterContainer>
+    <CounterContainer ref={headingRef}>
       <div
         className="counter"
         id={`counter-${index}`}
