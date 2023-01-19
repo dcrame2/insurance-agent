@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Container, MediaQueries } from "../styles/Utilities";
 import { Variables } from "../styles/Variables";
 import { H2Styles, H3Styles, PSecondary } from "../styles/Type";
 import Arrow from "../sub_components/svg/Arrow";
-import { useInView } from "framer-motion";
+import { useInView, motion, useAnimationControls } from "framer-motion";
 import { FaQuoteRight } from "react-icons/fa";
 import LinkButton from "../sub_components/LinkButton";
 
@@ -253,8 +253,21 @@ const InnerContainer = styled.div`
 export default function TestimonialsV2({ data }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const max = data.testimonials.length - 1;
+  //   const ref = useRef(null);
+  //   const isInView = useInView(ref, { once: true })
+
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, {
+    once: true,
+    amount: 1,
+  });
+  const controls = useAnimationControls();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start({ opacity: 1, translateY: "0" });
+    }
+  }, [isInView]);
 
   const nextPressed = () => {
     if (activeIndex < max) {
@@ -278,7 +291,12 @@ export default function TestimonialsV2({ data }) {
         <FaQuoteRight />
       </div>
       <InnerContainer>
-        <div ref={ref} className="heading-container">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, translateY: "-200%" }}
+          animate={controls}
+          className="heading-container"
+        >
           <h2
           // style={{
           //   transform: isInView ? "none" : "translateY(-200px)",
@@ -289,7 +307,7 @@ export default function TestimonialsV2({ data }) {
             {data.heading}
           </h2>
           {/* <h3>{data.subheading}</h3> */}
-        </div>
+        </motion.div>
         <div className="carousel-wrapper">
           <button
             className="prev"
@@ -298,7 +316,11 @@ export default function TestimonialsV2({ data }) {
           >
             <Arrow />
           </button>
-          <div className="content-wrapper">
+          <motion.div
+            initial={{ opacity: 0, translateY: "-200%" }}
+            animate={controls}
+            className="content-wrapper"
+          >
             {data.testimonials.map((testimonial, index) => {
               return (
                 <div
@@ -310,7 +332,7 @@ export default function TestimonialsV2({ data }) {
                 </div>
               );
             })}
-          </div>
+          </motion.div>
           <button
             className="next"
             onClick={nextPressed}
@@ -334,7 +356,12 @@ export default function TestimonialsV2({ data }) {
             );
           })}
         </ul>
-        <LinkButton text="Read More on Google" />
+        <LinkButton
+          text={data.button.text}
+          aria-label={data.button.ariaLabel}
+          href={data.button.href}
+          target={data.button.target}
+        />
       </InnerContainer>
     </ModuleContainer>
   );
