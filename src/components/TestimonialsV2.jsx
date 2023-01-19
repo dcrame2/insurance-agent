@@ -7,6 +7,7 @@ import { H2Styles, H3Styles, PSecondary } from "../styles/Type";
 import Arrow from "../sub_components/svg/Arrow";
 import { useInView } from "framer-motion";
 import { FaQuoteRight } from "react-icons/fa";
+import LinkButton from "../sub_components/LinkButton";
 
 const ModuleContainer = styled.section`
   position: relative;
@@ -318,7 +319,6 @@ export default function TestimonialsV2({ data }) {
             <Arrow />
           </button>
         </div>
-
         <ul className="indicators">
           {data.testimonials.map((item, index) => {
             return (
@@ -334,6 +334,7 @@ export default function TestimonialsV2({ data }) {
             );
           })}
         </ul>
+        <LinkButton text="Read More on Google" />
       </InnerContainer>
     </ModuleContainer>
   );
