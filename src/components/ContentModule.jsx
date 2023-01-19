@@ -2,7 +2,12 @@ import styled from 'styled-components';
 import { Variables } from '../styles/Variables';
 import { Container, MediaQueries } from '../styles/Utilities';
 import { PBaseStyles } from '../styles/Type';
-import { motion, useAnimationControls, useInView } from 'framer-motion';
+import {
+    filterProps,
+    motion,
+    useAnimationControls,
+    useInView,
+} from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
 const ContentContainer = styled.div`
@@ -12,23 +17,22 @@ const ContentContainer = styled.div`
 const ContentInnerContainer = styled.div`
     ${Container}
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    grid-template-columns: ${(props) =>
+        props.columns === 2 ? '1fr 1fr' : '1fr'};
+    gap: ${(props) => (props.columns === 2 ? '50px' : '1em')};
 
     @media ${MediaQueries.tablet} {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: ${(props) => (props.columns === 2 ? '30px' : '1em')};
     }
 
     p {
         ${PBaseStyles}
-    }
-    br {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1em;
     }
 `;
 
-const ContentModule = ({ data }) => {
+const ContentModule = ({ data, ...props }) => {
     const ContainerRef = useRef(null);
     const isInView = useInView(ContainerRef, { once: true, amount: 1 });
     const controls = useAnimationControls();
@@ -41,7 +45,7 @@ const ContentModule = ({ data }) => {
 
     return (
         <ContentContainer>
-            <ContentInnerContainer ref={ContainerRef}>
+            <ContentInnerContainer columns={props.columns} ref={ContainerRef}>
                 <motion.div
                     className='col-1'
                     initial={{ opacity: 0, translateY: '-200%' }}
@@ -50,9 +54,9 @@ const ContentModule = ({ data }) => {
                 />
 
                 <motion.div
+                    className='col-2'
                     initial={{ opacity: 0, translateY: '-200%' }}
                     animate={controls}
-                    className='col-2'
                     dangerouslySetInnerHTML={{ __html: data.content2 }}
                 />
             </ContentInnerContainer>

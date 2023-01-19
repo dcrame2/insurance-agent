@@ -20,14 +20,14 @@ const CarInsurance = () => {
                 color={Variables.primaryColor2}
                 desktop={100}
                 tablet={80}
-                mobile={60}
+                mobile={40}
             />
-            <ContentModule data={CarInsuranceContentModuleData} />
+            <ContentModule data={CarInsuranceContentModuleData} columns={2} />
             <Spacer
                 color={Variables.primaryColor2}
                 desktop={100}
                 tablet={80}
-                mobile={60}
+                mobile={40}
             />
             <FaqModule {...CarInsuranceFaqData} />
             <Spacer
