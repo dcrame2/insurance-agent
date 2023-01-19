@@ -286,12 +286,13 @@ export default function TestimonialsV2({ data }) {
   };
 
   return (
-    <ModuleContainer ref={ref}>
+    <ModuleContainer>
       <div className="quote">
         <FaQuoteRight />
       </div>
       <InnerContainer>
         <motion.div
+          ref={ref}
           initial={{ opacity: 0, translateY: "-200%" }}
           animate={controls}
           className="heading-container"
