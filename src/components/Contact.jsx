@@ -55,7 +55,6 @@ const Section = styled.section`
         img {
           width: 500px;
           height: 500px;
-          border-radius: 15px;
           margin: auto;
           @media ${MediaQueries.tablet2} {
             height: 300px;
@@ -139,7 +138,6 @@ const Section = styled.section`
         gap: 20px;
         color: ${Variables.white};
         background: transparent;
-        border-radius: 40px;
         padding: 50px;
         @media ${MediaQueries.tablet} {
           width: 100%;
@@ -171,7 +169,6 @@ const Section = styled.section`
             outline: none;
             font-size: 1.5rem;
             background-color: transparent;
-            /* border-radius: 8px; */
             width: 500px;
             border: 2px solid ${Variables.primaryColor};
             &:hover,
