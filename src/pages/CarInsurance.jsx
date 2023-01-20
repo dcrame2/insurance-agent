@@ -11,6 +11,7 @@ import Spacer from '../sub_components/Spacer';
 import FaqModule from '../components/FaqModule';
 import ContactBarModule from '../components/ContactBarModule';
 import ContentModule from '../components/ContentModule';
+import ListContentModule from '../components/ListContentModule';
 
 const CarInsurance = () => {
     return (
@@ -22,7 +23,8 @@ const CarInsurance = () => {
                 tablet={80}
                 mobile={40}
             />
-            <ContentModule data={CarInsuranceContentModuleData} columns={2} />
+            {/* <ContentModule data={CarInsuranceContentModuleData} columns={2} /> */}
+            <ListContentModule />
             <Spacer
                 color={Variables.primaryColor2}
                 desktop={100}
