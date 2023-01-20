@@ -117,15 +117,21 @@ export const ContactFormData = {
     socials: [
       {
         name: "facebook",
-        link: "#",
+        link: "https://www.facebook.com/mikey.moulis",
         icon: <FaFacebookSquare />,
         alt: "facebook icon",
       },
       {
         name: "linkedin",
-        link: "#",
+        link: "https://www.linkedin.com/in/mike-moulis-59394b129/",
         icon: <FaLinkedin />,
         alt: "linkedin icon",
+      },
+      {
+        name: "google business",
+        link: "https://www.google.com/search?q=Mike+Moulis+-+COUNTRY+Financial+representative&oq=mike&aqs=chrome.1.69i57j69i59l2j46i433i512l2j69i61l3.2834j0j1&sourceid=chrome&ie=UTF-8",
+        icon: <FaGoogle />,
+        alt: "google business icon",
       },
     ],
   },

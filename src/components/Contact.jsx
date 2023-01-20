@@ -32,35 +32,20 @@ const Section = styled.section`
       gap: 30px;
       justify-content: center;
       align-items: center;
-      /* border-radius: 40px; */
       background-color: ${Variables.secondaryColor};
-      /* border: solid 1px ${Variables.primaryColor}; */
       @media ${MediaQueries.tablet} {
         padding: 50px 20px;
         flex-direction: column;
         gap: 20px;
-        /* border: solid 1px ${Variables.primaryColor}; */
-        /* background-color: unset; */
-        /* background: transparent; */
-        /* box-shadow: 1px 1px 10px 2px ${Variables.secondaryColor};
-        -webkit-box-shadow: 1px 1px 10px 2px ${Variables.secondaryColor};
-        -moz-box-shadow: 1px 1px 10px 2px ${Variables.secondaryColor};
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
       }
       @media ${MediaQueries.mobile} {
         padding: 40px 20px;
       }
-
       .form-info {
         display: flex;
         flex-direction: column;
         gap: 10px;
-
-        /* margin-bottom: 50px; */
         margin: 50px;
-        /* margin-top: 50px; */
         width: 40%;
         @media ${MediaQueries.tablet} {
           margin-bottom: 20px;
@@ -91,7 +76,6 @@ const Section = styled.section`
         .location-container {
           display: flex;
           flex-wrap: wrap;
-          /* flex: 1 1 auto; */
           gap: 20px;
 
           .location-inner-container {
@@ -105,11 +89,10 @@ const Section = styled.section`
               line-height: 25px;
               margin-right: 5%;
               @media ${MediaQueries.tablet} {
-                /* text-align: center; */
                 margin-right: unset;
               }
             }
-            h4 {
+            a.social-links {
               display: inline;
               margin-right: 5px;
               ${PSecondary}
@@ -133,54 +116,9 @@ const Section = styled.section`
         background: transparent;
         border-radius: 40px;
         padding: 50px;
-        /* border: solid 1px ${Variables.primaryColor}; */
-        /* box-shadow: 1px 1px 10px 2px ${Variables.secondaryColor};
-        -webkit-box-shadow: 1px 1px 10px 2px ${Variables.secondaryColor};
-        -moz-box-shadow: 1px 1px 10px 2px ${Variables.secondaryColor};
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, */
-        /* rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
-
-        @keyframes shake {
-          0% {
-            transform: translate(1px, 1px) rotate(0deg);
-          }
-          10% {
-            transform: translate(-1px, -2px) rotate(-1deg);
-          }
-          20% {
-            transform: translate(-3px, 0px) rotate(1deg);
-          }
-          30% {
-            transform: translate(3px, 2px) rotate(0deg);
-          }
-          40% {
-            transform: translate(1px, -1px) rotate(1deg);
-          }
-          50% {
-            transform: translate(-1px, 2px) rotate(-1deg);
-          }
-          60% {
-            transform: translate(-3px, 1px) rotate(0deg);
-          }
-          70% {
-            transform: translate(3px, 1px) rotate(-1deg);
-          }
-          80% {
-            transform: translate(-1px, -1px) rotate(1deg);
-          }
-          90% {
-            transform: translate(1px, 2px) rotate(0deg);
-          }
-          100% {
-            transform: translate(1px, -2px) rotate(-1deg);
-          }
-        }
         img {
           width: auto;
           height: 100px;
-          animation-iteration-count: infinite;
-          animation: shake 1s;
         }
         h4 {
           ${PSecondary}
@@ -268,8 +206,8 @@ const Contact = ({ data }) => {
   };
 
   const recipients = [
-    "jtully97@gmail.com",
-    "dcrame2@gmail.com",
+    // "jtully97@gmail.com",
+    // "dcrame2@gmail.com",
     "info@thedigitaldelight.com",
   ];
 
@@ -312,16 +250,13 @@ const Contact = ({ data }) => {
         <div className="form-wrapper">
           {successValue ? (
             <div className="success-container">
-              <h4>{successMessage} A team member will be reaching out.</h4>
-              <img
-                src="hands/Purple-in-Jumper10.png"
-                alt="Shaking hands to initiate partnership"
-                srcset=""
-              />
+              <h4>
+                {successMessage} I will be reaching out as soon as possible.
+              </h4>
+              <img src={Variables.logoWhite} alt="Moulis Financial" />
             </div>
           ) : (
             <form onSubmit={OnSubmit}>
-              {/* action="https://formsubmit.co/dcrame2@gmail.com" */}
               <input
                 type="hidden"
                 name="_subject"
@@ -332,13 +267,13 @@ const Contact = ({ data }) => {
                 name="_autoresponse"
                 value={`Thank you from ${Variables.companyName}`}
               ></input>
-              <input type="hidden" name="_cc" value="jtully97@gmail.com" />
+              {/* <input type="hidden" name="_cc" value="jtully97@gmail.com" /> */}
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table"></input>
               <input
                 type="hidden"
                 name="_next"
-                value="http://www.thedigitaldelight.com"
+                value="http://www.moulisfinancial.com"
               ></input>
               <h2>{data.title2}</h2>
               <div>
@@ -411,7 +346,11 @@ const Contact = ({ data }) => {
               <div className="location-inner-container">
                 <p>Social Media:</p>
                 {data.socialMedia.socials.map((social) => {
-                  return <h4>{social.icon}</h4>;
+                  return (
+                    <a className="social-links" href={social.link}>
+                      {social.icon}
+                    </a>
+                  );
                 })}
               </div>
             </div>
