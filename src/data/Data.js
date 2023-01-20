@@ -117,15 +117,21 @@ export const ContactFormData = {
     socials: [
       {
         name: "facebook",
-        link: "#",
+        link: "https://www.facebook.com/mikey.moulis",
         icon: <FaFacebookSquare />,
         alt: "facebook icon",
       },
       {
         name: "linkedin",
-        link: "#",
+        link: "https://www.linkedin.com/in/mike-moulis-59394b129/",
         icon: <FaLinkedin />,
         alt: "linkedin icon",
+      },
+      {
+        name: "google business",
+        link: "https://www.google.com/search?q=Mike+Moulis+-+COUNTRY+Financial+representative&oq=mike&aqs=chrome.1.69i57j69i59l2j46i433i512l2j69i61l3.2834j0j1&sourceid=chrome&ie=UTF-8",
+        icon: <FaGoogle />,
+        alt: "google business icon",
       },
     ],
   },
@@ -163,6 +169,7 @@ export const ReviewsData = {
     ariaLabel: "Google Reviews",
     href: "https://www.google.com/search?q=Mike+Moulis+-+COUNTRY+Financial+representative&oq=mike&aqs=chrome.1.69i57j69i59l2j46i433i512l2j69i61l3.2834j0j1&sourceid=chrome&ie=UTF-8",
     target: "_blank",
+    aTag: true,
   },
 };
 
@@ -175,9 +182,10 @@ export const FooterData = {
   resources: {
     heading: "Resources",
     links: [
-      { href: "#services", text: "Services" },
-      { href: "#testimonials", text: "Testimonials" },
-      { href: "#faqSection", text: "FAQ" },
+      { href: "/car-insurance", text: "Car Insurance" },
+      { href: "/life-insurance", text: "Life Insurance" },
+      { href: "/home-insurance", text: "Home Insurance" },
+      { href: "/business-insurance", text: "Business Insurance" },
     ],
   },
   information: {
@@ -194,20 +202,20 @@ export const FooterData = {
     links: [
       {
         icon: <FaFacebookSquare />,
-        href: "www.facebook.com",
+        href: "https://www.facebook.com/mikey.moulis",
       },
       {
         icon: <FaLinkedin />,
-        href: "www.linkedin.com",
+        href: "https://www.linkedin.com/in/mike-moulis-59394b129/",
       },
       {
         icon: <FaGoogle />,
-        href: "www.google.com",
+        href: "https://www.google.com/search?q=Mike+Moulis+-+COUNTRY+Financial+representative&oq=mike&aqs=chrome.1.69i57j69i59l2j46i433i512l2j69i61l3.2834j0j1&sourceid=chrome&ie=UTF-8",
       },
-      {
-        icon: <FaTwitter />,
-        href: "www.twitter.com",
-      },
+      // {
+      //   icon: <FaTwitter />,
+      //   href: "https://www.twitter.com",
+      // },
     ],
   },
 };
@@ -347,8 +355,8 @@ export const LifeInsuranceFaqData = {
 };
 
 export const LifeInsuranceContentModuleData = {
-    content1: `<p>Life insurance is a contract between an individual and an insurance company in which the individual pays a premium and the insurance company agrees to pay a designated beneficiary a sum of money upon the individual's death. There are two main types of life insurance: term life insurance and permanent life insurance.</p><p>Term life insurance provides coverage for a specific period of time, such as 20 or 30 years. If the insured individual dies within this period, the death benefit is paid to the designated beneficiary. If the individual does not die within the term, the contract expires with no value.</p>`,
-    content2: `<p>Permanent life insurance, such as whole life insurance or universal life insurance, provides coverage for the individual's entire lifetime. Premiums are typically higher than term life insurance, but the policy's cash value component builds over time. This component can be borrowed against or used to pay premiums.</p><p>Both types of life insurance are designed to provide financial support for the insured's beneficiaries in the event of their death. The death benefit can be used to cover expenses such as funeral costs, outstanding debts, and living expenses.</p>`,
+  content1: `<p>Life insurance is a contract between an individual and an insurance company in which the individual pays a premium and the insurance company agrees to pay a designated beneficiary a sum of money upon the individual's death. There are two main types of life insurance: term life insurance and permanent life insurance.</p><p>Term life insurance provides coverage for a specific period of time, such as 20 or 30 years. If the insured individual dies within this period, the death benefit is paid to the designated beneficiary. If the individual does not die within the term, the contract expires with no value.</p>`,
+  content2: `<p>Permanent life insurance, such as whole life insurance or universal life insurance, provides coverage for the individual's entire lifetime. Premiums are typically higher than term life insurance, but the policy's cash value component builds over time. This component can be borrowed against or used to pay premiums.</p><p>Both types of life insurance are designed to provide financial support for the insured's beneficiaries in the event of their death. The death benefit can be used to cover expenses such as funeral costs, outstanding debts, and living expenses.</p>`,
 };
 
 // BUSINESS INSURANCE PAGE DATA
@@ -367,23 +375,23 @@ export const HomePageStatsData = {
   stats: [
     {
       symbol: "$",
-      dataTarget: "5000",
-      heading: "Money's Saved",
+      dataTarget: "200",
+      heading: "saved on average for car insurance",
     },
     {
       symbol: "$",
-      dataTarget: "30000",
-      heading: "Money Saved",
-    },
-    {
-      symbol: "+",
-      dataTarget: "597",
-      heading: "Clients",
+      dataTarget: "150",
+      heading: "saved on average for life insurance",
     },
     {
       symbol: "$",
-      dataTarget: "50000",
-      heading: "Money's Saved",
+      dataTarget: "600",
+      heading: "saved on average for home insurance",
+    },
+    {
+      symbol: "$",
+      dataTarget: "2500",
+      heading: "saved on average for business insurance",
     },
   ],
 };

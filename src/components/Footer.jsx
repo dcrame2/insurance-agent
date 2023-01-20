@@ -4,6 +4,7 @@ import { MediaQueries, Container } from "../styles/Utilities";
 import { useEffect, useState } from "react";
 import { PSmallStyles, H4Styles } from "../styles/Type";
 import { GlassEffect } from "../styles/Utilities";
+import { Link } from "react-router-dom";
 
 const FooterElm = styled.footer`
   position: relative;
@@ -142,7 +143,7 @@ export default function Footer({ data }) {
           {data.resources.links.map((link, index) => {
             return (
               <li key={`resource-link-${index}`}>
-                <a href={`${link.href}`}>{link.text}</a>
+                <Link to={`${link.href}`}>{link.text}</Link>
               </li>
             );
           })}
@@ -166,7 +167,9 @@ export default function Footer({ data }) {
           {data.socialMedia.links.map((link, index) => {
             return (
               <li key={`information-link${index}`}>
-                <a href={`${link.href}`}>{link.icon}</a>
+                <a target="_blank" href={`${link.href}`}>
+                  {link.icon}
+                </a>
               </li>
             );
           })}
