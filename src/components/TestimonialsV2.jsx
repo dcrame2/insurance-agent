@@ -361,6 +361,7 @@ export default function TestimonialsV2({ data }) {
           aria-label={data.button.ariaLabel}
           href={data.button.href}
           target={data.button.target}
+          aTag={data.button.aTag}
         />
       </InnerContainer>
     </ModuleContainer>

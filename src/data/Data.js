@@ -163,6 +163,7 @@ export const ReviewsData = {
     ariaLabel: "Google Reviews",
     href: "https://www.google.com/search?q=Mike+Moulis+-+COUNTRY+Financial+representative&oq=mike&aqs=chrome.1.69i57j69i59l2j46i433i512l2j69i61l3.2834j0j1&sourceid=chrome&ie=UTF-8",
     target: "_blank",
+    aTag: true,
   },
 };
 
@@ -175,9 +176,10 @@ export const FooterData = {
   resources: {
     heading: "Resources",
     links: [
-      { href: "#services", text: "Services" },
-      { href: "#testimonials", text: "Testimonials" },
-      { href: "#faqSection", text: "FAQ" },
+      { href: "/car-insurance", text: "Car Insurance" },
+      { href: "/life-insurance", text: "Life Insurance" },
+      { href: "/home-insurance", text: "Home Insurance" },
+      { href: "/business-insurance", text: "Business Insurance" },
     ],
   },
   information: {
@@ -194,20 +196,20 @@ export const FooterData = {
     links: [
       {
         icon: <FaFacebookSquare />,
-        href: "www.facebook.com",
+        href: "https://www.facebook.com/mikey.moulis",
       },
       {
         icon: <FaLinkedin />,
-        href: "www.linkedin.com",
+        href: "https://www.linkedin.com/in/mike-moulis-59394b129/",
       },
       {
         icon: <FaGoogle />,
-        href: "www.google.com",
+        href: "https://www.google.com/search?q=Mike+Moulis+-+COUNTRY+Financial+representative&oq=mike&aqs=chrome.1.69i57j69i59l2j46i433i512l2j69i61l3.2834j0j1&sourceid=chrome&ie=UTF-8",
       },
-      {
-        icon: <FaTwitter />,
-        href: "www.twitter.com",
-      },
+      // {
+      //   icon: <FaTwitter />,
+      //   href: "https://www.twitter.com",
+      // },
     ],
   },
 };
