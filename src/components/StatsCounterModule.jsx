@@ -10,7 +10,7 @@ const StatsCounterContainer = styled.section`
   height: auto;
   display: grid;
   align-content: center;
-  justify-content: center;
+  justify-items: center;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   gap: 20px;
