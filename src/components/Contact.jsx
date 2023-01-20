@@ -215,7 +215,9 @@ const Contact = ({ data }) => {
     setMessageValue(e.target.value);
   };
 
-  const recipients = ["info@thedigitaldelight.com"];
+  const recipients = [
+    "thedigitaldelightllc@gmail.com, mike.moulis@countryfinanical.com",
+  ];
 
   const submitForm = (recip) => {
     recip.map((email) => {
