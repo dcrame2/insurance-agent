@@ -10,6 +10,9 @@ const CounterContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  @media ${MediaQueries.mobile} {
+    max-width: 200px;
+  }
   .counter {
     color: ${Variables.primaryColor} !important;
     ${H1Styles}
