@@ -135,8 +135,6 @@ const InnerContainer = styled.div`
         background-color: ${Variables.primaryColor2};
         border-bottom: 2px solid ${Variables.primaryColor};
         padding: 26px 32px 28px;
-        /* border-radius: 24px; */
-
         @media ${MediaQueries.tablet} {
           padding: 20px 26px 24px;
         }
@@ -229,7 +227,7 @@ const InnerContainer = styled.div`
           right: 0;
           width: 0;
           margin: auto;
-          border-radius: 50%;
+          /* border-radius: 50%; */
           width: 0%;
           height: 0%;
           transition: width ease 0.3s, height ease 0.3s;
