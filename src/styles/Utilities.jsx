@@ -55,7 +55,7 @@ export const ButtonStyles = css`
   cursor: pointer;
   position: relative;
   padding: 12px 24px;
-  background-color: ${Variables.secondaryColor};
+  background-color: ${Variables.transparent};
   color: ${Variables.black};
   border: 2px solid ${Variables.white};
   text-decoration: unset;

@@ -18,6 +18,7 @@ export const Variables = {
   //   primaryColor: "blue",
   primaryColor2: "#181818",
   secondaryColor: "#333333",
+  transparent: "transparent",
   black: "black",
   white: "#ffff",
   $darkGray: "#434242",
