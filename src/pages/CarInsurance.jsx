@@ -5,6 +5,7 @@ import {
     CarInsuranceICMData,
     ContactBarData,
     CarInsuranceContentModuleData,
+    CarInsuranceListContentModule,
 } from '../data/Data';
 import ImageContentModule from '../components/ImageContentModule';
 import Spacer from '../sub_components/Spacer';
@@ -24,7 +25,7 @@ const CarInsurance = () => {
                 mobile={40}
             />
             {/* <ContentModule data={CarInsuranceContentModuleData} columns={2} /> */}
-            <ListContentModule />
+            <ListContentModule data={CarInsuranceListContentModule} />
             <Spacer
                 color={Variables.primaryColor2}
                 desktop={100}
