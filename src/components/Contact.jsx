@@ -105,8 +105,33 @@ const Section = styled.section`
           }
         }
       }
-      form,
+
       .success-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        color: ${Variables.white};
+        background: transparent;
+        max-width: 500px;
+        border-bottom: 2px solid ${Variables.primaryColor};
+        padding: 20px;
+        background-color: ${Variables.black};
+        @media ${MediaQueries.tablet} {
+          width: 100%;
+        }
+        img {
+          width: auto;
+          height: 30px;
+        }
+        h4 {
+          ${PSecondary}
+          text-align: center;
+        }
+      }
+
+      form {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -116,14 +141,6 @@ const Section = styled.section`
         background: transparent;
         border-radius: 40px;
         padding: 50px;
-        img {
-          width: auto;
-          height: 100px;
-        }
-        h4 {
-          ${PSecondary}
-          text-align: center;
-        }
         @media ${MediaQueries.tablet} {
           width: 100%;
           padding: unset;
@@ -132,13 +149,9 @@ const Section = styled.section`
           -webkit-box-shadow: unset;
           -moz-box-shadow: unset;
         }
-
         h2 {
           ${H2Styles}
           text-transform: uppercase;
-          /* @media ${MediaQueries.tablet} {
-            display: none;
-          } */
         }
         div {
           display: flex;
@@ -205,11 +218,7 @@ const Contact = ({ data }) => {
     setMessageValue(e.target.value);
   };
 
-  const recipients = [
-    // "jtully97@gmail.com",
-    // "dcrame2@gmail.com",
-    "info@thedigitaldelight.com",
-  ];
+  const recipients = ["info@thedigitaldelight.com"];
 
   const submitForm = (recip) => {
     recip.map((email) => {
@@ -248,77 +257,80 @@ const Contact = ({ data }) => {
       <div className="ContactInnerContainer">
         {/* <OpaqueFilter> */}
         <div className="form-wrapper">
-          {successValue ? (
-            <div className="success-container">
-              <h4>
-                {successMessage} I will be reaching out as soon as possible.
-              </h4>
-              <img src={Variables.logoWhite} alt="Moulis Financial" />
-            </div>
-          ) : (
-            <form onSubmit={OnSubmit}>
+          <form onSubmit={OnSubmit}>
+            <input
+              type="hidden"
+              name="_subject"
+              value={`New ${Variables.companyName} Submission!`}
+            />
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value={`Thank you from ${Variables.companyName}`}
+            ></input>
+            {/* <input type="hidden" name="_cc" value="jtully97@gmail.com" /> */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table"></input>
+            <input
+              type="hidden"
+              name="_next"
+              value="http://www.moulisfinancial.com"
+            ></input>
+            <h2>{data.title2}</h2>
+            <div>
+              <label htmlFor="firstname">First Name*</label>
               <input
-                type="hidden"
-                name="_subject"
-                value={`New ${Variables.companyName} Submission!`}
+                onChange={FNameHandler}
+                type="text"
+                name="firstname"
+                id="firstname"
+                required
               />
+            </div>
+            <div>
+              <label htmlFor="lastname">Last Name*</label>
               <input
-                type="hidden"
-                name="_autoresponse"
-                value={`Thank you from ${Variables.companyName}`}
-              ></input>
-              {/* <input type="hidden" name="_cc" value="jtully97@gmail.com" /> */}
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="table"></input>
+                onChange={LNameHandler}
+                type="text"
+                name="lastname"
+                id="lastname"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email">Email Address*</label>
               <input
-                type="hidden"
-                name="_next"
-                value="http://www.moulisfinancial.com"
-              ></input>
-              <h2>{data.title2}</h2>
-              <div>
-                <label htmlFor="firstname">First Name*</label>
-                <input
-                  onChange={FNameHandler}
-                  type="text"
-                  name="firstname"
-                  id="firstname"
-                  required
-                />
+                onChange={EmailHandler}
+                type="email"
+                name="email"
+                id="email"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="message">Message*</label>
+              <textarea
+                onChange={MessageHandler}
+                type="text"
+                name="message"
+                id="message"
+                required
+              />
+            </div>
+
+            <Button ariaLabel="Submit form" text="Submit"></Button>
+            {successValue ? (
+              <div className="success-container">
+                <h4>
+                  {successMessage} I will be reaching out as soon as possible.
+                </h4>
+                <img src={Variables.logoWhite} alt="Moulis Financial" />
               </div>
-              <div>
-                <label htmlFor="lastname">Last Name*</label>
-                <input
-                  onChange={LNameHandler}
-                  type="text"
-                  name="lastname"
-                  id="lastname"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email">Email Address*</label>
-                <input
-                  onChange={EmailHandler}
-                  type="email"
-                  name="email"
-                  id="email"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="message">Message*</label>
-                <textarea
-                  onChange={MessageHandler}
-                  type="text"
-                  name="message"
-                  id="message"
-                  required
-                />
-              </div>
-              <Button ariaLabel="Submit form" text="Submit"></Button>
-            </form>
-          )}
+            ) : (
+              ""
+            )}
+          </form>
+
           <div ref={ref} className="form-info">
             {/* <h2
               style={{
