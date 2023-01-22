@@ -4,6 +4,9 @@ import {
   FaLinkedin,
   FaGoogle,
   FaTwitter,
+  FaLocationArrow,
+  FaPhoneAlt,
+  FaMailBulk,
 } from "react-icons/fa";
 
 export const NavigationData = {
@@ -101,6 +104,24 @@ export const HomePageFaqData = {
 };
 
 export const ContactFormData = {
+  // contactDetails: [
+  //   {
+  //     icon: <FaLocationArrow />,
+  //     subheader: "Address",
+  //     content: "900 Technology Way Suite 280 Libertyville, IL 60048",
+  //   },
+  //   {
+  //     icon: <FaPhoneAlt />,
+  //     subheader: "Phone",
+  //     content: "(847)-548-8591",
+  //   },
+  //   {
+  //     icon: <FaMailBulk />,
+  //     subheader: "Email",
+  //     content: "mike.moulis@countryfinancial.com",
+  //   },
+  // ],
+
   title: "Location",
   desc: "Need a website? Talk with a team member for a FREE consultation on the goals of your wesbite.",
   title2: "Contact ",
@@ -113,6 +134,7 @@ export const ContactFormData = {
     days: "Monday - Saturday",
     hours: "8:00 AM - 6:00 PM",
   },
+  image: "/images/mike_easter.jpeg",
   socialMedia: {
     socials: [
       {
