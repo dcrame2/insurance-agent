@@ -60,8 +60,8 @@ const Section = styled.section`
 
         img {
           width: 100%;
-          height: 500px;
-          max-width: 500px;
+          height: 600px;
+          max-width: 600px;
           /* margin: auto; */
           @media ${MediaQueries.tablet2} {
             /* margin: auto; */
@@ -87,10 +87,21 @@ const Section = styled.section`
           flex-wrap: wrap;
           gap: 20px;
 
+          @media ${MediaQueries.tablet} {
+            flex-direction: column;
+          }
+          /* @media ${MediaQueries.mobile} {
+            flex-direction: column;
+          } */
+
           .location-inner-container {
-            max-width: 45%;
+            max-width: 40%;
             width: 100%;
+
             flex: 1 1 auto;
+            @media ${MediaQueries.tablet} {
+              max-width: 100%;
+            }
             p {
               text-align: left;
               ${PSecondary}
@@ -101,12 +112,15 @@ const Section = styled.section`
                 margin-right: unset;
                 text-align: left;
               }
+              @media ${MediaQueries.mobile} {
+                margin-right: unset;
+              }
             }
             a.social-links {
               display: inline;
-
+              /* flex-direction: row; */
               margin-right: 5px;
-              /* margin: auto; */
+
               ${PSecondary}
               transition: color ease 0.3s;
               &:hover {
