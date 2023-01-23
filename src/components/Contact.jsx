@@ -7,6 +7,7 @@ import { H3Styles, PSecondary, H2Styles } from "../styles/Type";
 import { Container } from "../styles/Utilities";
 import { useInView } from "framer-motion";
 import { GlassEffect } from "../styles/Utilities";
+import SubHero from "./SubHero";
 
 const Section = styled.section`
   height: auto;
@@ -29,13 +30,13 @@ const Section = styled.section`
     .form-wrapper {
       display: flex;
       flex-direction: row;
-      gap: 30px;
+      gap: 60px;
       justify-content: center;
       align-items: center;
       background-color: ${Variables.secondaryColor};
       @media ${MediaQueries.tablet} {
         padding: 50px 20px;
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 20px;
       }
       @media ${MediaQueries.mobile} {
@@ -45,24 +46,31 @@ const Section = styled.section`
         display: flex;
         flex-direction: column;
         gap: 10px;
-        margin: 50px;
+        /* margin: 50px; */
         width: 40%;
         @media ${MediaQueries.tablet} {
+          flex-direction: row;
+          gap: 30px;
           margin-bottom: 20px;
           width: 100%;
         }
+        @media ${MediaQueries.mobile} {
+          flex-direction: column;
+        }
 
         img {
-          width: 500px;
-          height: 500px;
-          margin: auto;
+          width: 100%;
+          height: 600px;
+          max-width: 600px;
+          /* margin: auto; */
           @media ${MediaQueries.tablet2} {
-            height: 300px;
-            width: 300px;
+            /* margin: auto; */
+            max-width: 400px;
+            height: 400px;
           }
           @media ${MediaQueries.mobile} {
-            height: 200px;
-            width: 200px;
+            height: 300px;
+            max-width: 300px;
           }
         }
         h2 {
@@ -74,13 +82,26 @@ const Section = styled.section`
         }
         .location-container {
           display: flex;
+          /* align-items: center; */
+          /* justify-content: center; */
           flex-wrap: wrap;
           gap: 20px;
 
+          @media ${MediaQueries.tablet} {
+            flex-direction: column;
+          }
+          /* @media ${MediaQueries.mobile} {
+            flex-direction: column;
+          } */
+
           .location-inner-container {
-            max-width: 45%;
+            max-width: 40%;
             width: 100%;
+
             flex: 1 1 auto;
+            @media ${MediaQueries.tablet} {
+              max-width: 100%;
+            }
             p {
               text-align: left;
               ${PSecondary}
@@ -89,11 +110,17 @@ const Section = styled.section`
               margin-right: 5%;
               @media ${MediaQueries.tablet} {
                 margin-right: unset;
+                text-align: left;
+              }
+              @media ${MediaQueries.mobile} {
+                margin-right: unset;
               }
             }
             a.social-links {
               display: inline;
+              /* flex-direction: row; */
               margin-right: 5px;
+
               ${PSecondary}
               transition: color ease 0.3s;
               &:hover {
@@ -215,7 +242,9 @@ const Contact = ({ data }) => {
     setMessageValue(e.target.value);
   };
 
-  const recipients = ["info@thedigitaldelight.com"];
+  const recipients = [
+    "thedigitaldelightllc@gmail.com, mike.moulis@countryfinanical.com",
+  ];
 
   const submitForm = (recip) => {
     recip.map((email) => {
@@ -250,86 +279,88 @@ const Contact = ({ data }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <Section id="contact">
-      <div className="ContactInnerContainer">
-        {/* <OpaqueFilter> */}
-        <div className="form-wrapper">
-          <form onSubmit={OnSubmit}>
-            <input
-              type="hidden"
-              name="_subject"
-              value={`New ${Variables.companyName} Submission!`}
-            />
-            <input
-              type="hidden"
-              name="_autoresponse"
-              value={`Thank you from ${Variables.companyName}`}
-            ></input>
-            {/* <input type="hidden" name="_cc" value="jtully97@gmail.com" /> */}
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table"></input>
-            <input
-              type="hidden"
-              name="_next"
-              value="http://www.moulisfinancial.com"
-            ></input>
-            <h2>{data.title2}</h2>
-            <div>
-              <label htmlFor="firstname">First Name*</label>
+    <>
+      {/* <SubHero data={data} /> */}
+      <Section id="contact">
+        <div className="ContactInnerContainer">
+          {/* <OpaqueFilter> */}
+          <div className="form-wrapper">
+            <form onSubmit={OnSubmit}>
               <input
-                onChange={FNameHandler}
-                type="text"
-                name="firstname"
-                id="firstname"
-                required
+                type="hidden"
+                name="_subject"
+                value={`New ${Variables.companyName} Submission!`}
               />
-            </div>
-            <div>
-              <label htmlFor="lastname">Last Name*</label>
               <input
-                onChange={LNameHandler}
-                type="text"
-                name="lastname"
-                id="lastname"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="email">Email Address*</label>
+                type="hidden"
+                name="_autoresponse"
+                value={`Thank you from ${Variables.companyName}`}
+              ></input>
+              {/* <input type="hidden" name="_cc" value="jtully97@gmail.com" /> */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table"></input>
               <input
-                onChange={EmailHandler}
-                type="email"
-                name="email"
-                id="email"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="message">Message*</label>
-              <textarea
-                onChange={MessageHandler}
-                type="text"
-                name="message"
-                id="message"
-                required
-              />
-            </div>
-
-            <Button ariaLabel="Submit form" text="Submit"></Button>
-            {successValue ? (
-              <div className="success-container">
-                <h4>
-                  {successMessage} I will be reaching out as soon as possible.
-                </h4>
-                <img src={Variables.logoWhite} alt="Moulis Financial" />
+                type="hidden"
+                name="_next"
+                value="http://www.moulisfinancial.com"
+              ></input>
+              <h2>{data.title2}</h2>
+              <div>
+                <label htmlFor="firstname">First Name*</label>
+                <input
+                  onChange={FNameHandler}
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  required
+                />
               </div>
-            ) : (
-              ""
-            )}
-          </form>
+              <div>
+                <label htmlFor="lastname">Last Name*</label>
+                <input
+                  onChange={LNameHandler}
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="email">Email Address*</label>
+                <input
+                  onChange={EmailHandler}
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="message">Message*</label>
+                <textarea
+                  onChange={MessageHandler}
+                  type="text"
+                  name="message"
+                  id="message"
+                  required
+                />
+              </div>
 
-          <div ref={ref} className="form-info">
-            {/* <h2
+              <Button ariaLabel="Submit form" text="Submit"></Button>
+              {successValue ? (
+                <div className="success-container">
+                  <h4>
+                    {successMessage} I will be reaching out as soon as possible.
+                  </h4>
+                  <img src={Variables.logoWhite} alt="Moulis Financial" />
+                </div>
+              ) : (
+                ""
+              )}
+            </form>
+
+            <div ref={ref} className="form-info">
+              {/* <h2
               style={{
                 transform: isInView ? "none" : "translateY(-200px)",
                 opacity: isInView ? 1 : 0,
@@ -338,35 +369,37 @@ const Contact = ({ data }) => {
             >
               {data.title}
             </h2> */}
-            <div className="location-container">
-              <div className="location-inner-container">
-                <p>Street Address:</p>
-                <p>{data.streetAddress}</p>
-              </div>
-              <div className="location-inner-container">
-                <p>Office Phone:</p>
-                <p>{data.numberInfo.mobileNumber}</p>
-              </div>
-              <div className="location-inner-container">
-                <p>Office Hours:</p>
-                <p>{data.officeHours.days}</p>
-                <p>{data.officeHours.hours}</p>
-              </div>
-              <div className="location-inner-container">
-                <p>Social Media:</p>
-                {data.socialMedia.socials.map((social) => {
-                  return (
-                    <a className="social-links" href={social.link}>
-                      {social.icon}
-                    </a>
-                  );
-                })}
+              <img src={data.image} alt="" />
+              <div className="location-container">
+                <div className="location-inner-container">
+                  <p>Street Address:</p>
+                  <p>{data.streetAddress}</p>
+                </div>
+                <div className="location-inner-container">
+                  <p>Office Phone:</p>
+                  <p>{data.numberInfo.mobileNumber}</p>
+                </div>
+                <div className="location-inner-container">
+                  <p>Office Hours:</p>
+                  <p>{data.officeHours.days}</p>
+                  <p>{data.officeHours.hours}</p>
+                </div>
+                <div className="location-inner-container">
+                  <p>Social Media:</p>
+                  {data.socialMedia.socials.map((social) => {
+                    return (
+                      <a className="social-links" href={social.link}>
+                        {social.icon}
+                      </a>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </Section>
+      </Section>
+    </>
   );
 };
 
