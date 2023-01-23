@@ -42,9 +42,6 @@ const ContentInnerContainer = styled.div`
       line-height: 35px;
     }
   }
-  span {
-    color: ${Variables.primaryColor};
-  }
 `;
 
 const ContentModule = ({ data, ...props }) => {
@@ -60,8 +57,8 @@ const ContentModule = ({ data, ...props }) => {
 
   return (
     <ContentContainer>
-      <h2>{data.header}</h2>
-      <ContentInnerContainer columns={props.columns} ref={ContainerRef}>
+      <h2 ref={ContainerRef}>{data.header}</h2>
+      <ContentInnerContainer columns={props.columns}>
         <motion.div
           className="col-1"
           initial={{ opacity: 0, translateY: "-200%" }}
