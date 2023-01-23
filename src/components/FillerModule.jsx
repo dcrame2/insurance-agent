@@ -17,14 +17,22 @@ const FillerModuleContainer = styled.section`
       margin-bottom: -25px;
       ${PBaseStyles}
       background-color: ${Variables.secondaryColor};
-      padding: 15px 40px;
+      padding: 15px 60px;
       z-index: 1;
       border-bottom: 3px solid ${Variables.primaryColor};
     }
     img {
       grid-row: 2;
-      max-width: 500px;
+      height: 400px;
+      object-fit: cover;
+      max-width: 750px;
+      width: 100%;
+      @media ${MediaQueries.tablet} {
+        max-width: 550px;
+        height: 400px;
+      }
       @media ${MediaQueries.mobile} {
+        height: 300px;
         max-width: 350px;
       }
     }
