@@ -107,7 +107,11 @@ export default function FaqModule({ ...props }) {
                                         opacity: 0,
                                         translateX: '200px',
                                     }}
-                                    animate={listControls}
+                                    animate={
+                                        isMobile
+                                            ? { opacity: 1, translateX: '0px' }
+                                            : listControls
+                                    }
                                     transition={
                                         isMobile
                                             ? {
