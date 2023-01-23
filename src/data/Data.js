@@ -334,6 +334,7 @@ export const CarInsuranceFaqData = {
 };
 
 export const CarInsuranceContentModuleData = {
+  header: "Get Prepared",
   content1: `<p>Car insurance is a contract between you and an insurance company in which you pay a premium and the insurance company agrees to pay for certain types of financial losses in the event of an accident or theft.</p><p>The most common types of car insurance are liability, collision, and comprehensive coverage. Liability coverage is required by law and covers damages or injuries that you may cause to another person or their property while operating your vehicle.</p>`,
   content2:
     "<p>Collision coverage pays for damages to your own vehicle in the event of an accident. Comprehensive coverage pays for non-collision damages such as theft, fire, or natural disasters. Other types of car insurance may include personal injury protection, uninsured motorist coverage, and more.</br>",
