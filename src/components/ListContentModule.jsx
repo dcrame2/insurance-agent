@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Container } from '../styles/Utilities';
-import { PBaseStyles } from '../styles/Type';
+import { PBaseStyles, H1Styles } from '../styles/Type';
 import { Variables } from '../styles/Variables';
 import { MediaQueries } from '../styles/Utilities';
 
@@ -14,23 +14,42 @@ const LCMInnerContainer = styled.div`
     ${Container}
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     gap: 28px 20px;
     justify-items: center;
 
     @media ${MediaQueries.tablet} {
         grid-template-columns: 1fr;
     }
+
+    span.row-count {
+        ${H1Styles}
+        display: flex;
+        align-items: center;
+
+        @media ${MediaQueries.tablet} {
+            display: none;
+        }
+    }
 `;
 
 const Item = styled.p`
     ${PBaseStyles}
     text-align: center;
-    max-width: 473px;
+    //max-width: 473px;
     width: 100%;
     background-color: ${Variables.secondaryColor};
-    padding: 24px 30px;
+    padding: 48px 68px;
     border-bottom: 2px solid ${Variables.primaryColor};
+    //border-radius: 25px 25px 0 0;
+
+    @media ${MediaQueries.tablet} {
+        padding: 34px 44px;
+    }
+
+    @media ${MediaQueries.mobile} {
+        padding: 24px 34px;
+    }
 
     ${(props) => {
         switch (props.index) {
@@ -88,16 +107,20 @@ const Item = styled.p`
 `;
 
 export default function ListContentModule({ ...props }) {
+    let rowCount = 1;
     return (
         <LCMContainer>
             <LCMInnerContainer>
                 {props.data.listItems.map((listItem, index) => {
                     return (
-                        <Item
-                            key={`list-item${index}`}
-                            dangerouslySetInnerHTML={{ __html: listItem }}
-                            index={`${index}`}
-                        />
+                        <>
+                            <Item
+                                key={`list-item${index}`}
+                                dangerouslySetInnerHTML={{ __html: listItem }}
+                                index={`${index}`}
+                            />
+                            <span className='row-count'>{`${rowCount++}`}</span>
+                        </>
                     );
                 })}
             </LCMInnerContainer>
