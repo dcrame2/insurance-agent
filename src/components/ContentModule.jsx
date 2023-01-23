@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Variables } from "../styles/Variables";
 import { Container, MediaQueries } from "../styles/Utilities";
-import { PBaseStyles } from "../styles/Type";
+import { PBaseStyles, H2Styles } from "../styles/Type";
 import {
   filterProps,
   motion,
@@ -12,6 +12,11 @@ import { useEffect, useRef } from "react";
 
 const ContentContainer = styled.div`
   background-color: ${Variables.primaryColor2};
+  h2 {
+    ${H2Styles}
+    text-transform: uppercase;
+    text-align: center;
+  }
 `;
 
 const ContentInnerContainer = styled.div`
@@ -20,7 +25,7 @@ const ContentInnerContainer = styled.div`
   grid-template-columns: ${(props) =>
     props.columns === 2 ? "1fr 1fr" : "1fr"};
   gap: ${(props) => (props.columns === 2 ? "70px" : "1em")};
-  border-bottom: 2px solid ${Variables.primaryColor};
+  /* border-bottom: 2px solid ${Variables.primaryColor}; */
   @media ${MediaQueries.tablet} {
     grid-template-columns: 1fr;
     gap: ${(props) => (props.columns === 2 ? "50px" : "1em")};
@@ -30,8 +35,11 @@ const ContentInnerContainer = styled.div`
     ${PBaseStyles}
     line-height: 45px;
     margin-bottom: 1em;
-    span {
-      color: ${Variables.primaryColor};
+    @media ${MediaQueries.tablet} {
+      line-height: 40px;
+    }
+    @media ${MediaQueries.mobile} {
+      line-height: 35px;
     }
   }
 `;
@@ -49,7 +57,14 @@ const ContentModule = ({ data, ...props }) => {
 
   return (
     <ContentContainer>
-      <ContentInnerContainer columns={props.columns} ref={ContainerRef}>
+      <motion.h2
+        ref={ContainerRef}
+        initial={{ opacity: 0, translateY: "-200%" }}
+        animate={controls}
+      >
+        {data.header}
+      </motion.h2>
+      <ContentInnerContainer columns={props.columns}>
         <motion.div
           className="col-1"
           initial={{ opacity: 0, translateY: "-200%" }}

@@ -334,6 +334,7 @@ export const CarInsuranceFaqData = {
 };
 
 export const CarInsuranceContentModuleData = {
+  header: "Get Prepared",
   content1: `<p>Car insurance is a contract between you and an insurance company in which you pay a premium and the insurance company agrees to pay for certain types of financial losses in the event of an accident or theft.</p><p>The most common types of car insurance are liability, collision, and comprehensive coverage. Liability coverage is required by law and covers damages or injuries that you may cause to another person or their property while operating your vehicle.</p>`,
   content2:
     "<p>Collision coverage pays for damages to your own vehicle in the event of an accident. Comprehensive coverage pays for non-collision damages such as theft, fire, or natural disasters. Other types of car insurance may include personal injury protection, uninsured motorist coverage, and more.</br>",
@@ -391,8 +392,9 @@ export const LifeInsuranceFaqData = {
 };
 
 export const LifeInsuranceContentModuleData = {
-  content1: `<p><span>Life insurance</span> is a contract between an individual and an insurance company in which the individual pays a premium and the insurance company agrees to pay a designated beneficiary a sum of money upon the individual's death. There are two main types of life insurance: term life insurance and permanent life insurance.</p><p><span>Term life insurance</span> provides coverage for a specific period of time, such as 20 or 30 years.<span> If the insured individual dies within this period, the death benefit is paid to the designated beneficiary. </span>  If the individual does not die within the term, the contract expires with no value.</p>`,
-  content2: `<p>Permanent life insurance, such as whole life insurance or universal life insurance, provides coverage for the individual's entire lifetime. Premiums are typically higher than term life insurance, but the <span>policy's cash value component builds over time.</span> This component can be borrowed against or used to pay premiums.</p><p>Both types of life insurance are designed to <span>provide financial support for the insured's beneficiaries in the event of their death.</span> The death benefit can be used to cover expenses such as funeral costs, outstanding debts, and living expenses.</p>`,
+  header: "Understanding the Importance",
+  content1: `<p>Life insurance is a contract between an individual and an insurance company in which the individual pays a premium and the insurance company agrees to pay a designated beneficiary a sum of money upon the individual's death. There are two main types of life insurance: term life insurance and permanent life insurance.</p><p>Term life insurance provides coverage for a specific period of time, such as 20 or 30 years. If the insured individual dies within this period, the death benefit is paid to the designated beneficiary. If the individual does not die within the term, the contract expires with no value.</p>`,
+  content2: `<p>Permanent life insurance, such as whole life insurance or universal life insurance, provides coverage for the individual's entire lifetime. Premiums are typically higher than term life insurance, but the policy's cash value component builds over time. This component can be borrowed against or used to pay premiums.</p><p>Both types of life insurance are designed to provide financial support for the insured's beneficiaries in the event of their death. The death benefit can be used to cover expenses such as funeral costs, outstanding debts, and living expenses.</p>`,
 };
 
 // BUSINESS INSURANCE PAGE DATA
