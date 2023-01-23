@@ -25,7 +25,7 @@ const ContentInnerContainer = styled.div`
   grid-template-columns: ${(props) =>
     props.columns === 2 ? "1fr 1fr" : "1fr"};
   gap: ${(props) => (props.columns === 2 ? "70px" : "1em")};
-  border-bottom: 2px solid ${Variables.primaryColor};
+  /* border-bottom: 2px solid ${Variables.primaryColor}; */
   @media ${MediaQueries.tablet} {
     grid-template-columns: 1fr;
     gap: ${(props) => (props.columns === 2 ? "50px" : "1em")};
