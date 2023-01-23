@@ -13,16 +13,13 @@ const Section = styled.section`
   height: auto;
   width: 100%;
   position: relative;
-  ${Container}
   background-color: ${Variables.secondaryColor};
   padding: 120px 0;
-  /* background-color: ${Variables.color14}; */
   @media ${MediaQueries.mobile} {
     padding: 85px 0;
   }
   .ContactInnerContainer {
-    /* ${Container} */
-    /* background-color: ${Variables.secondaryColor}; */
+    ${Container}
     @media ${MediaQueries.mobile} {
       padding-right: 25px;
       padding-left: 25px;
@@ -46,7 +43,6 @@ const Section = styled.section`
         display: flex;
         flex-direction: column;
         gap: 10px;
-        /* margin: 50px; */
         width: 40%;
         @media ${MediaQueries.tablet} {
           flex-direction: row;
@@ -54,17 +50,17 @@ const Section = styled.section`
           margin-bottom: 20px;
           width: 100%;
         }
+        @media (max-width: 700px) {
+          flex-direction: column;
+        }
         @media ${MediaQueries.mobile} {
           flex-direction: column;
         }
-
         img {
           width: 100%;
-          height: 600px;
-          max-width: 600px;
-          /* margin: auto; */
+          height: 500px;
+          max-width: 500px;
           @media ${MediaQueries.tablet2} {
-            /* margin: auto; */
             max-width: 400px;
             height: 400px;
           }
@@ -82,22 +78,14 @@ const Section = styled.section`
         }
         .location-container {
           display: flex;
-          /* align-items: center; */
-          /* justify-content: center; */
           flex-wrap: wrap;
           gap: 20px;
-
           @media ${MediaQueries.tablet} {
             flex-direction: column;
           }
-          /* @media ${MediaQueries.mobile} {
-            flex-direction: column;
-          } */
-
           .location-inner-container {
             max-width: 40%;
             width: 100%;
-
             flex: 1 1 auto;
             @media ${MediaQueries.tablet} {
               max-width: 100%;
@@ -118,9 +106,7 @@ const Section = styled.section`
             }
             a.social-links {
               display: inline;
-              /* flex-direction: row; */
               margin-right: 5px;
-
               ${PSecondary}
               transition: color ease 0.3s;
               &:hover {
@@ -131,7 +117,6 @@ const Section = styled.section`
           }
         }
       }
-
       .success-container {
         display: flex;
         flex-direction: column;
