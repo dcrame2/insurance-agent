@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Variables } from "../styles/Variables";
 import { Container, MediaQueries } from "../styles/Utilities";
-import { PBaseStyles } from "../styles/Type";
+import { PBaseStyles, H2Styles } from "../styles/Type";
 import {
   filterProps,
   motion,
@@ -12,6 +12,11 @@ import { useEffect, useRef } from "react";
 
 const ContentContainer = styled.div`
   background-color: ${Variables.primaryColor2};
+  h2 {
+    ${H2Styles}
+    text-transform: uppercase;
+    text-align: center;
+  }
 `;
 
 const ContentInnerContainer = styled.div`
@@ -30,9 +35,15 @@ const ContentInnerContainer = styled.div`
     ${PBaseStyles}
     line-height: 45px;
     margin-bottom: 1em;
-    span {
-      color: ${Variables.primaryColor};
+    @media ${MediaQueries.tablet} {
+      line-height: 40px;
     }
+    @media ${MediaQueries.mobile} {
+      line-height: 35px;
+    }
+  }
+  span {
+    color: ${Variables.primaryColor};
   }
 `;
 
@@ -49,6 +60,7 @@ const ContentModule = ({ data, ...props }) => {
 
   return (
     <ContentContainer>
+      <h2>{data.header}</h2>
       <ContentInnerContainer columns={props.columns} ref={ContainerRef}>
         <motion.div
           className="col-1"
