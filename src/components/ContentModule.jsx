@@ -57,9 +57,12 @@ const ContentModule = ({ data, ...props }) => {
 
   return (
     <ContentContainer>
-      <h2 initial={{ opacity: 0, translateY: "-200%" }} animate={controls}>
+      <motion.h2
+        initial={{ opacity: 0, translateY: "-200%" }}
+        animate={controls}
+      >
         {data.header}
-      </h2>
+      </motion.h2>
       <ContentInnerContainer ref={ContainerRef} columns={props.columns}>
         <motion.div
           className="col-1"
