@@ -350,6 +350,12 @@ export const CarInsuranceListContentModule = {
   ],
 };
 
+export const CarFillerModuleData = {
+  header: "Protect Your Assets",
+  image: "/images/car2.jpg",
+  altText: "Car",
+};
+
 // LIFE INSURANCE PAGE DATA
 export const LifeInsuranceICMData = {
   contentModule: {
@@ -359,6 +365,12 @@ export const LifeInsuranceICMData = {
     src: "/images/life.jpg",
     alt: "life insurance",
   },
+};
+
+export const LifeFillerModuleData = {
+  header: "Protect Your Life",
+  image: "/images/life2.jpg",
+  altText: "Life",
 };
 
 export const LifeInsuranceFaqData = {

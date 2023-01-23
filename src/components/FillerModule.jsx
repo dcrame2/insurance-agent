@@ -39,12 +39,12 @@ const FillerModuleContainer = styled.section`
   }
 `;
 
-const FillerModule = () => {
+const FillerModule = ({ data }) => {
   return (
     <FillerModuleContainer>
       <div className="filler-inner-container">
-        <h3>Protect Your Assets</h3>
-        <img src="/images/car2.jpg" alt="car" />
+        <h3>{data.header}</h3>
+        <img src={data.image} alt={data.altText} />
       </div>
     </FillerModuleContainer>
   );
