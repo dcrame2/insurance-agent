@@ -1,6 +1,6 @@
 import Dropdown from '../sub_components/Dropdown';
 import styled from 'styled-components';
-import { Variables } from '../styles/Variables';
+import { Variables, tabletWidthInt } from '../styles/Variables';
 import { Container, MediaQueries } from '../styles/Utilities';
 import { H2Styles, PBaseStyles, PSecondary } from '../styles/Type';
 import { motion, useInView, useAnimationControls } from 'framer-motion';
@@ -78,7 +78,7 @@ export default function FaqModule({ ...props }) {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < Variables.tabletWidthInt);
+            setIsMobile(window.innerWidth < tabletWidthInt);
         };
         window.addEventListener('resize', handleResize);
         handleResize();
@@ -108,7 +108,17 @@ export default function FaqModule({ ...props }) {
                                         translateX: '200px',
                                     }}
                                     animate={listControls}
-                                    transition={isMobile ? { delay: '0' } : { delay: `.${index}`, duration: '.35',}}
+                                    transition={
+                                        isMobile
+                                            ? {
+                                                  delay: '0',
+                                                  duration: '.35',
+                                              }
+                                            : {
+                                                  delay: `.${index}`,
+                                                  duration: '.35',
+                                              }
+                                    }
                                 >
                                     <Dropdown
                                         question={faq.question}
