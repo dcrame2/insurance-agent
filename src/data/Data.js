@@ -258,6 +258,19 @@ export const HomeInsuranceICMData = {
   },
 };
 
+export const HomeInsuranceContentModuleData = {
+  header: "Care For Your Home",
+  content1: `<p>Car insurance is a contract between you and an insurance company in which you pay a premium and the insurance company agrees to pay for certain types of financial losses in the event of an accident or theft.</p><p>The most common types of car insurance are liability, collision, and comprehensive coverage. Liability coverage is required by law and covers damages or injuries that you may cause to another person or their property while operating your vehicle.</p>`,
+  content2:
+    "<p>Collision coverage pays for damages to your own vehicle in the event of an accident. Comprehensive coverage pays for non-collision damages such as theft, fire, or natural disasters. Other types of car insurance may include personal injury protection, uninsured motorist coverage, and more.</br>",
+};
+
+export const HomeFillerModuleData = {
+  header: "Protect Your Home",
+  image: "/images/home2.jpg",
+  altText: "Inside of house",
+};
+
 export const HomeInsuranceFaqData = {
   headers: {
     heading: "Home Insurance FAQs",
@@ -419,6 +432,19 @@ export const BusinessInsuranceICMData = {
     src: "/images/business.jpg",
     alt: "Business insurance",
   },
+};
+
+export const BusinessInsuranceContentModuleData = {
+  header: "Your Business Needs",
+  content1: `<p>Car insurance is a contract between you and an insurance company in which you pay a premium and the insurance company agrees to pay for certain types of financial losses in the event of an accident or theft.</p><p>The most common types of car insurance are liability, collision, and comprehensive coverage. Liability coverage is required by law and covers damages or injuries that you may cause to another person or their property while operating your vehicle.</p>`,
+  content2:
+    "<p>Collision coverage pays for damages to your own vehicle in the event of an accident. Comprehensive coverage pays for non-collision damages such as theft, fire, or natural disasters. Other types of car insurance may include personal injury protection, uninsured motorist coverage, and more.</br>",
+};
+
+export const BusinessFillerModuleData = {
+  header: "Protect Your Business",
+  image: "/images/business2.jpg",
+  altText: "Business",
 };
 
 export const HomePageStatsData = {
