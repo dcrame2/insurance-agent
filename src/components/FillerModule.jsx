@@ -16,14 +16,14 @@ const FillerModuleContainer = styled.section`
       grid-row: 1;
       margin-bottom: -25px;
       ${PBaseStyles}
-      background-color: ${Variables.primaryColor};
-      padding: 15px;
+      background-color: ${Variables.secondaryColor};
+      padding: 15px 40px;
       z-index: 1;
-      border-bottom: 2px solid ${Variables.black};
+      border-bottom: 3px solid ${Variables.primaryColor};
     }
     img {
       grid-row: 2;
-      max-width: 400px;
+      max-width: 500px;
       @media ${MediaQueries.mobile} {
         max-width: 350px;
       }
@@ -36,7 +36,7 @@ const FillerModule = () => {
     <FillerModuleContainer>
       <div className="filler-inner-container">
         <h3>Protect Your Assets</h3>
-        <img src="/images/car.jpg" alt="car" />
+        <img src="/images/car2.jpg" alt="car" />
       </div>
     </FillerModuleContainer>
   );
