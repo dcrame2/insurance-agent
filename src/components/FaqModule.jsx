@@ -1,9 +1,14 @@
 import Dropdown from '../sub_components/Dropdown';
 import styled from 'styled-components';
-import { Variables } from '../styles/Variables';
+import { Variables, tabletWidthInt } from '../styles/Variables';
 import { Container, MediaQueries } from '../styles/Utilities';
 import { H2Styles, PBaseStyles, PSecondary } from '../styles/Type';
-import { motion, useInView, useAnimationControls } from 'framer-motion';
+import {
+    motion,
+    useInView,
+    useAnimationControls,
+    useAnimation,
+} from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 
 const FaqContainer = styled.section`
@@ -78,7 +83,7 @@ export default function FaqModule({ ...props }) {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < Variables.tabletWidthInt);
+            setIsMobile(window.innerWidth < tabletWidthInt);
         };
         window.addEventListener('resize', handleResize);
         handleResize();
@@ -107,8 +112,22 @@ export default function FaqModule({ ...props }) {
                                         opacity: 0,
                                         translateX: '200px',
                                     }}
-                                    animate={listControls}
-                                    transition={isMobile ? { delay: '0' } : { delay: `.${index}`, duration: '.35',}}
+                                    animate={
+                                        isMobile
+                                            ? { opacity: 1, translateX: '0px' }
+                                            : listControls
+                                    }
+                                    transition={
+                                        isMobile
+                                            ? {
+                                                  delay: '0',
+                                                  duration: '.35',
+                                              }
+                                            : {
+                                                  delay: `.${index}`,
+                                                  duration: '.35',
+                                              }
+                                    }
                                 >
                                     <Dropdown
                                         question={faq.question}
