@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { PBaseStyles, PSecondary } from "../styles/Type";
 import { Variables } from "../styles/Variables";
 import { MediaQueries } from "../styles/Utilities";
+import { motion, useInView, useAnimationControls } from "framer-motion";
 
 const FillerModuleContainer = styled.section`
   width: 100%;
@@ -40,12 +41,25 @@ const FillerModuleContainer = styled.section`
 `;
 
 const FillerModule = ({ data }) => {
+  const ContainerRef = useRef(null);
+  const isInView = useInView(ContainerRef, { once: true, amount: 1 });
+  const controls = useAnimationControls();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start({ opacity: 1, translateX: "0" });
+    }
+  }, [isInView]);
   return (
-    <FillerModuleContainer>
-      <div className="filler-inner-container">
+    <FillerModuleContainer ref={ContainerRef}>
+      <motion.div
+        initial={{ opacity: 0, translateX: "-200%" }}
+        animate={controls}
+        className="filler-inner-container"
+      >
         <h3>{data.header}</h3>
         <img src={data.image} alt={data.altText} />
-      </div>
+      </motion.div>
     </FillerModuleContainer>
   );
 };
