@@ -258,6 +258,19 @@ export const HomeInsuranceICMData = {
   },
 };
 
+export const HomeInsuranceContentModuleData = {
+  header: "Care For Your Home",
+  content1: `<p>Home insurance, also known as homeowners insurance, is a type of property insurance that covers a private residence. It typically includes coverage for the physical structure of the home, personal belongings, and liability. Homeowners insurance is usually required by mortgage companies as a condition of the loan. The standard home insurance policy typically covers risks such as fire, lightning, windstorm, hail, explosion, and more. It also covers risks like theft and vandalism.</p>`,
+  content2:
+    "<p>The liability portion of the policy provides protection in the event someone is injured on your property and you are found legally liable for their injuries. Additionally, it can also cover additional living expenses if you are unable to live in your home due to a covered loss.</br>Some policies may also include additional coverage for flood, earthquakes, and others depending on the area you live in or the insurance company you are buying from.",
+};
+
+export const HomeFillerModuleData = {
+  header: "Protect Your Home",
+  image: "/images/home2.jpg",
+  altText: "Inside of house",
+};
+
 export const HomeInsuranceFaqData = {
   headers: {
     heading: "Home Insurance FAQs",
@@ -350,6 +363,12 @@ export const CarInsuranceListContentModule = {
   ],
 };
 
+export const CarFillerModuleData = {
+  header: "Protect Your Assets",
+  image: "/images/car2.jpg",
+  altText: "Car",
+};
+
 // LIFE INSURANCE PAGE DATA
 export const LifeInsuranceICMData = {
   contentModule: {
@@ -359,6 +378,12 @@ export const LifeInsuranceICMData = {
     src: "/images/life.jpg",
     alt: "life insurance",
   },
+};
+
+export const LifeFillerModuleData = {
+  header: "Protect Your Life",
+  image: "/images/life2.jpg",
+  altText: "Life",
 };
 
 export const LifeInsuranceFaqData = {
@@ -407,6 +432,19 @@ export const BusinessInsuranceICMData = {
     src: "/images/business.jpg",
     alt: "Business insurance",
   },
+};
+
+export const BusinessInsuranceContentModuleData = {
+  header: "Your Business Needs",
+  content1: `<p>Business insurance, also known as commercial insurance, is a type of insurance that protects companies from financial losses due to unexpected events. There are many different types of business insurance available, each designed to protect against specific types of risks. Some common types of business insurance include:</p><ul><li>General liability insurance: This type of insurance protects a business from financial losses due to third-party claims of bodily injury or property damage.</li><li>Property insurance: This type of insurance covers damage to a company's physical assets, such as buildings, equipment, and inventory.</li><li>Professional liability insurance: This type of insurance, also known as errors and omissions insurance, protects businesses from financial losses due to mistakes or negligence in the course of providing professional services.</li>`,
+  content2:
+    "<li>Business interruption insurance: This type of insurance provides coverage for lost income and expenses if a business is forced to close due to a covered event, such as a natural disaster.</li><li>Cyber liability insurance: This type of insurance provides coverage for businesses that are at risk of a data breach or cyber attack.</li><li>Commercial Auto Insurance: This type of insurance covers vehicles used for business purpose such as delivery trucks and company cars.</li></ul><p>These are some of the common types of business insurance available, but there are many other types of coverage available depending on the type of business, location and the industry. It's important for business owners to consult with an insurance agent to determine which types of coverage are necessary for their specific business.</p>",
+};
+
+export const BusinessFillerModuleData = {
+  header: "Protect Your Business",
+  image: "/images/business2.jpg",
+  altText: "Business",
 };
 
 export const HomePageStatsData = {
