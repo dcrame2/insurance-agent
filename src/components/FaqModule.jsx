@@ -3,7 +3,12 @@ import styled from 'styled-components';
 import { Variables, tabletWidthInt } from '../styles/Variables';
 import { Container, MediaQueries } from '../styles/Utilities';
 import { H2Styles, PBaseStyles, PSecondary } from '../styles/Type';
-import { motion, useInView, useAnimationControls } from 'framer-motion';
+import {
+    motion,
+    useInView,
+    useAnimationControls,
+    useAnimation,
+} from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 
 const FaqContainer = styled.section`
