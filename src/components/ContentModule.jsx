@@ -31,7 +31,8 @@ const ContentInnerContainer = styled.div`
     gap: ${(props) => (props.columns === 2 ? "50px" : "1em")};
   }
 
-  p {
+  p,
+  li {
     ${PBaseStyles}
     line-height: 45px;
     margin-bottom: 1em;
