@@ -109,10 +109,22 @@ const FooterInner = styled.div`
                 ${PSmallStyles}
                 transition: color ease 0.4s;
 
-                &:hover,
-                &.active {
+                &:hover {
                     color: ${Variables.primaryColor};
                     transition: color ease 0.4s;
+                    position: relative;
+                }
+                &.active {
+                    position: relative;
+
+                    ::before {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        bottom: -2px;
+                        background-color: ${Variables.primaryColor};
+                    }
                 }
             }
         }

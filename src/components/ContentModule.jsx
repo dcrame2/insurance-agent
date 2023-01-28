@@ -48,6 +48,10 @@ const ContentInnerContainer = styled.div`
         }
     }
     li {
+        @media ${MediaQueries.tablet} {
+            margin-left: 24px;
+        }
+
         @media ${MediaQueries.mobile} {
             margin-left: 24px;
         }
