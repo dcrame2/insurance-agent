@@ -38,27 +38,27 @@ const LifeInsurance = () => {
                 color={Variables.black}
                 desktop={100}
                 tablet={80}
-                mobile={40}
+                mobile={80}
             />
             <FillerModule data={LifeFillerModuleData} />
             <Spacer
                 color={Variables.black}
                 desktop={100}
                 tablet={80}
-                mobile={40}
+                mobile={80}
             />
             <Spacer
                 color={Variables.primaryColor2}
                 desktop={100}
                 tablet={80}
-                mobile={40}
+                mobile={80}
             />
             <FaqModule {...LifeInsuranceFaqData} />
             <Spacer
                 color={Variables.primaryColor2}
                 desktop={100}
                 tablet={80}
-                mobile={40}
+                mobile={80}
             />
             <ContactBarModule data={ContactBarData} />
         </>
