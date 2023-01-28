@@ -18,7 +18,7 @@ const FaqContainer = styled.section`
 
   .faq-inner-container {
     display: flex;
-    gap: 10%;
+    gap: 8%;
     ${Container}
 
     @media (max-width: 961px) {
