@@ -37,9 +37,9 @@ const LifeInsurance = () => {
       <FaqModule {...LifeInsuranceFaqData} />
       <Spacer
         color={Variables.primaryColor2}
-        desktop={244}
-        tablet={120}
-        mobile={100}
+        desktop={100}
+        tablet={80}
+        mobile={40}
       />
       <ContactBarModule data={ContactBarData} />
     </>
