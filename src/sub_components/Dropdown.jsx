@@ -10,7 +10,7 @@ const Container = styled.div`
     background-color: ${Variables.secondaryColor};
     border-bottom: 2px solid ${Variables.primaryColor};
     height: auto;
-    padding: 0 10px;
+    padding: 0 24px;
 
     .wrapper {
         display: flex;
