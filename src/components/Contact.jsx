@@ -226,7 +226,8 @@ const Contact = ({ data }) => {
   };
 
   const recipients = [
-    "thedigitaldelightllc@gmail.com, mike.moulis@countryfinanical.com",
+    "thedigitaldelightllc@gmail.com",
+    "mike.moulis@countryfinanical.com",
   ];
 
   const submitForm = (recip) => {
