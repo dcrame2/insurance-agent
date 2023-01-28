@@ -32,6 +32,10 @@ const InsuranceContainer = styled.section`
                 max-width: 472px;
             }
 
+            @media ${MediaQueries.mobile} {
+                margin-bottom: 28px;
+            }
+
             h2 {
                 ${H2Styles}
                 margin-bottom: 8px;
@@ -62,6 +66,7 @@ const InsuranceContainer = styled.section`
 
             @media ${MediaQueries.mobile} {
                 grid-template-columns: 1fr;
+                gap: 38px;
                 max-width: 200px;
             }
 
