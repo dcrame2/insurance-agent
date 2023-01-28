@@ -25,14 +25,14 @@ const LifeInsurance = () => {
                 color={Variables.primaryColor2}
                 desktop={100}
                 tablet={80}
-                mobile={40}
+                mobile={80}
             />
             <ContentModule data={LifeInsuranceContentModuleData} columns={2} />
             <Spacer
                 color={Variables.primaryColor2}
                 desktop={100}
                 tablet={80}
-                mobile={40}
+                mobile={80}
             />
             <Spacer
                 color={Variables.black}
