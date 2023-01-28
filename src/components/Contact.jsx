@@ -1,13 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { Variables } from "../styles/Variables";
 import { MediaQueries } from "../styles/Utilities";
 import Button from "../sub_components/Button";
-import { H3Styles, PSecondary, H2Styles } from "../styles/Type";
+import { PSecondary, H2Styles } from "../styles/Type";
 import { Container } from "../styles/Utilities";
-import { useInView } from "framer-motion";
-import { GlassEffect } from "../styles/Utilities";
-import SubHero from "./SubHero";
+import { useInView, useAnimationControls, motion } from "framer-motion";
 
 const Section = styled.section`
   height: auto;
@@ -262,7 +260,15 @@ const Contact = ({ data }) => {
   };
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const ContainerRef = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 1 });
+  const controls = useAnimationControls();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start({ opacity: 1, translateX: "0" });
+    }
+  }, [isInView]);
   return (
     <>
       {/* <SubHero data={data} /> */}
@@ -344,7 +350,12 @@ const Contact = ({ data }) => {
               )}
             </form>
 
-            <div ref={ref} className="form-info">
+            <motion.div
+              initial={{ opacity: 0, translateX: "200%" }}
+              animate={controls}
+              ref={ref}
+              className="form-info"
+            >
               {/* <h2
               style={{
                 transform: isInView ? "none" : "translateY(-200px)",
@@ -354,7 +365,7 @@ const Contact = ({ data }) => {
             >
               {data.title}
             </h2> */}
-              <img src={data.image} alt="" />
+              <img src={data.image} alt={data.altText} />
               <div className="location-container">
                 <div className="location-inner-container">
                   <p>Street Address:</p>
@@ -380,7 +391,7 @@ const Contact = ({ data }) => {
                   })}
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </Section>

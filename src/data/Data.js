@@ -130,6 +130,7 @@ export const ContactFormData = {
     hours: "8:00 AM - 6:00 PM",
   },
   image: "/images/mike_easter.jpeg",
+  altText: "mike at east event",
   socialMedia: {
     socials: [
       {
