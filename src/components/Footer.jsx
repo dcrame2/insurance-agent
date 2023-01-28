@@ -3,8 +3,7 @@ import { Variables } from '../styles/Variables';
 import { MediaQueries, Container } from '../styles/Utilities';
 import { useEffect, useState } from 'react';
 import { PSmallStyles, H4Styles } from '../styles/Type';
-import { GlassEffect } from '../styles/Utilities';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const FooterElm = styled.footer`
     position: relative;
@@ -110,7 +109,8 @@ const FooterInner = styled.div`
                 ${PSmallStyles}
                 transition: color ease 0.4s;
 
-                &:hover {
+                &:hover,
+                &.active {
                     color: ${Variables.primaryColor};
                     transition: color ease 0.4s;
                 }
@@ -145,7 +145,12 @@ export default function Footer({ data }) {
                     {data.resources.links.map((link, index) => {
                         return (
                             <li key={`resource-link-${index}`}>
-                                <Link to={`${link.href}`}>{link.text}</Link>
+                                <NavLink
+                                    to={`${link.href}`}
+                                    activeclassname='active'
+                                >
+                                    {link.text}
+                                </NavLink>
                             </li>
                         );
                     })}

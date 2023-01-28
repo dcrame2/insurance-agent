@@ -6,7 +6,7 @@ import { FontStyles1 } from '../styles/Utilities';
 import { MediaQueries } from '../styles/Utilities';
 import Hamburger from '../sub_components/svg/Hamburger';
 import { Container } from '../styles/Utilities';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Nav = styled.nav`
     background-color: ${Variables.black};
