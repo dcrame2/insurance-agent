@@ -350,12 +350,7 @@ const Contact = ({ data }) => {
               )}
             </form>
 
-            <motion.div
-              initial={{ opacity: 0, translateX: "200%" }}
-              animate={controls}
-              ref={ref}
-              className="form-info"
-            >
+            <div ref={ref} className="form-info">
               {/* <h2
               style={{
                 transform: isInView ? "none" : "translateY(-200px)",
@@ -365,7 +360,12 @@ const Contact = ({ data }) => {
             >
               {data.title}
             </h2> */}
-              <img src={data.image} alt={data.altText} />
+              <motion.img
+                src={data.image}
+                alt={data.altText}
+                initial={{ opacity: 0, translateX: "200%" }}
+                animate={controls}
+              />
               <div className="location-container">
                 <div className="location-inner-container">
                   <p>Street Address:</p>
@@ -391,7 +391,7 @@ const Contact = ({ data }) => {
                   })}
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </Section>
