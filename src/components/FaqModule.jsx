@@ -27,7 +27,7 @@ const FaqContainer = styled.section`
     }
 
     .content-container {
-      text-align: center;
+      text-align: left;
       height: auto;
       display: flex;
       flex-direction: column;
@@ -37,6 +37,9 @@ const FaqContainer = styled.section`
         justify-content: center;
         align-items: center;
         margin: auto;
+      }
+      @media ${MediaQueries.mobile} {
+        text-align: center;
       }
       h2 {
         ${H2Styles}
