@@ -260,15 +260,7 @@ const Contact = ({ data }) => {
   };
 
   const ref = useRef(null);
-  const ContainerRef = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 1 });
-  const controls = useAnimationControls();
 
-  useEffect(() => {
-    if (isInView) {
-      controls.start({ opacity: 1, translateX: "0" });
-    }
-  }, [isInView]);
   return (
     <>
       {/* <SubHero data={data} /> */}
@@ -363,24 +355,70 @@ const Contact = ({ data }) => {
               <motion.img
                 src={data.image}
                 alt={data.altText}
-                initial={{ opacity: 0, translateX: "200%" }}
-                animate={controls}
+                initial={{
+                  opacity: 0,
+                  transform: "translateX(300px)",
+                }}
+                animate={{ opacity: 1, transform: "translateX(0px)" }}
+                transition={{
+                  delay: ".200",
+                }}
               />
               <div className="location-container">
-                <div className="location-inner-container">
+                <motion.div
+                  className="location-inner-container"
+                  initial={{
+                    opacity: 0,
+                    transform: "translateX(300px)",
+                  }}
+                  animate={{ opacity: 1, transform: "translateX(0px)" }}
+                  transition={{
+                    delay: ".300",
+                  }}
+                >
                   <p>Street Address:</p>
                   <p>{data.streetAddress}</p>
-                </div>
-                <div className="location-inner-container">
+                </motion.div>
+                <motion.div
+                  className="location-inner-container"
+                  initial={{
+                    opacity: 0,
+                    transform: "translateX(300px)",
+                  }}
+                  animate={{ opacity: 1, transform: "translateX(0px)" }}
+                  transition={{
+                    delay: ".400",
+                  }}
+                >
                   <p>Office Phone:</p>
                   <p>{data.numberInfo.mobileNumber}</p>
-                </div>
-                <div className="location-inner-container">
+                </motion.div>
+                <motion.div
+                  className="location-inner-container"
+                  initial={{
+                    opacity: 0,
+                    transform: "translateX(300px)",
+                  }}
+                  animate={{ opacity: 1, transform: "translateX(0px)" }}
+                  transition={{
+                    delay: ".500",
+                  }}
+                >
                   <p>Office Hours:</p>
                   <p>{data.officeHours.days}</p>
                   <p>{data.officeHours.hours}</p>
-                </div>
-                <div className="location-inner-container">
+                </motion.div>
+                <motion.div
+                  className="location-inner-container"
+                  initial={{
+                    opacity: 0,
+                    transform: "translateX(200px)",
+                  }}
+                  animate={{ opacity: 1, transform: "translateX(0px)" }}
+                  transition={{
+                    delay: ".600",
+                  }}
+                >
                   <p>Social Media:</p>
                   {data.socialMedia.socials.map((social) => {
                     return (
@@ -389,7 +427,7 @@ const Contact = ({ data }) => {
                       </a>
                     );
                   })}
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
