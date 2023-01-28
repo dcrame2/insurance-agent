@@ -121,8 +121,8 @@ const FooterInner = styled.div`
                         content: '';
                         position: absolute;
                         width: 100%;
-                        height: 2px;
-                        bottom: -2px;
+                        height: 1px;
+                        bottom: 0px;
                         background-color: ${Variables.primaryColor};
                     }
                 }
