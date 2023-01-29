@@ -7,6 +7,7 @@ import { MediaQueries } from '../styles/Utilities';
 import Hamburger from '../sub_components/svg/Hamburger';
 import { Container } from '../styles/Utilities';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Nav = styled.nav`
     background-color: ${Variables.black};
@@ -309,12 +310,19 @@ export default function Navigation({ backdrop, data }) {
                             hamburgerPressed ? 'active' : ''
                         }`}
                     >
-                        <button
+                        <motion.button
                             aria-label='toggle mobile menu'
                             onClick={HamburgerToggle}
+                            whileHover={{ scale: 1.08 }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{
+                                type: 'spring',
+                                stiffness: 400,
+                                damping: 17,
+                            }}
                         >
                             <Hamburger></Hamburger>
-                        </button>
+                        </motion.button>
                     </li>
                 </ul>
             </div>
