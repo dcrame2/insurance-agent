@@ -12,6 +12,8 @@ const InsuranceContainer = styled.section`
     width: 100%;
     position: relative;
     background-color: ${Variables.secondaryColor};
+    overflow: visible;
+    z-index: 100;
 
     .insurance-content {
         display: flex;

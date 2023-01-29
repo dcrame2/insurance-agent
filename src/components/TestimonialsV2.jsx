@@ -165,24 +165,15 @@ const InnerContainer = styled.div`
             z-index: 1;
 
             &.prev {
-                transform: rotate(180deg);
+                svg {
+                    transform: rotate(180deg);
+                }
             }
 
             svg {
                 transition: transform ease 0.3s;
                 @media ${MediaQueries.mobile} {
                     transition: unset;
-                }
-            }
-
-            &:hover {
-                svg {
-                    transform: scale(1.15);
-                    transition: transform ease 0.2s;
-                    @media ${MediaQueries.mobile} {
-                        transform: unset;
-                        transition: unset;
-                    }
                 }
             }
         }
@@ -250,6 +241,7 @@ const InnerContainer = styled.div`
 
 export default function TestimonialsV2({ data }) {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [leftPressed, setLeftPressed] = useState(null);
     const max = data.testimonials.length - 1;
     //   const ref = useRef(null);
     //   const isInView = useInView(ref, { once: true })
@@ -268,6 +260,7 @@ export default function TestimonialsV2({ data }) {
     }, [isInView]);
 
     const nextPressed = () => {
+        setLeftPressed(false);
         if (activeIndex < max) {
             setActiveIndex((activeIndex) => activeIndex + 1);
         } else {
@@ -276,6 +269,7 @@ export default function TestimonialsV2({ data }) {
     };
 
     const prevPressed = () => {
+        setLeftPressed(true);
         if (activeIndex > 0) {
             setActiveIndex((activeIndex) => activeIndex - 1);
         } else {
@@ -307,13 +301,20 @@ export default function TestimonialsV2({ data }) {
                     {/* <h3>{data.subheading}</h3> */}
                 </motion.div>
                 <div className='carousel-wrapper'>
-                    <button
+                    <motion.button
                         className='prev'
                         onClick={prevPressed}
                         aria-label='previous testimonial'
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{
+                            type: 'spring',
+                            stiffness: 400,
+                            damping: 17,
+                        }}
                     >
                         <Arrow />
-                    </button>
+                    </motion.button>
                     <motion.div
                         initial={{ opacity: 0, translateY: '-200%' }}
                         animate={controls}
@@ -335,13 +336,20 @@ export default function TestimonialsV2({ data }) {
                             );
                         })}
                     </motion.div>
-                    <button
+                    <motion.button
                         className='next'
                         onClick={nextPressed}
                         aria-label='next testimonial'
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{
+                            type: 'spring',
+                            stiffness: 400,
+                            damping: 17,
+                        }}
                     >
                         <Arrow />
-                    </button>
+                    </motion.button>
                 </div>
                 <ul className='indicators'>
                     {data.testimonials.map((item, index) => {

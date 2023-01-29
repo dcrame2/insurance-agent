@@ -5,6 +5,7 @@ import { Variables } from '../styles/Variables';
 import { PBaseStyles } from '../styles/Type';
 import { useEffect } from 'react';
 import { useRef } from 'react';
+import { useState } from 'react';
 
 const CardStyles = styled.div`
     background-color: ${Variables.primaryColor2};
@@ -43,26 +44,42 @@ export default function Card({ ...props }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 1 });
     const controls = useAnimationControls();
+    const [isInViewFired, setIsInViewFired] = useState(false);
+    const [initial, setInitial] = useState({ opacity: 0, scale: 0.5 });
 
     useEffect(() => {
         if (isInView) {
-            controls.start({ opacity: 1, scale: 1 });
+            setIsInViewFired(true);
+            controls.start({
+                opacity: 1,
+                scale: 1,
+            });
         }
-    }, [isInView]);
+
+        if (isInViewFired) {
+            setInitial({ opacity: 1, scale: 1 });
+        }
+    }, [isInView, isInViewFired]);
 
     return (
         <motion.div
             ref={ref}
-            initial={{ opacity: 0, scale: 0 }}
+            initial={initial}
             animate={controls}
             transition={{
-                delay: `.${props.index}`,
-                type: 'spring',
-                stiffness: 400,
-                damping: 17,
+                default: {
+                    duration: 0.3,
+                    ease: [0, 0.71, 0.2, 1.01],
+                    opacity: 0,
+                },
+                scale: {
+                    type: 'spring',
+                    damping: 10,
+                    stiffness: 100,
+                    restDelta: 0.001,
+                },
             }}
-            whileHover={{ scale: 1.2 }}
-            exit={{ scale: 0.8, rotate: 45 }}
+            whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.9 }}
         >
             <CardStyles>
