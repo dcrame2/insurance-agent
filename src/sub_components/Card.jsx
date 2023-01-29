@@ -78,6 +78,7 @@ export default function Card({ ...props }) {
                     stiffness: 100,
                     restDelta: 0.001,
                 },
+                delay: `.${props.index}`,
             }}
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.9 }}
