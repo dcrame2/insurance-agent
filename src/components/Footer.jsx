@@ -4,6 +4,7 @@ import { MediaQueries, Container } from '../styles/Utilities';
 import { useEffect, useState } from 'react';
 import { PSmallStyles, H4Styles } from '../styles/Type';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const FooterElm = styled.footer`
     position: relative;
@@ -144,12 +145,17 @@ export default function Footer({ data }) {
         <FooterElm>
             {/* <OpaqueFilter> */}
             <FooterInner>
-                <a href='/'>
+                <motion.a
+                    href='/'
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                >
                     <img
                         src={Variables.logoWhite}
                         alt={`${Variables.companyName} logo`}
                     ></img>
-                </a>
+                </motion.a>
                 <ul>
                     <li>
                         <h2>{data.resources.heading}</h2>
