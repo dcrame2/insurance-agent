@@ -1,14 +1,8 @@
-import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components/macro';
 import { H1Styles, PSecondary, H2Styles } from '../styles/Type';
 import { Variables } from '../styles/Variables';
 import { Container, MediaQueries } from '../styles/Utilities';
-import {
-    motion,
-    useScroll,
-    useAnimationControls,
-    useSpring,
-} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const customTablet = '900px';
 
@@ -80,11 +74,18 @@ const HeroContainer = styled.section`
                 max-width: unset;
             }
 
+            @media ${MediaQueries.mobile} {
+                transform: translateX(25px);
+            }
+
             img {
                 height: auto;
 
                 @media (max-width: ${customTablet}) {
                     height: 100%;
+                }
+                @media ${MediaQueries.tablet} {
+                    align-self: end;
                 }
             }
         }
