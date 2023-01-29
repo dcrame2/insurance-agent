@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
-import { PBaseStyles, PSecondary } from "../styles/Type";
+import { PBaseStyles } from "../styles/Type";
 import { Variables } from "../styles/Variables";
 import { MediaQueries } from "../styles/Utilities";
 import { motion, useInView, useAnimationControls } from "framer-motion";
