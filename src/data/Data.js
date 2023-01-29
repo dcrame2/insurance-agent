@@ -1,13 +1,5 @@
 import { Variables } from "../styles/Variables";
-import {
-  FaFacebookSquare,
-  FaLinkedin,
-  FaGoogle,
-  FaTwitter,
-  FaLocationArrow,
-  FaPhoneAlt,
-  FaMailBulk,
-} from "react-icons/fa";
+import { FaFacebookSquare, FaLinkedin, FaGoogle } from "react-icons/fa";
 
 export const NavigationData = {
   logo: { src: `${Variables.logoWhite}`, alt: "logo" },
