@@ -85,14 +85,14 @@ const ContentModule = ({ data, ...props }) => {
           <motion.div
             className="col-1"
             dangerouslySetInnerHTML={{ __html: data.content1 }}
-            initial={{ opacity: 0, translateY: "300%" }}
+            initial={{ opacity: 0, translateY: "70%" }}
             animate={controls}
           />
 
           <motion.div
             className="col-2"
             dangerouslySetInnerHTML={{ __html: data.content2 }}
-            initial={{ opacity: 0, translateY: "300%" }}
+            initial={{ opacity: 0, translateY: "70%" }}
             animate={controls}
           />
         </ContentInnerContainer>
