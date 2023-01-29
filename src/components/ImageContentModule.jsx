@@ -83,7 +83,7 @@ const ICMContainer = styled.section`
                 margin-top: -225px;
             }
 
-            h2 {
+            h1 {
                 ${H2Styles};
                 text-transform: uppercase;
                 color: ${Variables.white};
@@ -123,7 +123,7 @@ export default function ImageContentModule({ ...props }) {
         >
             <div className='ICMInnerContainer' ref={ref}>
                 <div className='content'>
-                    <h2>{props.contentModule.heading}</h2>
+                    <h1>{props.contentModule.heading}</h1>
                     <p>{props.contentModule.content}</p>
                 </div>
                 <motion.img
