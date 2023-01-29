@@ -84,7 +84,7 @@ const HeroContainer = styled.section`
                 @media (max-width: ${customTablet}) {
                     height: 100%;
                 }
-                @media ${MediaQueries.tablet} {
+                @media ${MediaQueries.mobile} {
                     align-self: end;
                 }
             }
