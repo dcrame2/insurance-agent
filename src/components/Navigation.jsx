@@ -279,11 +279,18 @@ export default function Navigation({ backdrop, data }) {
                                 <ul>
                                     {data.links.map((link, index) => {
                                         return (
-                                            <li
+                                            <motion.li
                                                 onClick={() =>
                                                     setHamburgerPressed(false)
                                                 }
                                                 key={`textLink${index}`}
+                                                whileHover={{ scale: 1.2 }}
+                                                whileTap={{ scale: 0.9 }}
+                                                transition={{
+                                                    type: 'spring',
+                                                    stiffness: 400,
+                                                    damping: 17,
+                                                }}
                                             >
                                                 <NavLink
                                                     activeclassname='active'
@@ -297,7 +304,7 @@ export default function Navigation({ backdrop, data }) {
                                                 >
                                                     {link.text}
                                                 </NavLink>
-                                            </li>
+                                            </motion.li>
                                         );
                                     })}
                                 </ul>
