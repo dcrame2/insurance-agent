@@ -175,6 +175,7 @@ const Section = styled.section`
 
                     input,
                     textarea {
+                        -webkit-appearance: none;
                         text-indent: 10px;
                         outline: none;
                         font-size: 1.5rem;
