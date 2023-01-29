@@ -10,6 +10,7 @@ const CardStyles = styled.div`
     background-color: ${Variables.primaryColor2};
     border: 3px solid ${Variables.primaryColor};
     transition: border ease 0.2s, border-radius ease 0.2s;
+    min-width: 126px;
 
     &:hover,
     &:focus {
