@@ -2,8 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components/macro';
 import { Container } from '../styles/Utilities';
 import { Variables } from '../styles/Variables';
-import { H2Styles, PBaseStyles, PSecondary } from '../styles/Type';
-import { GlassEffect } from '../styles/Utilities';
+import { H2Styles, PBaseStyles } from '../styles/Type';
 import { MediaQueries } from '../styles/Utilities';
 import Card from '../sub_components/Card';
 import { motion, useAnimationControls, useInView } from 'framer-motion';
@@ -65,9 +64,7 @@ const InsuranceContainer = styled.section`
             }
 
             @media ${MediaQueries.mobile} {
-                grid-template-columns: 1fr;
-                gap: 38px;
-                max-width: 200px;
+                gap: 26px;
             }
 
             a {
