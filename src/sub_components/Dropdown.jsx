@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { PBaseStyles, PSecondary } from '../styles/Type';
 import { MediaQueries } from '../styles/Utilities';
 import { Variables } from '../styles/Variables';
 import DropIndicator from './svg/DropIndicator';
+import { useInView, useAnimationControls, motion } from 'framer-motion';
 
 const Container = styled.div`
     display: relative;
@@ -99,31 +100,46 @@ const Container = styled.div`
 export default function Dropdown({ ...props }) {
     const [active, setActive] = useState(false);
     const [cname, setCname] = useState('');
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 1 });
+    const controls = useAnimationControls();
 
     useEffect(() => {
         // null check for class name to prevent undefined being passed into className
         if (props.cname) {
             setCname(props.cname);
         }
-    });
+
+        if (isInView) {
+            console.log('inView');
+            controls.start({ opacity: 1, translateX: '0px' });
+        }
+    }, [isInView]);
 
     const toggleDropdown = () => {
         setActive(!active);
     };
 
     return (
-        <Container className={`${cname} ${active ? 'active' : ''}`}>
-            <div className='wrapper'>
-                <button className='toggle' onClick={toggleDropdown}>
-                    {props.question}
-                </button>
-                <div className='indicator'>
-                    <DropIndicator />
-                </div>
-            </div>
-            <div className='panel'>
-                <p>{props.answer}</p>
-            </div>
-        </Container>
+        <div ref={ref} className='wrapper'>
+            <motion.div
+                initial={{ opacity: 0, translateX: '200px' }}
+                animate={controls}
+            >
+                <Container className={`${cname} ${active ? 'active' : ''}`}>
+                    <div className='wrapper'>
+                        <button className='toggle' onClick={toggleDropdown}>
+                            {props.question}
+                        </button>
+                        <div className='indicator'>
+                            <DropIndicator />
+                        </div>
+                    </div>
+                    <div className='panel'>
+                        <p>{props.answer}</p>
+                    </div>
+                </Container>
+            </motion.div>
+        </div>
     );
 }

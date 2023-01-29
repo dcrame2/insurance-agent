@@ -4,7 +4,7 @@ import { Variables } from '../styles/Variables';
 import { Container, MediaQueries } from '../styles/Utilities';
 import { H2Styles, PSecondary } from '../styles/Type';
 import { motion, useInView, useAnimationControls } from 'framer-motion';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 const FaqContainer = styled.section`
     position: relative;
@@ -67,6 +67,7 @@ export default function FaqModule({ ...props }) {
     const listRef = useRef(null);
     const headingRef = useRef(null);
     const isInView = useInView(listRef, { once: true, amount: 1 });
+    const headingIsInView = useInView(headingRef, { once: true, amount: 1 });
     const listControls = useAnimationControls();
     const headingControls = useAnimationControls();
     const [isMobile, setIsMobile] = useState(false);
@@ -75,9 +76,11 @@ export default function FaqModule({ ...props }) {
     useEffect(() => {
         if (isInView) {
             listControls.start({ opacity: 1, translateX: '0px' });
+        }
+        if (headingIsInView) {
             headingControls.start({ opacity: 1, translateY: '0' });
         }
-    }, [isInView, isMobile]);
+    }, [isInView, isMobile, headingIsInView]);
 
     useEffect(() => {
         const handleResize = () => {
@@ -93,15 +96,16 @@ export default function FaqModule({ ...props }) {
     return (
         <FaqContainer>
             <div className='faq-inner-container'>
-                <motion.div
-                    className='content-container'
-                    initial={{ opacity: 0, translateY: '200px' }}
-                    animate={headingControls}
-                    ref={headingRef}
-                >
-                    <h2>{props.headers.heading}</h2>
-                    <p>{props.headers.subheader}</p>
-                </motion.div>
+                <div ref={headingRef}>
+                    <motion.div
+                        className='content-container'
+                        initial={{ opacity: 0, translateY: '200px' }}
+                        animate={headingControls}
+                    >
+                        <h2>{props.headers.heading}</h2>
+                        <p>{props.headers.subheader}</p>
+                    </motion.div>
+                </div>
                 <div className='faq-drop-container'>
                     <ul
                         className='dropdown-container'
