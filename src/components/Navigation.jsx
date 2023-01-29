@@ -254,11 +254,20 @@ export default function Navigation({ backdrop, data }) {
                     ${hamburgerPressed ? 'panel-active' : ''}`}
             >
                 <ul>
-                    <li className='logo'>
+                    <motion.li
+                        className='logo'
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{
+                            type: 'spring',
+                            stiffness: 400,
+                            damping: 17,
+                        }}
+                    >
                         <NavLink exact to='/'>
                             <img src={data.logo.src} alt={data.logo.alt}></img>
                         </NavLink>
-                    </li>
+                    </motion.li>
                     <li
                         className={`primary-links 
                         ${backdrop ? 'backdrop-active' : ''}

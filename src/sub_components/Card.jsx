@@ -57,7 +57,13 @@ export default function Card({ ...props }) {
             animate={controls}
             transition={{
                 delay: `.${props.index}`,
+                type: 'spring',
+                stiffness: 400,
+                damping: 17,
             }}
+            whileHover={{ scale: 1.2 }}
+            exit={{ scale: 0.8, rotate: 45 }}
+            whileTap={{ scale: 0.9 }}
         >
             <CardStyles>
                 <Link to={props.to}>
