@@ -23,45 +23,7 @@ const ModuleContainer = styled.section`
         transform: rotate(30deg);
         font-size: 100px;
         position: absolute;
-        /* animation: shake 0.5s;
 
-    /* When the animation is finished, start again */
-        /* animation-iteration-count: infinite;  */
-        /* @keyframes shake {
-      0% {
-        transform: translate(1px, 1px) rotate(0deg);
-      }
-      10% {
-        transform: translate(-1px, -2px) rotate(-1deg);
-      }
-      20% {
-        transform: translate(-3px, 0px) rotate(1deg);
-      }
-      30% {
-        transform: translate(3px, 2px) rotate(0deg);
-      }
-      40% {
-        transform: translate(1px, -1px) rotate(1deg);
-      }
-      50% {
-        transform: translate(-1px, 2px) rotate(-1deg);
-      }
-      60% {
-        transform: translate(-3px, 1px) rotate(0deg);
-      }
-      70% {
-        transform: translate(3px, 1px) rotate(-1deg);
-      }
-      80% {
-        transform: translate(-1px, -1px) rotate(1deg);
-      }
-      90% {
-        transform: translate(1px, 2px) rotate(0deg);
-      }
-      100% {
-        transform: translate(1px, -2px) rotate(-1deg);
-      }
-    } */
         @media ${MediaQueries.tablet} {
             right: 10%;
             top: 75px;
@@ -97,8 +59,7 @@ const InnerContainer = styled.div`
 
         h2 {
             ${H2Styles}
-            /* text-transform: uppercase; */
-      margin-bottom: 10px;
+            margin-bottom: 10px;
         }
         h3 {
             ${PSecondary}
@@ -126,7 +87,6 @@ const InnerContainer = styled.div`
                 grid-column: 1;
                 text-align: center;
                 opacity: 0;
-                transform: translateX(120px);
                 transition: opacity ease 0.4s, transform ease 0.35s;
                 display: flex;
                 justify-content: center;
@@ -137,6 +97,14 @@ const InnerContainer = styled.div`
                 padding: 26px 32px 28px;
                 @media ${MediaQueries.tablet} {
                     padding: 20px 26px 24px;
+                }
+
+                &.left-origin {
+                    transform: translateX(-120px);
+                }
+
+                &.right-origin {
+                    transform: translateX(120px);
                 }
 
                 &.active {
@@ -326,6 +294,10 @@ export default function TestimonialsV2({ data }) {
                                     key={`tile-${index}`}
                                     className={`tile ${
                                         activeIndex === index ? 'active' : ''
+                                    } ${
+                                        leftPressed
+                                            ? 'left-origin'
+                                            : 'right-origin'
                                     }`}
                                 >
                                     <h4>{testimonial.name}</h4>
