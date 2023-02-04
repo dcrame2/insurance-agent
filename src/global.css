@@ -16,6 +16,14 @@ body {
   scroll-behavior: smooth;
 }
 
+html {
+  color-scheme: dark;
+}
+body {
+  color: white;
+  background: black;
+}
+
 h1,
 h2,
 h3,
