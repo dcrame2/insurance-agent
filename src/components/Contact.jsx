@@ -1,11 +1,11 @@
-import React, { useState, useRef } from "react";
-import styled from "styled-components";
-import { Variables } from "../styles/Variables";
-import { MediaQueries } from "../styles/Utilities";
-import Button from "../sub_components/Button";
-import { PSecondary, H2Styles } from "../styles/Type";
-import { Container } from "../styles/Utilities";
-import { motion } from "framer-motion";
+import React, { useState, useRef } from 'react';
+import styled from 'styled-components';
+import { Variables } from '../styles/Variables';
+import { MediaQueries } from '../styles/Utilities';
+import Button from '../sub_components/Button';
+import { PSecondary, H2Styles } from '../styles/Type';
+import { Container } from '../styles/Utilities';
+import { motion } from 'framer-motion';
 
 const Section = styled.section`
   height: auto;
@@ -203,12 +203,12 @@ const Section = styled.section`
 `;
 
 const Contact = ({ data }) => {
-  const [fnameValue, setFnameValue] = useState("");
-  const [lnameValue, setLnameValue] = useState("");
-  const [emailValue, setEmailValue] = useState("");
-  const [messageValue, setMessageValue] = useState("");
+  const [fnameValue, setFnameValue] = useState('');
+  const [lnameValue, setLnameValue] = useState('');
+  const [emailValue, setEmailValue] = useState('');
+  const [messageValue, setMessageValue] = useState('');
   const [successValue, setSuccessValue] = useState(false);
-  const [successMessage, setSuccessMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState('');
 
   const FNameHandler = (e) => {
     setFnameValue(e.target.value);
@@ -227,17 +227,17 @@ const Contact = ({ data }) => {
   };
 
   const recipients = [
-    "thedigitaldelightllc@gmail.com",
-    "mike.moulis@countryfinanical.com",
+    'thedigitaldelightllc@gmail.com',
+    'mike.moulis@countryfinancial.com',
   ];
 
   const submitForm = (recip) => {
     recip.map((email) => {
       fetch(`https://formsubmit.co/ajax/${email}`, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
         body: JSON.stringify({
           fname: `${fnameValue}`,
@@ -266,85 +266,85 @@ const Contact = ({ data }) => {
   return (
     <>
       {/* <SubHero data={data} /> */}
-      <Section id="contact">
-        <div className="ContactInnerContainer">
+      <Section id='contact'>
+        <div className='ContactInnerContainer'>
           {/* <OpaqueFilter> */}
-          <div className="form-wrapper">
+          <div className='form-wrapper'>
             <form onSubmit={OnSubmit}>
               <input
-                type="hidden"
-                name="_subject"
+                type='hidden'
+                name='_subject'
                 value={`New ${Variables.companyName} Submission!`}
               />
               <input
-                type="hidden"
-                name="_autoresponse"
+                type='hidden'
+                name='_autoresponse'
                 value={`Thank you from ${Variables.companyName}`}
               ></input>
               {/* <input type="hidden" name="_cc" value="jtully97@gmail.com" /> */}
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="table"></input>
+              <input type='hidden' name='_captcha' value='false' />
+              <input type='hidden' name='_template' value='table'></input>
               <input
-                type="hidden"
-                name="_next"
-                value="http://www.moulisfinancial.com"
+                type='hidden'
+                name='_next'
+                value='http://www.moulisfinancial.com'
               ></input>
               <h2>{data.title2}</h2>
               <div>
-                <label htmlFor="firstname">First Name*</label>
+                <label htmlFor='firstname'>First Name*</label>
                 <input
                   onChange={FNameHandler}
-                  type="text"
-                  name="firstname"
-                  id="firstname"
+                  type='text'
+                  name='firstname'
+                  id='firstname'
                   required
                 />
               </div>
               <div>
-                <label htmlFor="lastname">Last Name*</label>
+                <label htmlFor='lastname'>Last Name*</label>
                 <input
                   onChange={LNameHandler}
-                  type="text"
-                  name="lastname"
-                  id="lastname"
+                  type='text'
+                  name='lastname'
+                  id='lastname'
                   required
                 />
               </div>
               <div>
-                <label htmlFor="email">Email Address*</label>
+                <label htmlFor='email'>Email Address*</label>
                 <input
                   onChange={EmailHandler}
-                  type="email"
-                  name="email"
-                  id="email"
+                  type='email'
+                  name='email'
+                  id='email'
                   required
                 />
               </div>
               <div>
-                <label htmlFor="message">Message*</label>
+                <label htmlFor='message'>Message*</label>
                 <textarea
                   onChange={MessageHandler}
-                  type="text"
-                  name="message"
-                  id="message"
+                  type='text'
+                  name='message'
+                  id='message'
                   required
                 />
               </div>
 
-              <Button ariaLabel="Submit form" text="Submit"></Button>
+              <Button ariaLabel='Submit form' text='Submit'></Button>
               {successValue ? (
-                <div className="success-container">
+                <div className='success-container'>
                   <h4>
                     {successMessage} I will be reaching out as soon as possible.
                   </h4>
-                  <img src={Variables.logoWhite} alt="Moulis Financial" />
+                  <img src={Variables.logoWhite} alt='Moulis Financial' />
                 </div>
               ) : (
-                ""
+                ''
               )}
             </form>
 
-            <div ref={ref} className="form-info">
+            <div ref={ref} className='form-info'>
               {/* <h2
               style={{
                 transform: isInView ? "none" : "translateY(-200px)",
@@ -359,63 +359,63 @@ const Contact = ({ data }) => {
                 alt={data.altText}
                 initial={{
                   opacity: 0,
-                  transform: "translateX(300px)",
+                  transform: 'translateX(300px)',
                 }}
                 animate={{
                   opacity: 1,
-                  transform: "translateX(0px)",
+                  transform: 'translateX(0px)',
                 }}
                 transition={{
-                  delay: ".200",
+                  delay: '.200',
                 }}
               />
-              <div className="location-container">
+              <div className='location-container'>
                 <motion.div
-                  className="location-inner-container"
+                  className='location-inner-container'
                   initial={{
                     opacity: 0,
-                    transform: "translateX(300px)",
+                    transform: 'translateX(300px)',
                   }}
                   animate={{
                     opacity: 1,
-                    transform: "translateX(0px)",
+                    transform: 'translateX(0px)',
                   }}
                   transition={{
-                    delay: ".300",
+                    delay: '.300',
                   }}
                 >
                   <p>Street Address:</p>
                   <p>{data.streetAddress}</p>
                 </motion.div>
                 <motion.div
-                  className="location-inner-container"
+                  className='location-inner-container'
                   initial={{
                     opacity: 0,
-                    transform: "translateX(300px)",
+                    transform: 'translateX(300px)',
                   }}
                   animate={{
                     opacity: 1,
-                    transform: "translateX(0px)",
+                    transform: 'translateX(0px)',
                   }}
                   transition={{
-                    delay: ".400",
+                    delay: '.400',
                   }}
                 >
                   <p>Office Phone:</p>
                   <p>{data.numberInfo.mobileNumber}</p>
                 </motion.div>
                 <motion.div
-                  className="location-inner-container"
+                  className='location-inner-container'
                   initial={{
                     opacity: 0,
-                    transform: "translateX(300px)",
+                    transform: 'translateX(300px)',
                   }}
                   animate={{
                     opacity: 1,
-                    transform: "translateX(0px)",
+                    transform: 'translateX(0px)',
                   }}
                   transition={{
-                    delay: ".500",
+                    delay: '.500',
                   }}
                 >
                   <p>Office Hours:</p>
@@ -423,23 +423,23 @@ const Contact = ({ data }) => {
                   <p>{data.officeHours.hours}</p>
                 </motion.div>
                 <motion.div
-                  className="location-inner-container"
+                  className='location-inner-container'
                   initial={{
                     opacity: 0,
-                    transform: "translateX(200px)",
+                    transform: 'translateX(200px)',
                   }}
                   animate={{
                     opacity: 1,
-                    transform: "translateX(0px)",
+                    transform: 'translateX(0px)',
                   }}
                   transition={{
-                    delay: ".600",
+                    delay: '.600',
                   }}
                 >
                   <p>Social Media:</p>
                   {data.socialMedia.socials.map((social) => {
                     return (
-                      <a className="social-links" href={social.link}>
+                      <a className='social-links' href={social.link}>
                         {social.icon}
                       </a>
                     );
